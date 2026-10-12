@@ -1,0 +1,8 @@
+name: snn_embedding_probe_signed_delta
+source_config: SNN/configs/spiking_shallow_signed_delta.yaml
+embedding:
+  mode: concat
+heads:
+  - linearsvc_c1
+  - rbf_svc_c10_gamma_scale
+  - pca128_rbf_svc_c3_gamma_scale

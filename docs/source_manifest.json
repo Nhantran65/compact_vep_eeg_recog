@@ -1,0 +1,2477 @@
+{
+  "source_commit": "7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45",
+  "files": [
+    {
+      "source": "SNN/README.md",
+      "destination": "SNN/README.md",
+      "sha256": "6369eb5ac772d625295b15a57d9df3a56e882bd87186e1dd15b13e4bc7536466"
+    },
+    {
+      "source": "SNN/LITERATURE_REVIEW.md",
+      "destination": "SNN/LITERATURE_REVIEW.md",
+      "sha256": "84b617c3e2c635273c40e401f18862d28b152b991c02bc5828eeb5beebfdb70b"
+    },
+    {
+      "source": "SNN/requirements.txt",
+      "destination": "SNN/requirements.txt",
+      "sha256": "460db45166801c1e923f0c1984af6cbd17ed810ffce65cd55549a92b953db00d"
+    },
+    {
+      "source": "SNN/RESEARCH_DIRECTIONS.md",
+      "destination": "SNN/RESEARCH_DIRECTIONS.md",
+      "sha256": "32ceffedc91b55f5e15fd738106a6a8c78be9f94a8e18659cdfb678294741d95"
+    },
+    {
+      "source": "SNN/configs/spiking_shallow_direct.yaml",
+      "destination": "SNN/configs/spiking_shallow_direct.yaml",
+      "sha256": "cb185a1c81601d4460c8e06d86b05f266a45f3cbcb37a22fb80a27c120a36560"
+    },
+    {
+      "source": "SNN/configs/spiking_shallow_rate.yaml",
+      "destination": "SNN/configs/spiking_shallow_rate.yaml",
+      "sha256": "ec1ea10e249d7905bb27846fa7e9071fe9f247d9e46a5de19c0beddb054ce126"
+    },
+    {
+      "source": "SNN/configs/spiking_shallow_delta.yaml",
+      "destination": "SNN/configs/spiking_shallow_delta.yaml",
+      "sha256": "9565b4bf209fef72e2703683f7421d5e7d7a305b03183fb89538aa07bed9cf51"
+    },
+    {
+      "source": "SNN/configs/spiking_shallow_signed_delta.yaml",
+      "destination": "SNN/configs/spiking_shallow_signed_delta.yaml",
+      "sha256": "bc1685bbffea685fc1e9b5a64e2cf8637cf53130c1381b09fd6518c45830fc4e"
+    },
+    {
+      "source": "SNN/configs/snn_embedding_probe.yaml",
+      "destination": "SNN/configs/snn_embedding_probe.yaml",
+      "sha256": "c8173807bde661c55a1da2bbff213d85a44fbf4efd21449c41874b147bc148b8"
+    },
+    {
+      "source": "SNN/configs/snn_embedding_probe_rate.yaml",
+      "destination": "SNN/configs/snn_embedding_probe_rate.yaml",
+      "sha256": "2128607989cb8ba3a699dccc2c256d0b7e0ba641aed70e1e25d32a9b31b2621b"
+    },
+    {
+      "source": "SNN/configs/snn_embedding_probe_delta.yaml",
+      "destination": "SNN/configs/snn_embedding_probe_delta.yaml",
+      "sha256": "05e0fe33568e17f4078628ac95c2b99304cc34384ba772552b1ee354c6fcc978"
+    },
+    {
+      "source": "SNN/configs/snn_embedding_probe_signed_delta.yaml",
+      "destination": "SNN/configs/snn_embedding_probe_signed_delta.yaml",
+      "sha256": "5c6d137b42dffe4f5b2b39d170efc68e12bb5c360d04df4f11cbdc35a4c4a4d1"
+    },
+    {
+      "source": "SNN/configs/shallow80_lif_head.yaml",
+      "destination": "SNN/configs/shallow80_lif_head.yaml",
+      "sha256": "9d1b285c6ce39491b24c12742963348868e605a8036e75c09cc81bf1368801c0"
+    },
+    {
+      "source": "SNN/configs/shallow80_plif_head.yaml",
+      "destination": "SNN/configs/shallow80_plif_head.yaml",
+      "sha256": "b52433ed3caf3f838d8f50dcd8eafe5ebf38afe34b33358857e44daf4c01cc95"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_lif_head.yaml",
+      "destination": "SNN/configs/shallow_temporal_lif_head.yaml",
+      "sha256": "f3fb86184b7246ae9d32a04b8be937b8401aa78916686fef2fd90ad002079c78"
+    },
+    {
+      "source": "SNN/configs/spiking_shallow_adaptive_signed_delta.yaml",
+      "destination": "SNN/configs/spiking_shallow_adaptive_signed_delta.yaml",
+      "sha256": "2ec23efce90d654191ee4b0b8677a68c1c4673961ad0fae612a1aabb474ed565"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_lif_distill_k48.yaml",
+      "destination": "SNN/configs/shallow_temporal_lif_distill_k48.yaml",
+      "sha256": "096fd73acef32f3af4fcd5b44e5c910b46e44f5ced5270d4848972c9e86fc138"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_lif_distill_k64.yaml",
+      "destination": "SNN/configs/shallow_temporal_lif_distill_k64.yaml",
+      "sha256": "0b4c676ded2f4a215eee2173856c2efa9625da99d9ca745db6848d5fd2db6932"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_lif_distill_k80.yaml",
+      "destination": "SNN/configs/shallow_temporal_lif_distill_k80.yaml",
+      "sha256": "3c4101e5b9cce3c47f62d47b77c475afd1af7527696d32b10d94cb78eb1ac548"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_lif_eegpt_distill_full104.yaml",
+      "destination": "archive/foundation_extensions/configs/shallow_temporal_lif_eegpt_distill_full104.yaml",
+      "sha256": "a8f81b1b605657c7af3ae50b3fd0d43be0e79394d138c3fb82f5ae3926af376b"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_gated_lif.yaml",
+      "destination": "SNN/configs/shallow_temporal_gated_lif.yaml",
+      "sha256": "0149f5303c073f4e01695e40765fc3b8355448ce6b3a7361b9e6797fe594d868"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_spike_aware_gated_lif.yaml",
+      "destination": "SNN/configs/shallow_temporal_spike_aware_gated_lif.yaml",
+      "sha256": "d59d4573e64e306271316d3a1a39c604c430d1f2b44a3bafe6b28f24dcc8ae38"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_windowed_spike_lif_4bins.yaml",
+      "destination": "SNN/configs/shallow_temporal_windowed_spike_lif_4bins.yaml",
+      "sha256": "dbcdea9875db1a671dd8c014e7b06b0d32cebaadf4a397c77691b2989ecbe138"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_windowed_spike_lif_8bins.yaml",
+      "destination": "SNN/configs/shallow_temporal_windowed_spike_lif_8bins.yaml",
+      "sha256": "4ac53dabfe4bfaadfb7d5116d5949a2a96cd66de25cbaf966dea4ae095987907"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_multiscale_gated_lif.yaml",
+      "destination": "SNN/configs/shallow_temporal_multiscale_gated_lif.yaml",
+      "sha256": "87cfa576b773e9ef8b8c07fbfcf5651c0cd57449dc5491d83e76638fdbe633a3"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_spike_aware_proto_lif_ce.yaml",
+      "destination": "SNN/configs/shallow_temporal_spike_aware_proto_lif_ce.yaml",
+      "sha256": "d6321beb3ad11201585f14fba02a5b3674c027e3b2fd893711db9f5d2eea8dea"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_spike_aware_proto_lif_supcon005.yaml",
+      "destination": "SNN/configs/shallow_temporal_spike_aware_proto_lif_supcon005.yaml",
+      "sha256": "1366f435469e0e752b4ef598da4e61e9bbfbd0e50b3db27f94f2a7a132eae95c"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_spike_aware_proto_lif_supcon010.yaml",
+      "destination": "SNN/configs/shallow_temporal_spike_aware_proto_lif_supcon010.yaml",
+      "sha256": "113e97423d2f0eef13e441a3bf37c03cc241c222913743e9dad73517af01a8dd"
+    },
+    {
+      "source": "SNN/configs/shallow_temporal_spike_aware_proto_lif_supcon005_sep.yaml",
+      "destination": "SNN/configs/shallow_temporal_spike_aware_proto_lif_supcon005_sep.yaml",
+      "sha256": "5d87b5eae457acd6143d640dbba552a8ff0ea4395a94443200b58d23f9661cbb"
+    },
+    {
+      "source": "SNN/configs/eegpt_token_spike_aware_gated_lif.yaml",
+      "destination": "archive/foundation_extensions/configs/eegpt_token_spike_aware_gated_lif.yaml",
+      "sha256": "1d76c3263756f45d9624989dbf4831f5dfcb3f09503539aaec8c5e0bdceef5df"
+    },
+    {
+      "source": "SNN/configs/eegpt_token_spike_aware_proto_lif_ce.yaml",
+      "destination": "archive/foundation_extensions/configs/eegpt_token_spike_aware_proto_lif_ce.yaml",
+      "sha256": "3fa2625124503bead0b0aab61ce6f3ccd84e2804c2ac2e070440f6629070ff06"
+    },
+    {
+      "source": "SNN/scripts/smoke_test.py",
+      "destination": "SNN/scripts/smoke_test.py",
+      "sha256": "47a39b042043b74a4f28bab8558fad6caa0a93a16ad7c640aa89f30e053e6de6"
+    },
+    {
+      "source": "SNN/scripts/run_fold.py",
+      "destination": "SNN/scripts/run_fold.py",
+      "sha256": "e07d4cb9ab1d14cfbcbf1b0e306121479ebe05cb8e877df764527068a80d9dc9"
+    },
+    {
+      "source": "SNN/scripts/run_ablation.py",
+      "destination": "SNN/scripts/run_ablation.py",
+      "sha256": "187bbc71d998959de5b817dcda395c6e8c59dcc34ebb71c7a857385b3052a150"
+    },
+    {
+      "source": "SNN/scripts/run_probe.py",
+      "destination": "SNN/scripts/run_probe.py",
+      "sha256": "2a39b2d3cc8f667fe7ee3244c1f7acd99d5d90120ce49f1481a0d95ad7d25693"
+    },
+    {
+      "source": "SNN/scripts/summarize_results.py",
+      "destination": "SNN/scripts/summarize_results.py",
+      "sha256": "171068302e9ec4f8a0e6f002698999d6bdd48ab91b9d7f9d16dfbdf4f0d589f9"
+    },
+    {
+      "source": "SNN/scripts/smoke_snn_v2.py",
+      "destination": "SNN/scripts/smoke_snn_v2.py",
+      "sha256": "430df140806cb48a038b75f6b258fcf2cc7911d9bbd579a1ccc7dc06fdb188a7"
+    },
+    {
+      "source": "SNN/scripts/run_snn_v2_controls.py",
+      "destination": "SNN/scripts/run_snn_v2_controls.py",
+      "sha256": "cabc79139b4dfdf61a896fd447834a188fe3596b357ca4251689723167a4092f"
+    },
+    {
+      "source": "SNN/scripts/run_shallow_snn_hybrid.py",
+      "destination": "SNN/scripts/run_shallow_snn_hybrid.py",
+      "sha256": "e397344c4448eda68f436dbdae57fd2ae0e14c46c4ac1078fd4e0e3c8245c211"
+    },
+    {
+      "source": "SNN/scripts/run_shallow_snn_probe.py",
+      "destination": "SNN/scripts/run_shallow_snn_probe.py",
+      "sha256": "37ed582c2a400529194e60a9b7f39d85e0c06fdd56ac8f28b9079a0569b5a125"
+    },
+    {
+      "source": "SNN/scripts/summarize_snn_v2.py",
+      "destination": "SNN/scripts/summarize_snn_v2.py",
+      "sha256": "6a8e97c777989d955774d25b7f86b8f125065c1e38765ec6cb13f14bd57a14d7"
+    },
+    {
+      "source": "SNN/scripts/smoke_snn_early_exit.py",
+      "destination": "SNN/scripts/smoke_snn_early_exit.py",
+      "sha256": "062d94cd362c3acbd1fb0a572efdf738bef45a14be366c9f3bcac09c2e51e38b"
+    },
+    {
+      "source": "SNN/scripts/run_snn_early_exit.py",
+      "destination": "SNN/scripts/run_snn_early_exit.py",
+      "sha256": "d49e3c01defab76ad9c409c3eb56e3110099e5c1436f6f217a9293c2bbea5641"
+    },
+    {
+      "source": "SNN/scripts/summarize_snn_early_exit.py",
+      "destination": "SNN/scripts/summarize_snn_early_exit.py",
+      "sha256": "fcdcf0634f8603a2f77679fbe92ce8da1359016f8f6b2f05917d6e334781e802"
+    },
+    {
+      "source": "SNN/scripts/run_snn_prefix_distill.py",
+      "destination": "SNN/scripts/run_snn_prefix_distill.py",
+      "sha256": "8b227396c4ad9751445828d35713158e5feb15a0cd4247c711f3392fcf8b69fd"
+    },
+    {
+      "source": "SNN/scripts/summarize_snn_prefix_distill.py",
+      "destination": "SNN/scripts/summarize_snn_prefix_distill.py",
+      "sha256": "1c6aba3bdf6f15ee00fdf9d9930d6abfbb136cfc292edfffd4ae36106e7b7700"
+    },
+    {
+      "source": "SNN/scripts/summarize_snn_prefix_rescue.py",
+      "destination": "SNN/scripts/summarize_snn_prefix_rescue.py",
+      "sha256": "cc3f06723ee70e6f5749a8393eb158d732cdc8344623e771cc27caafbdf1b1f2"
+    },
+    {
+      "source": "SNN/scripts/run_snn_eegpt_distill.py",
+      "destination": "archive/foundation_extensions/scripts/run_snn_eegpt_distill.py",
+      "sha256": "e98c2686b71e508939e1d87ea7aaa37cba154a185d1161245d865c55ed27135b"
+    },
+    {
+      "source": "SNN/scripts/summarize_snn_eegpt_distill.py",
+      "destination": "archive/foundation_extensions/scripts/summarize_snn_eegpt_distill.py",
+      "sha256": "a6f64e742b91394fa72c6f2368c8078307f9394d0337706752647f7212e94ea2"
+    },
+    {
+      "source": "SNN/scripts/run_eegpt_token_snn.py",
+      "destination": "archive/foundation_extensions/scripts/run_eegpt_token_snn.py",
+      "sha256": "cd958209365e0d69df03448cd49d363bbbd42e05e7fab3af18493104952a7971"
+    },
+    {
+      "source": "SNN/scripts/summarize_snn_fm_token.py",
+      "destination": "archive/foundation_extensions/scripts/summarize_snn_fm_token.py",
+      "sha256": "07c49a9bd6159ae6217e6c06beb1a52d20aae2074da8f44b9c5ad19d27e11e36"
+    },
+    {
+      "source": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k64_a0p00_d0p30.yaml",
+      "destination": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k64_a0p00_d0p30.yaml",
+      "sha256": "fe5e47d473e88da5c3879dfdd180b95b7aa6b96f83206b106293bdab0c9ffb49"
+    },
+    {
+      "source": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k64_a0p25_d0p30.yaml",
+      "destination": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k64_a0p25_d0p30.yaml",
+      "sha256": "4b760b867d78025661e138150bf6b0f6e6349e7cbfefc735687342521652abe8"
+    },
+    {
+      "source": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k64_a0p25_d0p15.yaml",
+      "destination": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k64_a0p25_d0p15.yaml",
+      "sha256": "e6dfa9683fbbbf0708004f6269e599ec2ab38e17ed389d30b4dd0a47618a1970"
+    },
+    {
+      "source": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k64_a0p50_d0p15.yaml",
+      "destination": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k64_a0p50_d0p15.yaml",
+      "sha256": "a3a2e8e07b93e557ea8c2cf04baa086350f24f4a86d588807610916a928cb5ac"
+    },
+    {
+      "source": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k80_a0p00_d0p30.yaml",
+      "destination": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k80_a0p00_d0p30.yaml",
+      "sha256": "ef7ec923c8b5c5c0a972b745046bf1fe0deaca5d4496f73ae55934dbc532cd6f"
+    },
+    {
+      "source": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k80_a0p25_d0p30.yaml",
+      "destination": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k80_a0p25_d0p30.yaml",
+      "sha256": "92fcfb3f0c813309889332db5693b244e2f77f7607185f53dc7d5293a7be41c7"
+    },
+    {
+      "source": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k80_a0p25_d0p15.yaml",
+      "destination": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k80_a0p25_d0p15.yaml",
+      "sha256": "b2ec2f5961b7be3f4365a2590a209ec0d99b8a1a0adb5210a2fb10c05ef8371a"
+    },
+    {
+      "source": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k80_a0p50_d0p15.yaml",
+      "destination": "SNN/configs/prefix_rescue/shallow_temporal_lif_distill_k80_a0p50_d0p15.yaml",
+      "sha256": "3282fc568f8d54499c9c82923c7c60176e7be16c11df50bba01dd2605f3c48f8"
+    },
+    {
+      "source": "SNN/src/snn_vep/__init__.py",
+      "destination": "SNN/src/snn_vep/__init__.py",
+      "sha256": "a1799104f17fe75941e5a4cf18e416f129609f01b805c9abb6be18efaa0f70e9"
+    },
+    {
+      "source": "SNN/src/snn_vep/constants.py",
+      "destination": "SNN/src/snn_vep/constants.py",
+      "sha256": "3d9409f8190d9d8f2069074d02d6e0d4516e71385b41d5381a76543a2466669e"
+    },
+    {
+      "source": "SNN/src/snn_vep/utils.py",
+      "destination": "SNN/src/snn_vep/utils.py",
+      "sha256": "ebe4f8e8ffd626f5ae5be1298f5c3a19813f0f253d1267e1cba190059901422c"
+    },
+    {
+      "source": "SNN/src/snn_vep/configs.py",
+      "destination": "SNN/src/snn_vep/configs.py",
+      "sha256": "cec9fa61041bc4a6410d1a115e153e0a127c84b97f9598ecbd808a6eac5391db"
+    },
+    {
+      "source": "SNN/src/snn_vep/metrics.py",
+      "destination": "SNN/src/snn_vep/metrics.py",
+      "sha256": "301a146dce278e2f3823b4f3f82c58920238356fabaead4289ec890a759d8a32"
+    },
+    {
+      "source": "SNN/src/snn_vep/data.py",
+      "destination": "SNN/src/snn_vep/data.py",
+      "sha256": "a642ca165a0a0fdd03395787d75de3be42cacb0cadf0384498e932a7b78b966f"
+    },
+    {
+      "source": "SNN/src/snn_vep/encoders.py",
+      "destination": "SNN/src/snn_vep/encoders.py",
+      "sha256": "9e7464c5ea547c3e8cc99d89a86973f5b978452b7298925f5c10a8104252c324"
+    },
+    {
+      "source": "SNN/src/snn_vep/readouts.py",
+      "destination": "SNN/src/snn_vep/readouts.py",
+      "sha256": "f1bcd1d63f3ea35f098901226b1fa398eab694415943bab1cdbcc29bdf41295a"
+    },
+    {
+      "source": "SNN/src/snn_vep/models.py",
+      "destination": "SNN/src/snn_vep/models.py",
+      "sha256": "102f227f2e6d59a482c1914b204cae0f6b622758a378b8eed452486d1fad676e"
+    },
+    {
+      "source": "SNN/src/snn_vep/training.py",
+      "destination": "SNN/src/snn_vep/training.py",
+      "sha256": "dba262b794453f2496920bd119c16d927ba6f59005b3a00fea901eca993d2c0b"
+    },
+    {
+      "source": "SNN/src/snn_vep/probes.py",
+      "destination": "SNN/src/snn_vep/probes.py",
+      "sha256": "098bfb7ed248737570495fa85996082fa912cabfb6b273c507d245f37c91dd0b"
+    },
+    {
+      "source": "SNN/src/snn_vep/v2_controls.py",
+      "destination": "SNN/src/snn_vep/v2_controls.py",
+      "sha256": "bff18cc7481d75bfba2023a222548a2a4c583f0825c3b8c32729774c6943f0f9"
+    },
+    {
+      "source": "SNN/src/snn_vep/shallow_features.py",
+      "destination": "SNN/src/snn_vep/shallow_features.py",
+      "sha256": "579edd70df5c54c169d23b4ce87ee25228426ce75f606309e6deffaa43deda5f"
+    },
+    {
+      "source": "SNN/src/snn_vep/hybrid_models.py",
+      "destination": "SNN/src/snn_vep/hybrid_models.py",
+      "sha256": "b16937091e7490a31ee429a5462beb6406c75643b67aa1857ed75f92c2b2f190"
+    },
+    {
+      "source": "SNN/src/snn_vep/hybrid_training.py",
+      "destination": "SNN/src/snn_vep/hybrid_training.py",
+      "sha256": "4d0b71b7fb24a257b7a3ec68c5609f3481a31cbd030f9e9e7f4c289644ae4ec7"
+    },
+    {
+      "source": "SNN/src/snn_vep/early_exit.py",
+      "destination": "SNN/src/snn_vep/early_exit.py",
+      "sha256": "0aa714f04fa1531d2e6120fbbc3e95ae04dd58b9de02cdfa3eb1ee049533656a"
+    },
+    {
+      "source": "SNN/src/snn_vep/distillation.py",
+      "destination": "SNN/src/snn_vep/distillation.py",
+      "sha256": "763d7fb1cf3bbb16f810153814bf6fd75b832d61e735b97f647fe3ff73fba6d0"
+    },
+    {
+      "source": "SNN/src/snn_vep/eegpt_distillation.py",
+      "destination": "archive/foundation_extensions/src/snn_vep/eegpt_distillation.py",
+      "sha256": "a764751e9d2cfdb99c837be0fedfd8e444c526726dda88fab51c35df593aa948"
+    },
+    {
+      "source": "SNN/src/snn_vep/eegpt_token_snn.py",
+      "destination": "archive/foundation_extensions/src/snn_vep/eegpt_token_snn.py",
+      "sha256": "7fdb56fc9eddd8c0c6de7eaf87812188661ac7ebfb87d6757d1391bcf8a80492"
+    },
+    {
+      "source": "SNN/results/summaries/fivefold_summary.csv",
+      "destination": "SNN/results/summaries/fivefold_summary.csv",
+      "sha256": "a81ae2b26c4c13a18f921edea984cde3c0ef57be76ff63daab353ea00f56257b"
+    },
+    {
+      "source": "SNN/results/summaries/snn_v2_summary.csv",
+      "destination": "SNN/results/summaries/snn_v2_summary.csv",
+      "sha256": "d66158789aa7821b35cfa08eb59390c4d302ad54971d9efd99806469cf28af11"
+    },
+    {
+      "source": "SNN/results/summaries/snn_early_exit_summary.csv",
+      "destination": "SNN/results/summaries/snn_early_exit_summary.csv",
+      "sha256": "52d0ecd49351963e07d43b603714ebbc49bdf2d875e498b8232d94537ec62f3a"
+    },
+    {
+      "source": "SNN/results/summaries/snn_prefix_distill_summary.csv",
+      "destination": "SNN/results/summaries/snn_prefix_distill_summary.csv",
+      "sha256": "b76f708ee0353ce3746b6d6ed141af10bc9e5720568491d52e17bef3a3086e78"
+    },
+    {
+      "source": "SNN/results/summaries/snn_prefix_distill_summary.md",
+      "destination": "SNN/results/summaries/snn_prefix_distill_summary.md",
+      "sha256": "1b9028c0e54dc2c053ec19bd5dad06e58f9af07f62dbbc5f5e2cd7b3ecbde4bf"
+    },
+    {
+      "source": "SNN/results/summaries/snn_prefix_rescue_summary.csv",
+      "destination": "SNN/results/summaries/snn_prefix_rescue_summary.csv",
+      "sha256": "8de50f8bb0d45d4609bd5177b1b10dd99a30592d6e96b414f1155f6736bb52ba"
+    },
+    {
+      "source": "SNN/results/summaries/snn_prefix_rescue_summary.md",
+      "destination": "SNN/results/summaries/snn_prefix_rescue_summary.md",
+      "sha256": "bbd749d369d0ad022a8ab3f5cba1e42ed430aff5ef16d788fccbcad137469673"
+    },
+    {
+      "source": "SNN/results/summaries/snn_eegpt_distill_summary.csv",
+      "destination": "SNN/results/summaries/snn_eegpt_distill_summary.csv",
+      "sha256": "674301c34a1dfd61205d0fe7d509dbf6ce4855e121c289f54b38261bc548cc18"
+    },
+    {
+      "source": "SNN/results/summaries/snn_eegpt_distill_summary.md",
+      "destination": "SNN/results/summaries/snn_eegpt_distill_summary.md",
+      "sha256": "db438ebb28e0d2bfde010633be02f9061739443b57670da6deee27ac087fea1d"
+    },
+    {
+      "source": "SNN/results/summaries/snn_v2_summary.md",
+      "destination": "SNN/results/summaries/snn_v2_summary.md",
+      "sha256": "abd6209c4af241f9d2a7efc39926a45397d89cc492e9ab23ee7bd06ee8a5ed1f"
+    },
+    {
+      "source": "SNN/results/summaries/snn_v6_extensions_summary.md",
+      "destination": "SNN/results/summaries/snn_v6_extensions_summary.md",
+      "sha256": "f739b373406c2ea0221759149b6902ad4458a7938cdba9f9be4e9fa9f89f9700"
+    },
+    {
+      "source": "SNN/results/summaries/snn_v6d_proto_summary.md",
+      "destination": "SNN/results/summaries/snn_v6d_proto_summary.md",
+      "sha256": "e4fe7d10eb1b40679c1bfc98e2a417b14b2777f933d4c9eb104f8ea900899448"
+    },
+    {
+      "source": "SNN/results/summaries/snn_fm_token_summary.csv",
+      "destination": "SNN/results/summaries/snn_fm_token_summary.csv",
+      "sha256": "83bdd218c26ef6912a4bc9a18d8996ba2678911d265b97c007d7e3a94099c479"
+    },
+    {
+      "source": "SNN/results/summaries/snn_fm_token_summary.md",
+      "destination": "SNN/results/summaries/snn_fm_token_summary.md",
+      "sha256": "f4e04893bc54b448e4ff0d6a9a8e9f38017f6ae115ae02f4556236751fabd042"
+    },
+    {
+      "source": "SNN/results/by_config/spiking_shallow_direct/fold_1.json",
+      "destination": "SNN/results/by_config/spiking_shallow_direct/fold_1.json",
+      "sha256": "1506753ea55706f38cdb322e4a9cb5c4bd8fd1a15a46d947c1c0ca96f1c9eff0"
+    },
+    {
+      "source": "SNN/results/by_config/snn_embedding_probe/fold_1.json",
+      "destination": "SNN/results/by_config/snn_embedding_probe/fold_1.json",
+      "sha256": "7218ac076e546ef99489518dee991e3f71d05fdb87ac44377a1a231610327b80"
+    },
+    {
+      "source": "SNN/results/by_config/spiking_shallow_rate/fold_1.json",
+      "destination": "SNN/results/by_config/spiking_shallow_rate/fold_1.json",
+      "sha256": "8949f0f67ece10d4e0d8d8c3f31b1f91a2d0f4c3b024dde9b008741abd887cce"
+    },
+    {
+      "source": "SNN/results/by_config/spiking_shallow_signed_delta/fold_1.json",
+      "destination": "SNN/results/by_config/spiking_shallow_signed_delta/fold_1.json",
+      "sha256": "058200e66ba115f4e9f4d2e5c26fa8c6316279cc2d3a6a63228c79d00632f97e"
+    },
+    {
+      "source": "SNN/results/by_config/spiking_shallow_delta/fold_1.json",
+      "destination": "SNN/results/by_config/spiking_shallow_delta/fold_1.json",
+      "sha256": "f852cb329652f52408bd01fcc472247847a76b8eb24260875e69f1b0c2a1b007"
+    },
+    {
+      "source": "SNN/results/by_config/snn_embedding_probe_delta/fold_1.json",
+      "destination": "SNN/results/by_config/snn_embedding_probe_delta/fold_1.json",
+      "sha256": "f476ce511b7771e5d9c94260ed943ad373426b13233623ec00cbb1162695ac77"
+    },
+    {
+      "source": "SNN/results/by_config/snn_embedding_probe_signed_delta/fold_1.json",
+      "destination": "SNN/results/by_config/snn_embedding_probe_signed_delta/fold_1.json",
+      "sha256": "fca2fa4adc00f4cce8d811d2a86996694a764ec94848c0e8d5f8c6aac9330ba4"
+    },
+    {
+      "source": "SNN/results/by_config/snn_embedding_probe_rate/fold_1.json",
+      "destination": "SNN/results/by_config/snn_embedding_probe_rate/fold_1.json",
+      "sha256": "7023e513116f72dcecb19c18257203977b57d61e7bda73167fa6e8a3105a586c"
+    },
+    {
+      "source": "SNN/results/by_config/spiking_shallow_adaptive_signed_delta/fold_1.json",
+      "destination": "SNN/results/by_config/spiking_shallow_adaptive_signed_delta/fold_1.json",
+      "sha256": "29c952188eeff201cb17ba233fff45189809f98420a083e3972783d289162e28"
+    },
+    {
+      "source": "SNN/results/smoke/summaries/fivefold_summary.csv",
+      "destination": "SNN/results/smoke/summaries/fivefold_summary.csv",
+      "sha256": "f0dcdfa21111a9afc44824c59ff0f17418a43d5ba6bd8dd6c363d6f1b964ce77"
+    },
+    {
+      "source": "SNN/results/smoke/by_config/spiking_shallow_direct/fold_1.json",
+      "destination": "SNN/results/smoke/by_config/spiking_shallow_direct/fold_1.json",
+      "sha256": "db651f83c5a0b3fb0d9ad1ad2acb45887d2b8dcd090610c09b69e9c59453b851"
+    },
+    {
+      "source": "SNN/results/smoke/by_config/snn_embedding_probe/fold_1.json",
+      "destination": "SNN/results/smoke/by_config/snn_embedding_probe/fold_1.json",
+      "sha256": "154ace4562797c0a9cf6a65fb5cd05b1dbbc67d05d2e9b01d2ae5b8eb84e8cf6"
+    },
+    {
+      "source": "SNN/results/v2_smoke/v2_controls/delta_flat_control/fold_1.json",
+      "destination": "SNN/results/v2_smoke/v2_controls/delta_flat_control/fold_1.json",
+      "sha256": "157fd055f2dfec5573fdef0d7b6cf120de440aadf242b11f630e10a51deb3d3f"
+    },
+    {
+      "source": "SNN/results/v2_smoke/v2_hybrid/shallow80_lif_head/fold_1.json",
+      "destination": "SNN/results/v2_smoke/v2_hybrid/shallow80_lif_head/fold_1.json",
+      "sha256": "f0d9572bf2719356f2cd65535741b06764dc96fe62f44374a11730520fa1f850"
+    },
+    {
+      "source": "SNN/results/v2_smoke/v2_hybrid/shallow80_lif_head_embedding_probe/fold_1.json",
+      "destination": "SNN/results/v2_smoke/v2_hybrid/shallow80_lif_head_embedding_probe/fold_1.json",
+      "sha256": "e9afe737bd0b79e585a858ec6e8f79491c40e43a332d8a51c9c2c9994c7484a5"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_lif_head/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_lif_head/fold_1.json",
+      "sha256": "0e17bd40ff66d17214e0f0075ea6a759c4d7dec72627b3a1c763f87bc49a17e6"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_lif_head/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_lif_head/fold_3.json",
+      "sha256": "14e81048d054b9ddac753f30008fc1324ffca0e8a1918b6dd2d25a83133b9223"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_lif_head/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_lif_head/fold_2.json",
+      "sha256": "d008a9a5ce3ea8b499cf5c51bbcae2973dce4c703ab50db3e8e1b98eb246589c"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_lif_head/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_lif_head/fold_5.json",
+      "sha256": "9cdabacf96dc6f0b07c6cc7a8faa9e975b53f081759ed518c9867a182f15595f"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_lif_head/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_lif_head/fold_4.json",
+      "sha256": "6bcc083d321cf8d24a749e9b6ba644d66840e518b6f29ef11ccfd84c9b5db0d6"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_plif_head/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_plif_head/fold_1.json",
+      "sha256": "43f7a3e874f9243269cc3c54702dd703257123c0988c333fb1f86a0c1ed14d51"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_plif_head/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_plif_head/fold_2.json",
+      "sha256": "58380816e267308ecce42ee83ea8c5d70dacc588a2b39e41b57a8d88fbbaed90"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_plif_head/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_plif_head/fold_3.json",
+      "sha256": "6e57a8adbf2dda157bb7dfb70d505f47de48170530d381f671f86db52c74010d"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_plif_head/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_plif_head/fold_4.json",
+      "sha256": "9d0b98c54abee8363c721cb68527a4c51e253bb393ea850ec67d8c9c1e9fe006"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_plif_head/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_plif_head/fold_5.json",
+      "sha256": "e67379250a56b8c51fdc6b0a1a75c1df85da9b36136025eb3f4c7320205be2a2"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_lif_head_embedding_probe/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_lif_head_embedding_probe/fold_1.json",
+      "sha256": "f9a23de82864ecd1a03ef76b61795b624a27b30bbfd8ea22298469cec6e305fc"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow80_plif_head_embedding_probe/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow80_plif_head_embedding_probe/fold_1.json",
+      "sha256": "e6e6f60264242d7164e489bd078b9769bd68484a2df2b38e7703bc276d0a59fd"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_1.json",
+      "sha256": "eab030d0f051b3ba7aef90d53d46faf93c42d62ef9d5e26bb776ff5ad472532c"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_2.json",
+      "sha256": "5680780d492db45767724e44bbfbc9ab85f1d07f1af27ab35465e9e77b5f797d"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_4.json",
+      "sha256": "0797817c501c7c5ce967a73f97781adab350489da4fe1d1480a43e8ba8f6c855"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_3.json",
+      "sha256": "2d0ff140371959baa9709ca4ca34cfbc60d22430a1543f189b5056d9fb4fba55"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head/fold_5.json",
+      "sha256": "c3e6bef62537160c397f6de2783ac95d7328c0493dc54d363b604cd4b0e76240"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_1.json",
+      "sha256": "431fae39fa794b94bfc83c89c65fac8881ab2f2373b0ecd390e32be7d29b808e"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_2.json",
+      "sha256": "229e6d9c684902143a2e0e6a572847ab4a63ab0a1d4c133752d029bc5db9aaf2"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_3.json",
+      "sha256": "01fca26275492fdcbd64cf47d8204a2d4a2b1fea7b47dabb0ef5e497fbaf10e6"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_4.json",
+      "sha256": "49729ea4bc873b60fc314efecb3bb92c44e0dc9ba5b1b706d6bac0c551297adc"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe/fold_5.json",
+      "sha256": "9d6603c80da523129efbd834ded8e510f90563f8e640b236bfc3fcd562886c73"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_1.json",
+      "sha256": "8c78cf6da9a304755069f3cd07bf080c3a96f4b55305d7387e93041ff217bd6b"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_2.json",
+      "sha256": "5a68c3478fa1145404c140e45a33a478a6c2145a64acf4c419af26c639a18fee"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_3.json",
+      "sha256": "f7b7f2bb306e99f5c4a34986e9c577285bb9c507c68da62e7199bc467ff51249"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_4.json",
+      "sha256": "34897543b2e2ec9bbaa5d6d915e8080eb1254d4a7610c40806e0ff8103c973dd"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_count/fold_5.json",
+      "sha256": "b58a44af46f8ced852d044884f0f183f47484fff132514d387f7491bcc6d4378"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_1.json",
+      "sha256": "26b6033db82559489e09195e1694fab5c2433634df4026ec6838278593884da9"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_2.json",
+      "sha256": "88b90325332f5012056f67b2e04af101d87d40860582de7926d854456cf4b523"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_3.json",
+      "sha256": "3e7a20c8bb5127678c78aed2e206d5dbfc4bab4aaf65881628236df1c23ae50b"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_4.json",
+      "sha256": "95313bc64f2cec3e9307920dc2bb8a5419ae41ec014c03df9faa4a8ab18186f8"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_mean_membrane/fold_5.json",
+      "sha256": "14dc28133e6356aabf036cf0bf36dd7e257cc77cbf65255f401c8adbf525abd8"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_1.json",
+      "sha256": "67f4942473403353b305baee58b9f9ac238b9cfe8fa6839e0360a258dd555d20"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_2.json",
+      "sha256": "cd92b4f612bc78ddf7d19e1ef1bb030e6fd5a396318b002f1c8dd25f0c4676b4"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_3.json",
+      "sha256": "b4ddf3e077c87787391de391c43e3a52df8027d0b806cca07baf451e071ca740"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_4.json",
+      "sha256": "e35515bf585530c140d1082c62452b0fc7fd58af3e886f10411193d91a3f301e"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_final_membrane/fold_5.json",
+      "sha256": "b20099454d84d4dd43a1741fffdb172dc9290c3014b124c44f46a3db01923143"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_1.json",
+      "sha256": "e7cabfda0b9b57029f38fabf1ff787f3dcb957e98a5205657017fa6644a17801"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_2.json",
+      "sha256": "0b6b417076cdae3b887e1304b2cddfd1db1045091314ecccf89964e3acb45f83"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_3.json",
+      "sha256": "21c0e392072ea7b4c15676a0d48658a63902b9777aece3e768e0b69375977b47"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_4.json",
+      "sha256": "2ef5f299e8f567dae9f57e72d1b73897e8fc80a11fcb8ed56fc68ec12e1f3f15"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_max_membrane/fold_5.json",
+      "sha256": "59dd60174ed6d00f3f619d8c087c678296b8b785d72a8cbc0884bf620bc5ba78"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_1.json",
+      "sha256": "ab83ab5d4dc20da75163f8d9b064f3912b6b9e94fdbdd2e1abe21da41ef3f8a8"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_2.json",
+      "sha256": "1d39b301f17ee4508d9ce4a1809bf388caee96b0c88180770392a41f14104f31"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_3.json",
+      "sha256": "237dc3e63fadbbc32b4d3c3d324838037efa98b2c4afea72e170060d83aad440"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_4.json",
+      "sha256": "e45ca1b6979ded43a881f3e09ad7abb238385575b295f837de94eaf761e7f297"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_gated_lif/fold_5.json",
+      "sha256": "c587aeba7b358726f3de26b1aad4e0cdd6f43722f8177dd45176870b275e202b"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_1.json",
+      "sha256": "8b559b0fd1fd87508b5086de50c6d0c5e8d56dd513c7f30b39f7c9c073e6f256"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_2.json",
+      "sha256": "0b28a68a81ac5982195ad54816923c79c0404977b1bdb055471ed80dde18e644"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_3.json",
+      "sha256": "4472fb36af07129b042e93a5039482901ea9b16018f76ab1a5fb0eebe7df57a9"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_4.json",
+      "sha256": "949523de111afa3c57367a8a77477f68771644206d3d7d53ee3162ebad9a7cf7"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_5.json",
+      "sha256": "3e101cc5695204c29dda5065bd9ddb33b316cc01991d64be6802dcc01ab60a83"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_windowed_spike_lif_4bins/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_windowed_spike_lif_4bins/fold_1.json",
+      "sha256": "82f008cfd0e31ffc1d61c405ff9a92da246e094b0dc3a649542ee3463c3bf75e"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_windowed_spike_count_4/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_windowed_spike_count_4/fold_1.json",
+      "sha256": "debf8092d68a7c6e1482448ad64cef1e856903b876f810bf741d5c16f79b369e"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_mean_late_fusion/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_mean_late_fusion/fold_1.json",
+      "sha256": "9cc5d35698ccda26941811901f261967714a587d5f9667b5d4ef97d7cab365d4"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_multiscale_gated_lif/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_multiscale_gated_lif/fold_1.json",
+      "sha256": "6e59ebcc3910624dfd596b0d2145b9f72c3882660c9ce0e66c896c24859a5a6a"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_1.json",
+      "sha256": "1bc1d15ec84d33d0df7fdc5d0d1bac40f565a36bd5237ab64dd02fd8309b55ee"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_2.json",
+      "sha256": "15b4a8869ea3bf55da77761c4657ff6583279457b0b59d4bb957759ec074cc5d"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_3.json",
+      "sha256": "e3dfa929659ad4f017b76266a6e432cf79171fef208d64f0f5c9d54893707184"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_4.json",
+      "sha256": "cc63fd8076061f41198d156229841bf4ff75b49c9aa92b00f9737dbb56cc8cbb"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_5.json",
+      "sha256": "3bb42ffd131ad97a4692b44da5f6ccf517bbd5e0a8a490d60e94541a1502232a"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_1.json",
+      "sha256": "1948abaab00ca5a23e2d17b8e6848358325e7c7139203c0ba2dd1f1acfb24431"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_2.json",
+      "sha256": "4246091061011a6260c92392b0b3a80cd504c38d825c9462ef6a623cdc622baf"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_3.json",
+      "sha256": "47cbf7d7192d5081c88622f8b39ed1ab957b5c993a28440489296b17beb9499b"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_4.json",
+      "sha256": "cfa6b6937116b9cd0768422bde8f84347155f415a98143c81cfa5a23260fc34a"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_5.json",
+      "sha256": "a37539d3c9feadf6f563061d6c3a6ffc147b0cfe0fa48e394decb7c4b55955b7"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_1.json",
+      "sha256": "95b705e6cdca871da92947c56c28c5ee31b644f7fb25d7c7291af9a948808dfa"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_2.json",
+      "sha256": "6ea96c74f7e6f4a14dae07df39bbea3b0bea7a73ef1e94bb6994dfdc540819a6"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_3.json",
+      "sha256": "d7026d0cc11a63b49e37aa18b31b0317ac5c721b84b13379eee3360ef1484c11"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_4.json",
+      "sha256": "8601f3abfe835cbceec52e301d44bb77e810eea4f8e33c95f57daa828550c24e"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_5.json",
+      "sha256": "509f740d94df6ffb3ff3da56fab29e6703920546ba7b4367ffebfeb313a1d7a6"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_1.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_1.json",
+      "sha256": "48ff12cccfb0cbc65ed69a1c439a12f9d76b697a13acc9b33ffd1d8995fe3d33"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_2.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_2.json",
+      "sha256": "f1454d96d3445311ac18a5d076ddff5e2306d524007ba93aeb987c631a1d76bd"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_3.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_3.json",
+      "sha256": "9ac85278628a29e2af3d250b78d93b174094c082f0475c99033703bdf9c0eb8d"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_4.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_4.json",
+      "sha256": "b647ea1c1990593f01682343064901def8931474148821ed2561850cb10c81b3"
+    },
+    {
+      "source": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_5.json",
+      "destination": "SNN/results/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_5.json",
+      "sha256": "9bbca21697e62c1c2987cb02d2e82d8225d1425e61ff9a2c755d6457790c825d"
+    },
+    {
+      "source": "SNN/results/v2_controls/raw_flat_control/fold_1.json",
+      "destination": "SNN/results/v2_controls/raw_flat_control/fold_1.json",
+      "sha256": "71bd31857431b01b30e3bf98b6de25b9941b7c56dd8854eaca1b640edfbac1e7"
+    },
+    {
+      "source": "SNN/results/v2_controls/raw_flat_control/fold_2.json",
+      "destination": "SNN/results/v2_controls/raw_flat_control/fold_2.json",
+      "sha256": "dedae1d9994475d634aaef4be20fb5f2aef1f4299c5d7ec44a0513a8418e3013"
+    },
+    {
+      "source": "SNN/results/v2_controls/raw_flat_control/fold_3.json",
+      "destination": "SNN/results/v2_controls/raw_flat_control/fold_3.json",
+      "sha256": "65048a39e01613b00aab4d398df71448654be8003ac0146522f77ab1c5d59118"
+    },
+    {
+      "source": "SNN/results/v2_controls/raw_flat_control/fold_4.json",
+      "destination": "SNN/results/v2_controls/raw_flat_control/fold_4.json",
+      "sha256": "9fa91fe54b72de5d812078905ec589f865e387e29d1f30e61939acea835812d6"
+    },
+    {
+      "source": "SNN/results/v2_controls/raw_flat_control/fold_5.json",
+      "destination": "SNN/results/v2_controls/raw_flat_control/fold_5.json",
+      "sha256": "05a8d6f61156e8c4adc5055c141d9d46f86d64d0beafdb890c886301e8a36ca0"
+    },
+    {
+      "source": "SNN/results/v2_controls/delta_flat_control/fold_1.json",
+      "destination": "SNN/results/v2_controls/delta_flat_control/fold_1.json",
+      "sha256": "234886eacb8cf1e8f50e8804bc46121a8ea26c09840e39f0cc33eac7eec8b7d5"
+    },
+    {
+      "source": "SNN/results/v2_controls/delta_flat_control/fold_2.json",
+      "destination": "SNN/results/v2_controls/delta_flat_control/fold_2.json",
+      "sha256": "7de8571d169e81345e0ba8fdc7ac54cd005ddc023d53fdf728140c006bc5d42b"
+    },
+    {
+      "source": "SNN/results/v2_controls/delta_flat_control/fold_4.json",
+      "destination": "SNN/results/v2_controls/delta_flat_control/fold_4.json",
+      "sha256": "c1e2d0362363b3030beff0c633667d596dbb5b4c1ab829b3f43aa9f2d17b686b"
+    },
+    {
+      "source": "SNN/results/v2_controls/delta_flat_control/fold_3.json",
+      "destination": "SNN/results/v2_controls/delta_flat_control/fold_3.json",
+      "sha256": "ffcb4f232c26af1f15f45c1cbb3dcaea7d7a03776e65dfb7772c9658a4781f7f"
+    },
+    {
+      "source": "SNN/results/v2_controls/delta_flat_control/fold_5.json",
+      "destination": "SNN/results/v2_controls/delta_flat_control/fold_5.json",
+      "sha256": "69f5f261f6b8ecdcd99c1dc6525c186aeb2e6d218ec3051a81f78e937dcd8acf"
+    },
+    {
+      "source": "SNN/results/v2_controls/signed_delta_flat_control/fold_1.json",
+      "destination": "SNN/results/v2_controls/signed_delta_flat_control/fold_1.json",
+      "sha256": "665797de02fcf8414147e9d02c9fb5a50c4c77607335525fd58f9e59c445bbdc"
+    },
+    {
+      "source": "SNN/results/v2_controls/signed_delta_flat_control/fold_4.json",
+      "destination": "SNN/results/v2_controls/signed_delta_flat_control/fold_4.json",
+      "sha256": "0d01ed5b817b0b2c7318a47820ba02385117058affd1e02293db8b4ebefd1f49"
+    },
+    {
+      "source": "SNN/results/v2_controls/signed_delta_flat_control/fold_2.json",
+      "destination": "SNN/results/v2_controls/signed_delta_flat_control/fold_2.json",
+      "sha256": "82c0fca1eab77311845e7bc6fdb64202355f0d74c2210e10b5b72ff296649970"
+    },
+    {
+      "source": "SNN/results/v2_controls/signed_delta_flat_control/fold_5.json",
+      "destination": "SNN/results/v2_controls/signed_delta_flat_control/fold_5.json",
+      "sha256": "b7b3ea297a1f64c4082c3dd9a7cd63eb34f609fa2153faa9be66564547f19492"
+    },
+    {
+      "source": "SNN/results/v2_controls/signed_delta_flat_control/fold_3.json",
+      "destination": "SNN/results/v2_controls/signed_delta_flat_control/fold_3.json",
+      "sha256": "4bf9cc61e84fe3558aa8fabf23460f88da701ef39a07ec90c923b60760cb49d4"
+    },
+    {
+      "source": "SNN/results/v3_smoke/v3_early_exit/shallow_temporal_lif_head/fold_1.json",
+      "destination": "SNN/results/v3_smoke/v3_early_exit/shallow_temporal_lif_head/fold_1.json",
+      "sha256": "d3b411ada5c6d4d9e5349143eefadd15a050a958bd21eedf4c1945a91a981b7e"
+    },
+    {
+      "source": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_2.json",
+      "destination": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_2.json",
+      "sha256": "d03237ed9a7ba8dc292928607a87e8798e36237e827c8fa39d4c6b99c4bdf466"
+    },
+    {
+      "source": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_1.json",
+      "destination": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_1.json",
+      "sha256": "470d712631979d8396137333fd3cd435e1910a168e835d122b767298571b6bf6"
+    },
+    {
+      "source": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_3.json",
+      "destination": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_3.json",
+      "sha256": "85dc8184873a0e0574a28aab917e74638ebbda2c91b887d96cf86fa8a7c1eec6"
+    },
+    {
+      "source": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_4.json",
+      "destination": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_4.json",
+      "sha256": "d3e381813665b3867387da697ee8e55c315a3c7ecabbc1b8e2026275ed70b212"
+    },
+    {
+      "source": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_5.json",
+      "destination": "SNN/results/v3_early_exit/shallow_temporal_lif_head/fold_5.json",
+      "sha256": "488285c8881d1dc6168aa4110d722eb574539c0bd0976dc7b00538dbefdff24f"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64/fold_1.json",
+      "sha256": "09a34425f924dc8a4746ba5302847068c4b6e9d4bed0b1a2b6689ee504553349"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k48/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k48/fold_1.json",
+      "sha256": "507777d190cc40e13d3f1fcd0e302e895559536bbeb1f211798a8351dba02b58"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80/fold_1.json",
+      "sha256": "c4c7cd8e59ccf6713b02de81cc5d8be3f2a0c82d886156e9a6004cca71ade19a"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p00_d0p30/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p00_d0p30/fold_1.json",
+      "sha256": "d1c1c481e4eb5605bba26daccbebc773f55317825dd7bda8136e8e56026a53a1"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p50_d0p15/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p50_d0p15/fold_1.json",
+      "sha256": "bfc16b74f3b5c8ca049d3eda6a0f924de36299440f60484bdba2773c5140fb24"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_1.json",
+      "sha256": "2d2ac9e17259366523a6a7297e218aa5f850e71d0913a6dd2f599d258cdd4b2b"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_2.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_2.json",
+      "sha256": "af360cc1c16e029fb3ee25e8a33d18ffb9bbfea1e8b8a534d8dcb1716fbc9a73"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_3.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_3.json",
+      "sha256": "1d5607a54b6e11ccf24eb75126baaaa0424c4c07c5e3b66fea5647b757e688c8"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_4.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_4.json",
+      "sha256": "8366ca3dfd5bdeb90235f20475cdfb9ed41d6a477b9c7ef19a0fbc7cebd0bce4"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_5.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_5.json",
+      "sha256": "7e69e4bfc2835ec12fa1f9c2eb53cb1b54547186ccc5ac943aad0fe46695414e"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p30/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p30/fold_1.json",
+      "sha256": "b0238a116b9f86745feb80f32d9e276b613d7c92416cbe387304afd3adb66a8b"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p25_d0p15/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p25_d0p15/fold_1.json",
+      "sha256": "98df1dd0181745fbb415d28eb266d5544450353c7ed304f8db36d89e482a7a6f"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p00_d0p30/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p00_d0p30/fold_1.json",
+      "sha256": "bf25c644be1e90b59e76e2ba65786462e222678288c0168ed0c9b8e54d4d96ed"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p25_d0p30/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p25_d0p30/fold_1.json",
+      "sha256": "8b4616f5d245740e58334f5a3ac59b1fde66d5725c9e826b1af277d4fab34a44"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_1.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_1.json",
+      "sha256": "0f968bfda24e8bccbd9567ddab322e691a3135acb80d398bbae6bda140c985e0"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_2.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_2.json",
+      "sha256": "b1410f83de303f45dc8eba082bb733fcd7e178b9ba61cc2d26ea682fe7c323c3"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_3.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_3.json",
+      "sha256": "a4908e9dfb60a3a310c10e25d81c15b11c3771f603e646c2a8418e59a3b2d488"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_4.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_4.json",
+      "sha256": "d8e223a432f127c28f7c2f29054dc3f9234f10c26973248cd29a9516832a850c"
+    },
+    {
+      "source": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_5.json",
+      "destination": "SNN/results/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_5.json",
+      "sha256": "d72e19177ebabf53e467b6c9e27f654db27d1320d50b7923b9f9317f6b404653"
+    },
+    {
+      "source": "SNN/results/smoke_v5_eegpt_distill/v5_eegpt_distill/shallow_temporal_lif_eegpt_distill_full104/fold_1.json",
+      "destination": "SNN/results/smoke_v5_eegpt_distill/v5_eegpt_distill/shallow_temporal_lif_eegpt_distill_full104/fold_1.json",
+      "sha256": "0d66395f0718f4404be78c881c4357f626659376fd02dc8564f823c568f08b00"
+    },
+    {
+      "source": "SNN/results/smoke_v6_gated_lif/v2_hybrid/shallow_temporal_gated_lif/fold_1.json",
+      "destination": "SNN/results/smoke_v6_gated_lif/v2_hybrid/shallow_temporal_gated_lif/fold_1.json",
+      "sha256": "6b6ff1417b8fbd35c1fbeb13b4e7b66aad44cd885ea8027efdaa3b0a5be66149"
+    },
+    {
+      "source": "SNN/results/v5_eegpt_distill/shallow_temporal_lif_eegpt_distill_full104/fold_1.json",
+      "destination": "SNN/results/v5_eegpt_distill/shallow_temporal_lif_eegpt_distill_full104/fold_1.json",
+      "sha256": "76e43acce27a0039d20eb20aaa2331ce842e1a320c81abb74ec79660e7528ad5"
+    },
+    {
+      "source": "SNN/results/smoke_v6_extensions/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_1.json",
+      "destination": "SNN/results/smoke_v6_extensions/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_1.json",
+      "sha256": "9192cdacf42926f9bda00f0cdcb6e1c62170f51cb249d3e05353a1c170612963"
+    },
+    {
+      "source": "SNN/results/smoke_v6_extensions/v2_hybrid/shallow_temporal_windowed_spike_lif_4bins/fold_1.json",
+      "destination": "SNN/results/smoke_v6_extensions/v2_hybrid/shallow_temporal_windowed_spike_lif_4bins/fold_1.json",
+      "sha256": "4fe5cfc76193295ecf29551bb2f63e9448fda870cfa91b0be187e85e7016791b"
+    },
+    {
+      "source": "SNN/results/smoke_v6_extensions/v2_hybrid/shallow_temporal_windowed_spike_lif_8bins/fold_1.json",
+      "destination": "SNN/results/smoke_v6_extensions/v2_hybrid/shallow_temporal_windowed_spike_lif_8bins/fold_1.json",
+      "sha256": "fb732598a52dfbbfac10d9db5fb267fd093089f44d0ce8e550001b69a72a11fa"
+    },
+    {
+      "source": "SNN/results/smoke_v6_extensions/v2_hybrid/shallow_temporal_multiscale_gated_lif/fold_1.json",
+      "destination": "SNN/results/smoke_v6_extensions/v2_hybrid/shallow_temporal_multiscale_gated_lif/fold_1.json",
+      "sha256": "e60790c573c7b86bab1ddd1a40cae36fe4da974ab31d69ce2247f6cc0b0d1daf"
+    },
+    {
+      "source": "SNN/results/smoke_v5a_extensions/v2_hybrid/shallow_temporal_lif_head_embedding_probe_windowed_spike_count_4/fold_1.json",
+      "destination": "SNN/results/smoke_v5a_extensions/v2_hybrid/shallow_temporal_lif_head_embedding_probe_windowed_spike_count_4/fold_1.json",
+      "sha256": "39895610597cd854c55585674a65709ea76a020603b2109e6d2f93957b811235"
+    },
+    {
+      "source": "SNN/results/smoke_v5a_extensions/v2_hybrid/shallow_temporal_lif_head_embedding_probe_windowed_spike_count_8/fold_1.json",
+      "destination": "SNN/results/smoke_v5a_extensions/v2_hybrid/shallow_temporal_lif_head_embedding_probe_windowed_spike_count_8/fold_1.json",
+      "sha256": "847faf9d01508b0f8a09b3b3225f33f3b15083243f2c3ce15f439cb353fa01f9"
+    },
+    {
+      "source": "SNN/results/smoke_v5a_extensions/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_mean_concat/fold_1.json",
+      "destination": "SNN/results/smoke_v5a_extensions/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_mean_concat/fold_1.json",
+      "sha256": "5a3b4ebcca5a491cdfb56f9464567bf42b293bc8b80eabe428b09add5c46f473"
+    },
+    {
+      "source": "SNN/results/smoke_v5a_extensions/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_mean_late_fusion/fold_1.json",
+      "destination": "SNN/results/smoke_v5a_extensions/v2_hybrid/shallow_temporal_lif_head_embedding_probe_spike_mean_late_fusion/fold_1.json",
+      "sha256": "a8f7a174331d808e4bbb2d737448ef206aeb6d10636aacdbe6adea3d4382602c"
+    },
+    {
+      "source": "SNN/results/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_1.json",
+      "destination": "SNN/results/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_1.json",
+      "sha256": "a4a03525710221ccd54d7b7510a804cbaa7e97eb400d57e7b7e619de556476bf"
+    },
+    {
+      "source": "SNN/results/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_1.json",
+      "destination": "SNN/results/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_1.json",
+      "sha256": "fb6227cacbe317e0c60c1807623f656ed139b4eb9e9701660c5efb9680fe99d3"
+    },
+    {
+      "source": "SNN/results/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_1.json",
+      "destination": "SNN/results/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_1.json",
+      "sha256": "e4b1f56aa3e6a16ea0ba3cb06e125b50b1165929f0176a97d602e320ef56bcaa"
+    },
+    {
+      "source": "SNN/results/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_1.json",
+      "destination": "SNN/results/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_1.json",
+      "sha256": "2363c45e746408bfb104b610be8a5330f749b6954b6ad62ec847611d8ce7472d"
+    },
+    {
+      "source": "SNN/results/smoke_fm_token_snn/fm_token_snn/eegpt_token_spike_aware_gated_lif/fold_1.json",
+      "destination": "SNN/results/smoke_fm_token_snn/fm_token_snn/eegpt_token_spike_aware_gated_lif/fold_1.json",
+      "sha256": "0f886059b1b7db13b5579afb920869a03bba277e484c5ad3216c02a362d3e119"
+    },
+    {
+      "source": "SNN/results/smoke_fm_token_snn/fm_token_snn/eegpt_token_spike_aware_proto_lif_ce/fold_1.json",
+      "destination": "SNN/results/smoke_fm_token_snn/fm_token_snn/eegpt_token_spike_aware_proto_lif_ce/fold_1.json",
+      "sha256": "a3090831687776623b799dfc0977173cd9774953810b07f1bc4b5135373d9474"
+    },
+    {
+      "source": "SNN/results/fm_token_snn/eegpt_token_spike_aware_gated_lif/fold_1.json",
+      "destination": "SNN/results/fm_token_snn/eegpt_token_spike_aware_gated_lif/fold_1.json",
+      "sha256": "de2c0c793a168bf058ae6deb2e753161c0c8e4970044ce134bfd458a4d09a4ab"
+    },
+    {
+      "source": "SNN/results/fm_token_snn/eegpt_token_spike_aware_proto_lif_ce/fold_1.json",
+      "destination": "SNN/results/fm_token_snn/eegpt_token_spike_aware_proto_lif_ce/fold_1.json",
+      "sha256": "d3d27ba872cf407a0c04d2c3dc365aa421f5b26370e615280291bd63a71870d8"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/spiking_shallow_direct/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/spiking_shallow_direct/fold_1.pt",
+      "sha256": "685826c29a257668497cf5ed695f2fccdc5e49144be1b33f5f3a01cf5949f237"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/spiking_shallow_rate/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/spiking_shallow_rate/fold_1.pt",
+      "sha256": "14ba77561cdfa607d970acf473fa0a45745eda92ab3f91e49138ac5cf9f47484"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/spiking_shallow_signed_delta/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/spiking_shallow_signed_delta/fold_1.pt",
+      "sha256": "6dff0d9c6eafb0bd93853b6d442d116e6828f55ac751f105a9e1eb8840deab40"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/spiking_shallow_delta/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/spiking_shallow_delta/fold_1.pt",
+      "sha256": "059752e4fd65bc36e3f1af01c7c427a628f71f46ca6e29ea1e11927922736296"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/spiking_shallow_adaptive_signed_delta/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/spiking_shallow_adaptive_signed_delta/fold_1.pt",
+      "sha256": "9740a51bbd4379b5298f0576bdbd7095add5f8cad26702e6e23729ebcabdd250"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_1.pt",
+      "sha256": "519704a13cf749305216371709674fd0592a66246428ec9fbbe686571ae4237f"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_3.pt",
+      "sha256": "62115933208fba86f6e08b5a92e6c8fa761510580a1a0fb868e8e208659ba15b"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_2.pt",
+      "sha256": "aaecd551a7c2e8c5d82a0395e0389a4fa13518309697a4ff52695711f0ce9caa"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_5.pt",
+      "sha256": "bd20197baaa8375258fec634d1f4238e44388a700f0c8e0270c856abad8ff4fc"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_lif_head/fold_4.pt",
+      "sha256": "e8ca606d85d77e31e0f8466d1c93fba9dbff1d075327ca6607c05abb95b8273d"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_1.pt",
+      "sha256": "ec5de1ca28a89a4ed882cb592b0381b3c9d44de8e77bed259ed3d7f6e1b0f992"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_2.pt",
+      "sha256": "65432be60944d34f0c31942654b5f79bf88debe927fd1f0d320d0c76ddb832d6"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_3.pt",
+      "sha256": "10d8e3e10f909101139b0597f61ef61ca9b5152840e9944cfeedc6a5ade0768f"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_4.pt",
+      "sha256": "c8ec4a0a522fec337249a3d5632b7c6d5677ee230b2e488a7e90ad3a161e89b2"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow80_plif_head/fold_5.pt",
+      "sha256": "c4109b5abc01d7765cdf4402b3a5ee5740cf094cb9a0bec147f7e85dd76a5f12"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_1.pt",
+      "sha256": "1a00ae100435c5487caa764d1a1a95c7375174469894e343154839f159934db1"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_2.pt",
+      "sha256": "e62158b9fee8f938638bef771a49864bec2a0625e56856d028d17710216458ca"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_4.pt",
+      "sha256": "64b910e268dbd9953833c1565aa4968265b6a31b4e12cd9821feb0df0efe3a96"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_3.pt",
+      "sha256": "30731d9d9cd83aebbdd04c94e9345036763e7984e4087f954cac6d3fe94487db"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_5.pt",
+      "sha256": "4d3f2b7103637322db3071db6f0420624a3555abc425674fdda2e4dce555b38c"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_1.pt",
+      "sha256": "cbbc88559fff6e4c92a78a4a5a2fccd7813f1215b1a6f44fe4577663bca4ef9c"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_2.pt",
+      "sha256": "e4c34a7789018d7f141134457146807938317e1129514d082fb444a334479a88"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_3.pt",
+      "sha256": "60ce42bd157f2d2e3018e94bffe31373c64fec51b5397c6d63ac1cb600c6d343"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_4.pt",
+      "sha256": "e1cdaa9f51304a9c58ff6211800d2a710a7619a4f02922ccde588ed20adf47b9"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_gated_lif/fold_5.pt",
+      "sha256": "0fd284383fc8be4e9562435e6c2a01179adfa2c939de8df049d3963073e03f3a"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_1.pt",
+      "sha256": "1f477ad62e6b72f09e6566521a50c5e613dc9d8c47418b1d0d9b7b651c28163a"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_2.pt",
+      "sha256": "6336ae39cc1dcb63eb2245dcb6cf26dd5941c20eb24a78617177d6e228b28f02"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_3.pt",
+      "sha256": "9e288695a4a32c7f125b6fbbd1d3d5515873d92d23cbb50b12207c933f044cb7"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_4.pt",
+      "sha256": "fe21113de5559e8d89b3d6f52d5c3f23d55ce79d48a57384a78efc4fa9fa5dd3"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_5.pt",
+      "sha256": "66aee19c4a46e5f58db69eeadef0040ce0ad80782045f2fbb87c49e6d7eeb125"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_windowed_spike_lif_4bins/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_windowed_spike_lif_4bins/fold_1.pt",
+      "sha256": "82069c3e5f9f0fbb67860a1ddedc92d25a516ffba42f081f2e57be7550869a79"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_multiscale_gated_lif/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_multiscale_gated_lif/fold_1.pt",
+      "sha256": "27d1084b420538cb6101260c303fece2e354df294c7ac0b68b117adfe78e6d4f"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_1.pt",
+      "sha256": "d33961f07a7f01e13408d62273feeee6016f3e4671227ec56e6b119ca2182678"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_2.pt",
+      "sha256": "8497e5ffb225ffe6289dcc06f76444d2e5c4be288b6c1f701746c378cd3ab878"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_3.pt",
+      "sha256": "a296ce136cfbefcdd9e975764d8d89b01ee02f491a0bfb32ccdfcd6941509957"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_4.pt",
+      "sha256": "f1028a1b61ba5e1d2db9a81943fc77a14083cd6c772046bba05df966172c08bc"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_5.pt",
+      "sha256": "58cf7bba62bc2a437e8704d8b848805056fc55cfc9496055f2b93a107ff46348"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_1.pt",
+      "sha256": "d9f8802c51a1c8fec858e69bd416d59d07e98e02c7891bf0e6e605a97f8c8946"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_2.pt",
+      "sha256": "6189205a054b731a3c46856da7f1c471c99d6c6b2205401f2a2e623185b95798"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_3.pt",
+      "sha256": "93f67132e9bd1a9fd07ac02e8bd15c224bcb2cbc6ca9371b3f8b97ef237c5cfb"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_4.pt",
+      "sha256": "bef77d255bb75408f90d98d61572d29b55fd07cebf7ea55cc4675f1d797f5bc9"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_5.pt",
+      "sha256": "bc5fea860c860b75d1ee90c1d7832532b4c9d2f5945c6998db35d4244afe0c09"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_1.pt",
+      "sha256": "c2ce2d2a1c346eabb31763c11d08271c774607c56ebab7c242074b81e3ae44aa"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_2.pt",
+      "sha256": "9e15b87555e0f28ced92c4d2fb9a1419ec1b40d3b9e907945202e6f1d4dee5ad"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_3.pt",
+      "sha256": "5df4ad055b01eab6e8556ec0d710cba1617659921442f529eb2e61fbe2af3f5d"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_4.pt",
+      "sha256": "dc0d834bf5c211baea22566c2ef8d8eae2fad997f9e2d5aaf445bead33711b02"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_5.pt",
+      "sha256": "1095657ee84d11edf5856c8d1950153a82b5bff8d418c01c61e32fdbf8720217"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_1.pt",
+      "sha256": "4ac18c222768c584ac67ed2650e64ff438ab831f85ac7aaf275c566dc2ca7ceb"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_2.pt",
+      "sha256": "244e6d87e5a0dc2a59f180d7260eb8b826e102c7904bdfe2ff10b913372de069"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_3.pt",
+      "sha256": "6a4a44a44b41959a8dcde4be76ff90b215b3569820c636235d5061787630c1a4"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_4.pt",
+      "sha256": "36e0ddbbc2d337a54e1104d49b9b9160b5015308a4a543add249ab6ae0d0b417"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_5.pt",
+      "sha256": "4a94898e0fe83dba97c238659faaf9417435335fdcba27322f9a8ecb23c33a28"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64/fold_1.pt",
+      "sha256": "0467bef542fe06d4739a51b2a5fb6ebeb57c14358665852af447b50226dd8a55"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k48/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k48/fold_1.pt",
+      "sha256": "7eeab30e8f3d0c168cb9a41852d78e2f81a6ebe19c5f01c5f486c6e8695be549"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80/fold_1.pt",
+      "sha256": "9946a90a12eb56f7cb9fe06f6866a6f78407224dfcdeabae3de179354cbf3b51"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p00_d0p30/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p00_d0p30/fold_1.pt",
+      "sha256": "9e5cc72126d9a3936e130f69921bcbe744d12c10e677851d80d40e09689049b2"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p50_d0p15/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p50_d0p15/fold_1.pt",
+      "sha256": "306ff3da484759ecb8bbee6c056c18a094306ad8c5960c65bb2485d509ea3b94"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_1.pt",
+      "sha256": "da7eaa83cb6924e02a696d1b39a2369ac599f94b09798dfed50de3bf6a40e8cb"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_2.pt",
+      "sha256": "0daf6afdbd7b5eeecd89bc57ebb310fc82614e37640d908d124f9a1a0a81b8f2"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_3.pt",
+      "sha256": "e4c406a7cb6c74686741c4e9cbd11d55177636621a0a8a08657e740c0eef415b"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_4.pt",
+      "sha256": "8e3dfe3b4ede33f6fb94e019b509733e6f863bb7f6117a8b56e1dfef632353e7"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p15/fold_5.pt",
+      "sha256": "e7540de4d91f1c8cc735eba64ff67c7ffd34926bde68ed9f2bb35b0061c89d79"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p30/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k64_a0p25_d0p30/fold_1.pt",
+      "sha256": "0a409fefe32c495478924f6ac646654c4ad54efdc72f004e9a30fbb109455a48"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p25_d0p15/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p25_d0p15/fold_1.pt",
+      "sha256": "2bf28a118fb0da6c87795336413f769a4b6ea3e39acaa6fd0c3345814fe117fa"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p00_d0p30/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p00_d0p30/fold_1.pt",
+      "sha256": "2b0c1d0266e1052ca822e470c222237a853835111d08a2ef8499c840168f20c2"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p25_d0p30/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p25_d0p30/fold_1.pt",
+      "sha256": "279d36479c39c293a3b0007a965c9a15ce759c1880c4250ff5912045923d369f"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_1.pt",
+      "sha256": "5496552ee2cc7e31f29c505ce71b7da7e3a1cbf7ced55670d76e61ec8669770d"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_2.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_2.pt",
+      "sha256": "28157f81a03a10d0cd2618c990681cd93a2b73cc9f7d04255f86e28253638915"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_3.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_3.pt",
+      "sha256": "d2f4a6fb770d4e4f355e9652af7e25ef3f6e0b5b0c90caa2b0f6f28e81344ee6"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_4.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_4.pt",
+      "sha256": "92510109391b4f6a677faad6833938f1e818e1845d550852bc6e111bb9d0cc98"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_5.pt",
+      "destination": "SNN/artifacts/checkpoints/v4_prefix_distill/shallow_temporal_lif_distill_k80_a0p50_d0p15/fold_5.pt",
+      "sha256": "0734068186747c0a67c0501315d2c4428ebae275fecad5e3bd61d6be0fb4ec5a"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v5_eegpt_distill/v5_eegpt_distill/shallow_temporal_lif_eegpt_distill_full104/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v5_eegpt_distill/v5_eegpt_distill/shallow_temporal_lif_eegpt_distill_full104/fold_1.pt",
+      "sha256": "feb8ef1f4afd2455c52e11486abdcfeb16c96361a54df5c529bc984fe8dde4d4"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v6_gated_lif/v2_hybrid/shallow_temporal_gated_lif/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v6_gated_lif/v2_hybrid/shallow_temporal_gated_lif/fold_1.pt",
+      "sha256": "b93dbd0e765a8d512d90c42b4597ab2fe0ea2f7d4e40ff538d366baf1be48204"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/v5_eegpt_distill/shallow_temporal_lif_eegpt_distill_full104/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/v5_eegpt_distill/shallow_temporal_lif_eegpt_distill_full104/fold_1.pt",
+      "sha256": "d50cd7df28d9f8e0073165e880bffc22de65db63747eafef19a0196a159c3e8b"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v6_extensions/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v6_extensions/v2_hybrid/shallow_temporal_spike_aware_gated_lif/fold_1.pt",
+      "sha256": "762b3f3ccf6fdbdc3e4b004f900d94b7e0a380259364094f995e2f739ff29e9d"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v6_extensions/v2_hybrid/shallow_temporal_windowed_spike_lif_4bins/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v6_extensions/v2_hybrid/shallow_temporal_windowed_spike_lif_4bins/fold_1.pt",
+      "sha256": "001b80571cb50d6cde39581fad748892e137d53447effe069c3e795c55a95fea"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v6_extensions/v2_hybrid/shallow_temporal_windowed_spike_lif_8bins/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v6_extensions/v2_hybrid/shallow_temporal_windowed_spike_lif_8bins/fold_1.pt",
+      "sha256": "0cf92b35ffc59af8e082accc05a082448fe7a282c4ef0b4a7294947845881d65"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v6_extensions/v2_hybrid/shallow_temporal_multiscale_gated_lif/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v6_extensions/v2_hybrid/shallow_temporal_multiscale_gated_lif/fold_1.pt",
+      "sha256": "076d1555a55baf63286f0ded30895e1e3b9adceede0ab3e392b7cef817f252d4"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_ce/fold_1.pt",
+      "sha256": "5ef916aab6ec0bff2e0538bcac2112d31e4ff93b22cf9eb7efa59b92f8da3adb"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005/fold_1.pt",
+      "sha256": "6d8f4001d25f240515f23c331fd2a2fbd0609dd46cc236e3d512dcdb1dd44a12"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon010/fold_1.pt",
+      "sha256": "0e22fc12fdf4d0b86013e960725927cd54402f8a51b41f36acf5c565b1a1cb19"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_1.pt",
+      "sha256": "e4ef1e5cfa2b83baf233de9c52db31c015143ac7d9a4cba19d609d821c01c62b"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_fm_token_snn/fm_token_snn/eegpt_token_spike_aware_gated_lif/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_fm_token_snn/fm_token_snn/eegpt_token_spike_aware_gated_lif/fold_1.pt",
+      "sha256": "79529358c511429b9f1818904a44b2008e04ba5d06ec716e921636b9ef799396"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/smoke_fm_token_snn/fm_token_snn/eegpt_token_spike_aware_proto_lif_ce/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/smoke_fm_token_snn/fm_token_snn/eegpt_token_spike_aware_proto_lif_ce/fold_1.pt",
+      "sha256": "f2ed6f2c9a3ff860b193d79e5d150907b21948a4fa131c8b8469f9492e39edda"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/fm_token_snn/eegpt_token_spike_aware_gated_lif/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/fm_token_snn/eegpt_token_spike_aware_gated_lif/fold_1.pt",
+      "sha256": "cb0a54892196f3177761c0d893b2f9af8a7d6953b6d80a6cfbe9c83f6dc29863"
+    },
+    {
+      "source": "SNN/artifacts/checkpoints/fm_token_snn/eegpt_token_spike_aware_proto_lif_ce/fold_1.pt",
+      "destination": "SNN/artifacts/checkpoints/fm_token_snn/eegpt_token_spike_aware_proto_lif_ce/fold_1.pt",
+      "sha256": "33dad16c79b05dfc0f0cb03caf2e3c38538e1ec60e648293c9b453fd00323e3d"
+    },
+    {
+      "source": "SNN/artifacts/embeddings/spiking_shallow_direct/fold_1_concat.npz",
+      "destination": "SNN/artifacts/embeddings/spiking_shallow_direct/fold_1_concat.npz",
+      "sha256": "491fb1dc93bd5621a1e2aa86c47e762af3428de4d660ba7992c7b62699dc4487"
+    },
+    {
+      "source": "SNN/artifacts/embeddings/spiking_shallow_rate/fold_1_concat.npz",
+      "destination": "SNN/artifacts/embeddings/spiking_shallow_rate/fold_1_concat.npz",
+      "sha256": "5f64854b8f99e21066a3644f3f24d1d26ed3ba195ec3caa6290215443bac17b5"
+    },
+    {
+      "source": "SNN/artifacts/embeddings/spiking_shallow_delta/fold_1_concat.npz",
+      "destination": "SNN/artifacts/embeddings/spiking_shallow_delta/fold_1_concat.npz",
+      "sha256": "1bf627109da93510fb81c7d3c5a070dc3aab4378711470360917acd41636edc8"
+    },
+    {
+      "source": "SNN/artifacts/embeddings/spiking_shallow_signed_delta/fold_1_concat.npz",
+      "destination": "SNN/artifacts/embeddings/spiking_shallow_signed_delta/fold_1_concat.npz",
+      "sha256": "ceb7d5ae2b7fc01708ba0d90a872efc63691095cf47d978afc0c57fbfa87585d"
+    },
+    {
+      "source": "SNN/artifacts/smoke_checkpoints/spiking_shallow_direct/fold_1.pt",
+      "destination": "SNN/artifacts/smoke_checkpoints/spiking_shallow_direct/fold_1.pt",
+      "sha256": "448a141b5944304061bb4cf6234079a31a2d6ca7bb9b416d3e27b1d2f2f661ba"
+    },
+    {
+      "source": "SNN/artifacts/smoke_embeddings/spiking_shallow_direct/fold_1_concat.npz",
+      "destination": "SNN/artifacts/smoke_embeddings/spiking_shallow_direct/fold_1_concat.npz",
+      "sha256": "ce5de89b85332404c6b6f3979d9147677c2c301c0a410b16e370dcf83f254e8d"
+    },
+    {
+      "source": "SNN/artifacts/v2_smoke_checkpoints/v2_hybrid/shallow80_lif_head/fold_1.pt",
+      "destination": "SNN/artifacts/v2_smoke_checkpoints/v2_hybrid/shallow80_lif_head/fold_1.pt",
+      "sha256": "53d6976c9fe42ac93acc15bd60080721b5763e4c6d1a782b1de26121755b2515"
+    },
+    {
+      "source": "QNN/checkpoints/shallow_original_fold1_seed42.pth",
+      "destination": "baselines/checkpoints/shallow_original_fold1_seed42.pth",
+      "sha256": "5866686307dd43330fb9511417c853764a380198b405dbf226897b0bc47576e3"
+    },
+    {
+      "source": "QNN/checkpoints/shallow_original_fold2_seed42.pth",
+      "destination": "baselines/checkpoints/shallow_original_fold2_seed42.pth",
+      "sha256": "0647b875f804acbbd795a22e83bd309a89acd376220371005c14fe31a7d23616"
+    },
+    {
+      "source": "QNN/checkpoints/shallow_original_fold3_seed42.pth",
+      "destination": "baselines/checkpoints/shallow_original_fold3_seed42.pth",
+      "sha256": "a6e00f1df2f9f79077d1b12364437156cc2d704af5fc25538a637ad5c939047e"
+    },
+    {
+      "source": "QNN/checkpoints/shallow_original_fold4_seed42.pth",
+      "destination": "baselines/checkpoints/shallow_original_fold4_seed42.pth",
+      "sha256": "e27a9e3a7e427debf0b2f97b372b5371b5bc47c51ecc8c8f490c6b2278e7360c"
+    },
+    {
+      "source": "QNN/checkpoints/shallow_original_fold5_seed42.pth",
+      "destination": "baselines/checkpoints/shallow_original_fold5_seed42.pth",
+      "sha256": "c040fd0480f5546b11acc61a36a8980dc89ddce0a30197dac388702bfde27485"
+    },
+    {
+      "source": "results/classical_ml/classical_ml_fold_details.csv",
+      "destination": "results/classical_ml/classical_ml_fold_details.csv",
+      "sha256": "3e1d2b1c164c08dbcf2ac292de35212c8bcfe80748e265fab0487ba0c6fe557c"
+    },
+    {
+      "source": "results/classical_ml/classical_ml_results_summary.csv",
+      "destination": "results/classical_ml/classical_ml_results_summary.csv",
+      "sha256": "7fed10d4ef2cb4c1723bdef839d27f7aad48628e277fb57a96303862b0707e65"
+    },
+    {
+      "source": "results/classical_ml/classical_ml_confusion_by_fold.csv",
+      "destination": "results/classical_ml/classical_ml_confusion_by_fold.csv",
+      "sha256": "528830ef4f98206a5cc0ef7fb89b90c88038be2722663d7e2e99bcc6fa781fa0"
+    },
+    {
+      "source": "results/classical_ml/classical_ml_run_metadata.json",
+      "destination": "results/classical_ml/classical_ml_run_metadata.json",
+      "sha256": "d788bacd0cb74a94f2c8ffc6073e0417c251560b1a3d391e295d2f93de51076a"
+    },
+    {
+      "source": "results/deepconvnet/deepconvnet_fold_details.csv",
+      "destination": "results/deepconvnet/deepconvnet_fold_details.csv",
+      "sha256": "e4ba0a5790dd573cc3f9c1ec2b9e93b8250d1a5e883879b924f65346a377d3e0"
+    },
+    {
+      "source": "results/deepconvnet/deepconvnet_results_summary.csv",
+      "destination": "results/deepconvnet/deepconvnet_results_summary.csv",
+      "sha256": "4d6c6425809aafc8de46a774c878c59c309bc536ac04df987a55bb64f4c9bf40"
+    },
+    {
+      "source": "results/deepconvnet/deepconvnet_confusion_by_fold.csv",
+      "destination": "results/deepconvnet/deepconvnet_confusion_by_fold.csv",
+      "sha256": "2d71dae7528b1dd9efc51537200b63a6c630168b8b41f78c7c2910ba03534546"
+    },
+    {
+      "source": "results/deepconvnet/deepconvnet_run_metadata.json",
+      "destination": "results/deepconvnet/deepconvnet_run_metadata.json",
+      "sha256": "ca773b9dc0920cf705605e9f2bb862e695f3ad2be9d29f6859e3d9a3db52c0c1"
+    },
+    {
+      "source": "ATCNet.ipynb",
+      "destination": "archive/notebooks/ATCNet.ipynb",
+      "sha256": "eed9d21ce6a9904e1e624bf1b265da04352af632bc9b9094265b6b619593a670"
+    },
+    {
+      "source": "DeepConvNet.ipynb",
+      "destination": "archive/notebooks/DeepConvNet.ipynb",
+      "sha256": "635f34894ede680d7f4ef5602dcedd31cc140c8f1701ada603d6dc02777926ef"
+    },
+    {
+      "source": "EEG-ChannelNet.ipynb",
+      "destination": "archive/notebooks/EEG-ChannelNet.ipynb",
+      "sha256": "d2c72b779792f5ae5f1195630f61c198b99d031943155cd941024eec20c6d254"
+    },
+    {
+      "source": "EEG-ITNet.ipynb",
+      "destination": "archive/notebooks/EEG-ITNet.ipynb",
+      "sha256": "8579693006f286d213c79690ac0660b53e03727266c653093889101d8b1e10cc"
+    },
+    {
+      "source": "EEG-TCNet.ipynb",
+      "destination": "archive/notebooks/EEG-TCNet.ipynb",
+      "sha256": "4a4c45098c797daf71cdc1f092f30aae212e359d795dc494ff6fe43ee34fba9c"
+    },
+    {
+      "source": "EEGNet.ipynb",
+      "destination": "archive/notebooks/EEGNet.ipynb",
+      "sha256": "07ed8585e5ff1ba4787fb588597238db174f38773712d1cb05ed594f1fb30fa2"
+    },
+    {
+      "source": "EEG_Conformer.ipynb",
+      "destination": "archive/notebooks/EEG_Conformer.ipynb",
+      "sha256": "38bb04a7311169983110dfc2333bf3601dc65f9237a435caa3a10711bb33a59d"
+    },
+    {
+      "source": "EEG_Transformer.ipynb",
+      "destination": "archive/notebooks/EEG_Transformer.ipynb",
+      "sha256": "87d876e86171dc47c6417d303ffd2b67b261c25a867b4e9eb4881fe87846c73b"
+    },
+    {
+      "source": "SVM_Classification.ipynb",
+      "destination": "archive/notebooks/SVM_Classification.ipynb",
+      "sha256": "a30ba97a109692d8268937692d74f9bacca557085b76d5b372aa7f77ed9e11de"
+    },
+    {
+      "source": "ShallowConvNet.ipynb",
+      "destination": "archive/notebooks/ShallowConvNet.ipynb",
+      "sha256": "cbc598bac835b63e8a17b3fd673250027aa9836dc9905a32f2fdd42ecd4688ff"
+    },
+    {
+      "source": "CheckEventMarkers.m",
+      "destination": "preprocessing/CheckEventMarkers.m",
+      "sha256": "c3073f71f8fdb71727b8a4d9475f476a6335dc0c7c14033d4f8ca3cd3b3cc9fd"
+    },
+    {
+      "source": "ImportRawToSet.m",
+      "destination": "preprocessing/ImportRawToSet.m",
+      "sha256": "5934e3392de5f6ca54ccc65a45fb1d634d864d46efe38ae7389037851fb826da"
+    },
+    {
+      "source": "ListChannelsInEDF.m",
+      "destination": "preprocessing/ListChannelsInEDF.m",
+      "sha256": "317dd8104263a00b6b57ad062202aaef4e4f28956290a57003c8bcb54e6cf81e"
+    },
+    {
+      "source": "Preprocess.m",
+      "destination": "preprocessing/Preprocess.m",
+      "sha256": "241845aa0143317256cfdac4ac416563cd6254dba345df5a267318a6a0c5c1d9"
+    },
+    {
+      "source": "Preprocess_Step1.m",
+      "destination": "preprocessing/Preprocess_Step1.m",
+      "sha256": "241845aa0143317256cfdac4ac416563cd6254dba345df5a267318a6a0c5c1d9"
+    },
+    {
+      "source": "Preprocess_Step2.m",
+      "destination": "preprocessing/Preprocess_Step2.m",
+      "sha256": "e7819666cce3520c43c6941e6e492ac8f8c7c553a3d02175e967665e55e6bc60"
+    },
+    {
+      "source": "Preprocess_Step3.m",
+      "destination": "preprocessing/Preprocess_Step3.m",
+      "sha256": "f1e715b5caab5a38ce6d34a6d160389334ac5ca691d243ac808d0f595229643b"
+    },
+    {
+      "source": "Preprocess_Step4.m",
+      "destination": "preprocessing/Preprocess_Step4.m",
+      "sha256": "f3adad977e4a91182f19fd9cb1073279cbe4c4e91f2723f18374fa3cb8c688f0"
+    },
+    {
+      "source": "ScanEDFMarkers.m",
+      "destination": "preprocessing/ScanEDFMarkers.m",
+      "sha256": "483f95786309d21cf2e081e57f75ba3c8c1818a8d8899c139304d0b2b8cd5909"
+    },
+    {
+      "source": "svm_confusion_matrix.csv",
+      "destination": "archive/root_results/svm_confusion_matrix.csv",
+      "sha256": "76f9730414dd30e7c60cfd9a154aaa0fa2b011b789d6c3c72d3d9d53c7e078cd"
+    },
+    {
+      "source": "svm_fold_details.csv",
+      "destination": "archive/root_results/svm_fold_details.csv",
+      "sha256": "eeb8ca86457323d9a17eee7c985c4f5c22310cb6f5e40ce7de30c80ee1d646d8"
+    },
+    {
+      "source": "svm_results_summary.csv",
+      "destination": "archive/root_results/svm_results_summary.csv",
+      "sha256": "335635c534478593fab6f061ad9f8a674dbaacf5df5b094a2b21f3579af87708"
+    },
+    {
+      "source": "scripts/run_classical_ml_baselines.py",
+      "destination": "archive/baseline_scripts/run_classical_ml_baselines.py",
+      "sha256": "0498f813bef72765e709e6b94d51b14813eb51db400a10d44b44cbb59df13d71"
+    },
+    {
+      "source": "scripts/run_deepconvnet_baseline.py",
+      "destination": "archive/baseline_scripts/run_deepconvnet_baseline.py",
+      "sha256": "9f7c1c2056dce73c80e64cad8fcb9a9315aee0e22c0b24a107f7b03d8a667bdf"
+    },
+    {
+      "source": "train_svm.py",
+      "destination": "archive/baseline_scripts/train_svm.py",
+      "sha256": "114904f73d301f07ffbea00cfe90b71d5f68558f5449fe8ca8d2ec500fbd13b4"
+    },
+    {
+      "source": "docs/MSc__Supervision.pdf",
+      "destination": "docs/MSc__Supervision.pdf",
+      "sha256": "f24c3975675e193a90826ece3c10f906a62293bdb73555e1380bac16cd9d63ac"
+    },
+    {
+      "source": "User Guide for EEG Dataset.pdf",
+      "destination": "docs/User Guide for EEG Dataset.pdf",
+      "sha256": "35dcccecfbc70345ecaee11c8cc9683b42ac97ea8754f0148b156fabeebae16e"
+    },
+    {
+      "source": "VVIQuestionnaire.pdf",
+      "destination": "docs/VVIQuestionnaire.pdf",
+      "sha256": "dc50c28ba8221fbe96b6ab27dcabd0e6c8138ef7ea35329aa0163e0fe347956c"
+    },
+    {
+      "source": "Participant_info.xlsx",
+      "destination": "docs/Participant_info.xlsx",
+      "sha256": "a9c81814ebc73ff24191803bc5ff39a079668a979842a37a0aaee1fe498dd07a"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/recordings.jsonl",
+      "destination": "evidence/subject_disjoint/recordings.jsonl",
+      "sha256": "0148882b5428e3f0c20d6c143f2defaaa4c9957283ed8d6245bb608c2fc068e7"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/trials.jsonl",
+      "destination": "evidence/subject_disjoint/trials.jsonl",
+      "sha256": "45b224f96ab41e623da95e0d0aef26b96297d2898ef1dd0fa31014565c758be6"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/audit.json",
+      "destination": "evidence/subject_disjoint/audit.json",
+      "sha256": "98b285ca306d2fdb849d1861a23cebb1f309adf1abb6171e74335438add035c5"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/README.md",
+      "destination": "evidence/subject_disjoint/README.md",
+      "sha256": "7b934e01441aeca3dcfb900e467eee6e860179c59a104df8f291c38ce4c4cc7e"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/splits/subject_disjoint_v1/fold_1.json",
+      "destination": "evidence/subject_disjoint/splits/subject_disjoint_v1/fold_1.json",
+      "sha256": "e1119689b91d9fc7e7bc132cfa13008d5adcff7b9492231dfedf102139805bc8"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/splits/subject_disjoint_v1/fold_2.json",
+      "destination": "evidence/subject_disjoint/splits/subject_disjoint_v1/fold_2.json",
+      "sha256": "374ff6a0860664ffb38bb3ebb049962d5b8e13f2abc85716e4d777ecdb7ca82f"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/splits/subject_disjoint_v1/fold_3.json",
+      "destination": "evidence/subject_disjoint/splits/subject_disjoint_v1/fold_3.json",
+      "sha256": "f0f2d37e3230ac8d725f409c339ea967213e329e4f1e27e7ddd83b9181e7dd10"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/splits/subject_disjoint_v1/fold_4.json",
+      "destination": "evidence/subject_disjoint/splits/subject_disjoint_v1/fold_4.json",
+      "sha256": "8876847c5a657e5fdc4531fe3951cfb271f36460863874d81312f990b2910da5"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/splits/subject_disjoint_v1/fold_5.json",
+      "destination": "evidence/subject_disjoint/splits/subject_disjoint_v1/fold_5.json",
+      "sha256": "2fb5ed0543a39280b374bc4b516e38251ee4f23b03a3279781d4f89941935f00"
+    },
+    {
+      "source": "paper2_benchmark/manifests/current_vep/splits/subject_disjoint_v1/summary.json",
+      "destination": "evidence/subject_disjoint/splits/subject_disjoint_v1/summary.json",
+      "sha256": "53a8911098188a445ae62f8bfa1e6b0213ed5cb3ada1bf8717101fa9f4e84667"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-primary-test-2026-08-14/summary.json",
+      "destination": "evidence/later_benchmarks/v2-primary-test-2026-08-14/summary.json",
+      "sha256": "cb2bef7e1f646ba02a69691cda37240859908f8476cb6cc2123acf1dea6cda5b"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-primary-test-2026-08-14/artifact.json",
+      "destination": "evidence/later_benchmarks/v2-primary-test-2026-08-14/artifact.json",
+      "sha256": "1c36a54e138bef51f50e6e27912ca73f8c5aa800a694622727684f273a52d20f"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-primary-test-2026-08-14/report.html",
+      "destination": "evidence/later_benchmarks/v2-primary-test-2026-08-14/report.html",
+      "sha256": "e524dd0cad94aca3aa04f4177f5da9699186b51e176403e2ebdf117d9771d9e6"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-primary-test-2026-08-14/report.html.validation.json",
+      "destination": "evidence/later_benchmarks/v2-primary-test-2026-08-14/report.html.validation.json",
+      "sha256": "177bbe39a1e1943d3501c9a7503f1c5cab2d51a3aecb4355867ef7e38dd29b40"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-primary-test-2026-08-14/README.md",
+      "destination": "evidence/later_benchmarks/v2-primary-test-2026-08-14/README.md",
+      "sha256": "de840553b5684b4704e59c0c6c57714c98481a4f17acf499831d1ddbd4e4ac39"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-v3-validation-synthesis-2026-08-14/README.md",
+      "destination": "evidence/later_benchmarks/v2-v3-validation-synthesis-2026-08-14/README.md",
+      "sha256": "2f522bb629648822977351498d3793a90efd7ff9e3f371dfa97de52d4e182481"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-v3-validation-synthesis-2026-08-14/summary.json",
+      "destination": "evidence/later_benchmarks/v2-v3-validation-synthesis-2026-08-14/summary.json",
+      "sha256": "e0465639e6539f213a9444248c5d69e9f96bf8b01e324a5970bad96f9ee967d7"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-v3-validation-synthesis-2026-08-14/artifact.json",
+      "destination": "evidence/later_benchmarks/v2-v3-validation-synthesis-2026-08-14/artifact.json",
+      "sha256": "2a177f43b6faa2ea940211a7b9efac8a6d3c39973b28ae8b9996c3e80040a540"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-v3-validation-synthesis-2026-08-14/report.html",
+      "destination": "evidence/later_benchmarks/v2-v3-validation-synthesis-2026-08-14/report.html",
+      "sha256": "5a33aa2ef42a928cadfaac1783525c6494b857f803e255277bade372067d9716"
+    },
+    {
+      "source": "paper2_benchmark/reports/v2-v3-validation-synthesis-2026-08-14/report.html.validation.json",
+      "destination": "evidence/later_benchmarks/v2-v3-validation-synthesis-2026-08-14/report.html.validation.json",
+      "sha256": "e80eedb1acef9e4c72da81391b0a1fcadf6276808c52d40070549d396e705d04"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/report.json",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/report.json",
+      "sha256": "997e095d8828471f987e5f1a07e64626b77573eced762a35eb7f8faca8ebe211"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/README.md",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/README.md",
+      "sha256": "78b06c0f19aeb1e80cd24a3cc4f9e225e76dbbd8e3e840918b89cacd5c7abe52"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s1_report.json",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s1_report.json",
+      "sha256": "374e0f80db66ff1c18f3c23cc2ed8835e41b2ee841a609fed510630c6d7ef3d7"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s1_README.md",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s1_README.md",
+      "sha256": "bbd9d8533c238bc70db9e10f42c1aa45bd9290daea0f37a9662f5d675bf818d1"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s1r_report.json",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s1r_report.json",
+      "sha256": "f9cb4e76dc897a4cf4f2f25429068607ad6acaadb8b2e2fe14fc98545973366a"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s1r_README.md",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s1r_README.md",
+      "sha256": "0cb094b14f854da197896ad9132607f2f042f6fda91743d923466064fc7ea6d4"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s2_report.json",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s2_report.json",
+      "sha256": "2230ebed36023bd10df4f0f3fe92fc7dac366a40f01724996bb2b9cca9b0a19a"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s2_README.md",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s2_README.md",
+      "sha256": "1806fc90b127cb9e49010ef21e72446f78bc5020c7231c75c9cfe0c44e70683c"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s3_report.json",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s3_report.json",
+      "sha256": "e10e177956693f206b4eed8e06abe14102d56502cfc6a64f156d19a6146ae87a"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s3_README.md",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s3_README.md",
+      "sha256": "fbff828212fa33f70245a6bfb5866ffe346faaf4fbb01174e2bbcfe8ea718ded"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s4_report.json",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s4_report.json",
+      "sha256": "b2bab33abc6fbb52b89994040665eeb4ea58fa6b7421eb40361116c216bb6c69"
+    },
+    {
+      "source": "paper2_benchmark/reports/resona-vep-spike-2026-08-19/s4_README.md",
+      "destination": "evidence/later_benchmarks/resona-vep-spike-2026-08-19/s4_README.md",
+      "sha256": "a88f93c9c11dce22e4ea45b8782a1d3a4352157b955a4cc95cce9de54063a1fc"
+    },
+    {
+      "source": "paper2_benchmark/reports/harp-snn-fast-gate-2026-08-21/report.json",
+      "destination": "evidence/later_benchmarks/harp-snn-fast-gate-2026-08-21/report.json",
+      "sha256": "4ffb61a6a6a3987d9e4a8c5b762b77901acaaa94098a616822e2f0c2470e421a"
+    },
+    {
+      "source": "paper2_benchmark/reports/harp-snn-fast-gate-2026-08-21/README.md",
+      "destination": "evidence/later_benchmarks/harp-snn-fast-gate-2026-08-21/README.md",
+      "sha256": "e2341086edd4a7bdff0ebcae0de79c665adea714f3bd31196b2307627b0765c8"
+    },
+    {
+      "source": "paper2_benchmark/reports/star-cca-snn-fast-gate-2026-08-21/report.json",
+      "destination": "evidence/later_benchmarks/star-cca-snn-fast-gate-2026-08-21/report.json",
+      "sha256": "986b2769bfdfa83130d9760d7e66f65e79ffbe911f818cb73f0bb67920092476"
+    },
+    {
+      "source": "paper2_benchmark/reports/star-cca-snn-fast-gate-2026-08-21/README.md",
+      "destination": "evidence/later_benchmarks/star-cca-snn-fast-gate-2026-08-21/README.md",
+      "sha256": "824e7e2b3f5348a60861d0f55b2db01530b473fc565800aa08db3bb1cc8de62c"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A1/Apple_A1_sub15_A1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A1/Apple_A1_sub15_A1_RAW14_epochs.csv",
+      "sha256": "73062a8a7674dd39c637b11b43de8a925edf76487e3e2e1d76b9211c7697820f"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A1/Apple_A1_sub20_A1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A1/Apple_A1_sub20_A1_RAW14_epochs.csv",
+      "sha256": "7a44c4bedea6e2e48ef74764c740c5c6ea0586402fa6ba1e06d638d9df3f3d29"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A1/Apple_A1_sub29_A1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A1/Apple_A1_sub29_A1_RAW14_epochs.csv",
+      "sha256": "0a106c1550a47eb5058a430b21a2fc12087717602e5694092c92641af790524b"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A1/Apple_A1_sub32_A1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A1/Apple_A1_sub32_A1_RAW14_epochs.csv",
+      "sha256": "53d66e43ddef156be66882b4e54a44ecf782aa89b136af8e41d646bdc29c4172"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A1/Apple_A1_sub3_A1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A1/Apple_A1_sub3_A1_RAW14_epochs.csv",
+      "sha256": "66572977163c35a42022a506bc7bb9911f4bc447886b13caf327c7f6d1ef933a"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A1/Apple_A1_sub6_A1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A1/Apple_A1_sub6_A1_RAW14_epochs.csv",
+      "sha256": "131a4554bc063e8b275c9cf066c1b4d9b1ce25eacfae39dcd7397a37437cdc86"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A1/Apple_A1_sub8_A1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A1/Apple_A1_sub8_A1_RAW14_epochs.csv",
+      "sha256": "a239a88f8713fa396ba8ded8275f0ccee281118eafaf4926e8a3dc51e84e15e1"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A2/Apple_A2_sub10_A2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A2/Apple_A2_sub10_A2_RAW14_epochs.csv",
+      "sha256": "5c748182d364fd6533a7771da003d6f1bcf5a10eb4f9e29dd5a413a057ba49bf"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A2/Apple_A2_sub12_A2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A2/Apple_A2_sub12_A2_RAW14_epochs.csv",
+      "sha256": "c1492aab6b74be50b8946d1e6f6ffbef1fab8f632d70138058e60a1d3c086b35"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A2/Apple_A2_sub30_A2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A2/Apple_A2_sub30_A2_RAW14_epochs.csv",
+      "sha256": "2cfcdc967002d58663ceaacb8bced66d3dd0b4b14513bdeac4a61de1453c7791"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A2/Apple_A2_sub5_A2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A2/Apple_A2_sub5_A2_RAW14_epochs.csv",
+      "sha256": "0bb2aa9847ffa43347d5764a77773c35991319c92e10578e95636eaf81d74273"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Apple/A2/Apple_A2_sub9_A2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Apple/A2/Apple_A2_sub9_A2_RAW14_epochs.csv",
+      "sha256": "4fdcad1362ff101f1a3cb7ebfdb7ad86f6ac505c68c64116fe943ad445798e56"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C1/Car_C1_sub11_C1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C1/Car_C1_sub11_C1_RAW14_epochs.csv",
+      "sha256": "2c08dd8586c01c3c7540c87ce401e6049fc410ed4ff55c9cfd896852487dbaa8"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C1/Car_C1_sub16_C1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C1/Car_C1_sub16_C1_RAW14_epochs.csv",
+      "sha256": "38e0dcbf867c84b8dab9b52eccd34322901deae99581d2af287a9d0590b3b72e"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C1/Car_C1_sub22_C1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C1/Car_C1_sub22_C1_RAW14_epochs.csv",
+      "sha256": "b2d9f1e7d005edac3f182e5bd8517364272d54fc3a64dd48b2f235f3bea7df2d"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C1/Car_C1_sub28_C1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C1/Car_C1_sub28_C1_RAW14_epochs.csv",
+      "sha256": "60661fe924ee1c8c5922feb36f030c92a78c4fb5bfb5113f39429c7ae8f304e8"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C1/Car_C1_sub2_C1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C1/Car_C1_sub2_C1_RAW14_epochs.csv",
+      "sha256": "70fa8af6a95e922b741ca6583a623fadb88b3275e57856c2e04559ae93e4a316"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C1/Car_C1_sub4_C1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C1/Car_C1_sub4_C1_RAW14_epochs.csv",
+      "sha256": "597a0ab49434ec4d18622e9fd1dc60fd33201d300f1a76f1f65089d8136b995c"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C1/Car_C1_sub6_C1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C1/Car_C1_sub6_C1_RAW14_epochs.csv",
+      "sha256": "e2c3f1960737514880755da7c50500e3f67925c9f47af7cf7b627774202f0a1c"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C2/Car_C2_sub10_C2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C2/Car_C2_sub10_C2_RAW14_epochs.csv",
+      "sha256": "3a14c19a2224ec3552bb1fe8f384d20c63146f6c95c200fe1702493e7a13b1d9"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C2/Car_C2_sub12_C2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C2/Car_C2_sub12_C2_RAW14_epochs.csv",
+      "sha256": "1e578053f179e35402b4f97dee9f9c5e5019fdd426baea9dbf82d6159ec7fd29"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C2/Car_C2_sub13_C2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C2/Car_C2_sub13_C2_RAW14_epochs.csv",
+      "sha256": "9b926e0c0e1d6913271d94cdd8e4daa3b0d825b8f4155e0420acb8f41ce708c0"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C2/Car_C2_sub18_C2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C2/Car_C2_sub18_C2_RAW14_epochs.csv",
+      "sha256": "9319c7d89966bcf1962dbc89bacfc2fb70b0e0ba30d20c63c01c3b56b456d865"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C2/Car_C2_sub19_C2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C2/Car_C2_sub19_C2_RAW14_epochs.csv",
+      "sha256": "68ff26ee398383beecfc9840fb8f0102fd8f8db2e7af77db2ab2b4b17d8f0d6c"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C2/Car_C2_sub21_C2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C2/Car_C2_sub21_C2_RAW14_epochs.csv",
+      "sha256": "435cda1152b6069e7961f5181a058a2a945710c28b8bf2eba90259a8c562c5c7"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C2/Car_C2_sub24_C2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C2/Car_C2_sub24_C2_RAW14_epochs.csv",
+      "sha256": "fd03c06def3f14906801c00eb8df89ac1bf8de2e355f110544f818f7b85347f5"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Car/C2/Car_C2_sub8_C2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Car/C2/Car_C2_sub8_C2_RAW14_epochs.csv",
+      "sha256": "cae3b45902ad7caae5a76cd4deee34723b75745ebfca5fbb416d5c1ffc8df9a3"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F1/Flower_F1_sub14_F1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F1/Flower_F1_sub14_F1_RAW14_epochs.csv",
+      "sha256": "bc07ece4598fe206ce89dd05af65cd12854f6042bc351c271b3705808ba30ae7"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F1/Flower_F1_sub16_F1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F1/Flower_F1_sub16_F1_RAW14_epochs.csv",
+      "sha256": "93073f2d4fd3c29901e8c69a23f5d7227bbfd68db414201bd9b2c5bf7b9537dc"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F1/Flower_F1_sub1_F1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F1/Flower_F1_sub1_F1_RAW14_epochs.csv",
+      "sha256": "1f259eefbe8898f4ad8fd4deb8041e8c087fcb46ff0b225085869fe5dd455404"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F1/Flower_F1_sub22_F1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F1/Flower_F1_sub22_F1_RAW14_epochs.csv",
+      "sha256": "7733038201629f39eefddb6ddc421f47132d7345a2aa35c768f4599f58f60bbc"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F1/Flower_F1_sub23_F1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F1/Flower_F1_sub23_F1_RAW14_epochs.csv",
+      "sha256": "5f1a79f4c4b0dcc1d63185c1c4a12cb4b07d523744b7e79f511f3c9fa3e1dade"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F1/Flower_F1_sub26_F1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F1/Flower_F1_sub26_F1_RAW14_epochs.csv",
+      "sha256": "4ab8c8c2b3046d8efab6cc104abf54e7e32e3ac8ed8427ad74ff8a588f8b72b5"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F1/Flower_F1_sub31_F1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F1/Flower_F1_sub31_F1_RAW14_epochs.csv",
+      "sha256": "d620863a6ade3d1b0814c531c549e6c6380a7edf5b77caf805264902ab2fe020"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F1/Flower_F1_sub7_F1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F1/Flower_F1_sub7_F1_RAW14_epochs.csv",
+      "sha256": "916b93ac148c0f3b98d5b9b48b5020910646b54e3a8cabe92f05919cf7bfeb21"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F2/Flower_F2_sub13_F2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F2/Flower_F2_sub13_F2_RAW14_epochs.csv",
+      "sha256": "8c2dcd187237e06c1e512e5d647e0af8da39dc9d7acba67fbca61cce77aee4ad"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F2/Flower_F2_sub17_F2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F2/Flower_F2_sub17_F2_RAW14_epochs.csv",
+      "sha256": "2754010b38ec785ac996c421b5ac44a2bfb37be03e00d53d560fd6af0e811972"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F2/Flower_F2_sub18_F2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F2/Flower_F2_sub18_F2_RAW14_epochs.csv",
+      "sha256": "bc5298d1071e5b69a480d40d6594ca386757c7327e6d0df2a62ef5e66245c73a"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F2/Flower_F2_sub19_F2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F2/Flower_F2_sub19_F2_RAW14_epochs.csv",
+      "sha256": "3f1a1b0608d3859a23b7515c01cdcd29572974f8e0df5ff802c7dabca7d1fed1"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F2/Flower_F2_sub28_F2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F2/Flower_F2_sub28_F2_RAW14_epochs.csv",
+      "sha256": "cf6676f1980eaf48577701f24c0113988cc0371a82418a1a1cc49ebd31c29dd2"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F2/Flower_F2_sub4_F2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F2/Flower_F2_sub4_F2_RAW14_epochs.csv",
+      "sha256": "99cd71a4fffb987a16021ba8c34f37ae7db2830ea32ef3cdbb583161073d9303"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F2/Flower_F2_sub5_F2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F2/Flower_F2_sub5_F2_RAW14_epochs.csv",
+      "sha256": "e93453b15c0e08398acadb9a63d7a87189a69e39ddc2e65319d291cf43091476"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F2/Flower_F2_sub7_F2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F2/Flower_F2_sub7_F2_RAW14_epochs.csv",
+      "sha256": "80a0ee2e5533b27d17ac0dc1d198dd9dca56efcf44f9a124d671898dd271ff2c"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Flower/F2/Flower_F2_sub9_F2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Flower/F2/Flower_F2_sub9_F2_RAW14_epochs.csv",
+      "sha256": "d3209e8d906daf919bbd0c3c71b8fff71d24582d1bef1c3d08e8badfa73811b8"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P1/Human Face_P1_sub14_P1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub14_P1_RAW14_epochs.csv",
+      "sha256": "57b21b747e07c5d0c3551ff5b32bb2e5a4e2dcac913fa799aa574db54e492782"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P1/Human Face_P1_sub20_P1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub20_P1_RAW14_epochs.csv",
+      "sha256": "27506641feb2e1436dd7e2c796b54e022e4a3cee11d12513c6cec1956bfb1c0f"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P1/Human Face_P1_sub25_P1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub25_P1_RAW14_epochs.csv",
+      "sha256": "739ab457df0d466d947385369318c89ec4665d3c2ff6c0cd73e1193f1cc7b54d"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P1/Human Face_P1_sub2_P1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub2_P1_RAW14_epochs.csv",
+      "sha256": "21afdfad8141053ceadfdc2e99b24dfdea71d75786b7b0a44df22bedd24ec0a6"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P1/Human Face_P1_sub30_P1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub30_P1_RAW14_epochs.csv",
+      "sha256": "0b0d8e5a5aeb890d2c20cd76f04245be556c7e59ab40beada9ecd0807089213a"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P1/Human Face_P1_sub32_P1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub32_P1_RAW14_epochs.csv",
+      "sha256": "3e90669c6d870cf6ea72ade22235517f355f581cbabd692aa21395351499e70b"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P1/Human Face_P1_sub3_P1_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub3_P1_RAW14_epochs.csv",
+      "sha256": "c536823939593540329842cb0d78b8812b20d4ed2137bc717f276eab37cd8aed"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P2/Human Face_P2_sub11_P2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub11_P2_RAW14_epochs.csv",
+      "sha256": "345f3ef484187dc580ae3083668393648cc693801ff2f92a0ffc062967db171c"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P2/Human Face_P2_sub15_P2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub15_P2_RAW14_epochs.csv",
+      "sha256": "593a39785bb22712a18844fe81605143c671c02c439a652f0323459a67f0e46a"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P2/Human Face_P2_sub17_P2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub17_P2_RAW14_epochs.csv",
+      "sha256": "57d2a97c802da346dab570235629320bf1e5e099775c95c5c6881cdd7fb26c94"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P2/Human Face_P2_sub1_P2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub1_P2_RAW14_epochs.csv",
+      "sha256": "4d7d6c617fafc88e058364c9b57e4d610e554a582de341b707a3700a9439eb5d"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P2/Human Face_P2_sub21_P2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub21_P2_RAW14_epochs.csv",
+      "sha256": "362d970a216f11578e6167369b3b17845ce5d2930be188b794979ee3fadac376"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P2/Human Face_P2_sub24_P2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub24_P2_RAW14_epochs.csv",
+      "sha256": "30776f6f4c929988fe2833582e4be7fe4ea32117c31f8eaa938d68fd6c7e836b"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P2/Human Face_P2_sub29_P2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub29_P2_RAW14_epochs.csv",
+      "sha256": "df62307f6b3b78b69a4da94f68c2aba47f32f686ce80224e5db8f6e3ea42f509"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/Human Face/P2/Human Face_P2_sub31_P2_RAW14_epochs.csv",
+      "destination": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub31_P2_RAW14_epochs.csv",
+      "sha256": "73570054a187d0bc7b9eaea1a8f5bbc6eb7ee77a3cf843bbafa0a25951b23fc9"
+    },
+    {
+      "source": "git:7bb3a2b0fca911e9bfaeb53ef79039cc5f71aa45:CSV-FEATURES/dataset_summary.csv",
+      "destination": "CSV-FEATURES/dataset_summary.csv",
+      "sha256": "bcb8321b74bc0efac6cc39776cbd1b7959415af5a992a813c4dea29907dd7351"
+    },
+    {
+      "source": "QNN/results/by_config/shallow_original/shallow_original_fold1_seed42.json",
+      "destination": "results/shallowconvnet/shallow_original_fold1_seed42.json",
+      "sha256": "ee6bfed0be70d6c347a04f83492ae1d15d4a72ddca1b7c1d2fb8d4d0af590bc6"
+    },
+    {
+      "source": "QNN/results/by_config/shallow_original/shallow_original_fold2_seed42.json",
+      "destination": "results/shallowconvnet/shallow_original_fold2_seed42.json",
+      "sha256": "5b309166d8a80c7f672c5505cc65997fbbe86a888dee293418930f11e27432be"
+    },
+    {
+      "source": "QNN/results/by_config/shallow_original/shallow_original_fold3_seed42.json",
+      "destination": "results/shallowconvnet/shallow_original_fold3_seed42.json",
+      "sha256": "93205369783cf4782862d190d01af506849577cf0d075119edf7f7eb89c0bd9a"
+    },
+    {
+      "source": "QNN/results/by_config/shallow_original/shallow_original_fold4_seed42.json",
+      "destination": "results/shallowconvnet/shallow_original_fold4_seed42.json",
+      "sha256": "2fb558c9b057752b8540352ca5d7ca4d1db2588bec8add10882cf3414a8b7340"
+    },
+    {
+      "source": "QNN/results/by_config/shallow_original/shallow_original_fold5_seed42.json",
+      "destination": "results/shallowconvnet/shallow_original_fold5_seed42.json",
+      "sha256": "165e34d68aa730f8fd3f1544cde08e2f4590a2c33519f482d887f93488780d4a"
+    },
+    {
+      "source": "QNN/results/by_config/shallow_original/shallow_original_fold3_seed42.csv",
+      "destination": "results/shallowconvnet/shallow_original_fold3_seed42.csv",
+      "sha256": "52235790c31be4895cb75f60c5ee6d0f8a1824b7949c9f98604e845e4dd2c703"
+    },
+    {
+      "source": "QNN/results/by_config/shallow_original/shallow_original_folds1-2_seed42.csv",
+      "destination": "results/shallowconvnet/shallow_original_folds1-2_seed42.csv",
+      "sha256": "c0fb2e2cc0dbe754cd8b46e1db4e6b1c44cefc513517e1763b14113e2e5d5c90"
+    },
+    {
+      "source": "QNN/results/by_config/shallow_original/shallow_original_folds4-5_seed42.csv",
+      "destination": "results/shallowconvnet/shallow_original_folds4-5_seed42.csv",
+      "sha256": "b510ab78815e65f4b6ab2ac4b510b387963b5f5dfa03cc1e9227349b50aa2801"
+    },
+    {
+      "source": "atcnet_confusion_matrices.png",
+      "destination": "archive/supporting_figures/atcnet_confusion_matrices.png",
+      "sha256": "36d64d7a2d5a4a86f19b73c8e5edaded753ff4a996debf508ffb6f1b1caad773"
+    },
+    {
+      "source": "atcnet_training_history.png",
+      "destination": "archive/supporting_figures/atcnet_training_history.png",
+      "sha256": "ef04234fe02d9365d862aed74afdc2600ca4e316a1ac6002dc7fb88fa57fcd61"
+    },
+    {
+      "source": "deepconvnet_confusion_matrices.png",
+      "destination": "archive/supporting_figures/deepconvnet_confusion_matrices.png",
+      "sha256": "6e61cf4d0ff3f18f82c11dd7fd294b7473226c6080b0da44957f173a33063495"
+    },
+    {
+      "source": "deepconvnet_overfitting_analysis.png",
+      "destination": "archive/supporting_figures/deepconvnet_overfitting_analysis.png",
+      "sha256": "99bd1219128cfeb7717301a01e0a4d368d8c9d3c455d067557cf751c2a8cf77b"
+    },
+    {
+      "source": "deepconvnet_per_class_accuracy.png",
+      "destination": "archive/supporting_figures/deepconvnet_per_class_accuracy.png",
+      "sha256": "24f2fee077d85fb48793c92ac6a220d5fcd4d439f5d8155287ea0186602b3f8e"
+    },
+    {
+      "source": "deepconvnet_training_history.png",
+      "destination": "archive/supporting_figures/deepconvnet_training_history.png",
+      "sha256": "286a42f951818cbfbf1e7ccba4695c558512f173d98358c557ef2a8db1930376"
+    },
+    {
+      "source": "shallowconvnet_overfitting_analysis.png",
+      "destination": "archive/supporting_figures/shallowconvnet_overfitting_analysis.png",
+      "sha256": "8430496d0cf60847d70d93bfad7e9a520600bf9bdfb8221a718d0141433f8b58"
+    },
+    {
+      "source": "shallowconvnet_per_class_accuracy.png",
+      "destination": "archive/supporting_figures/shallowconvnet_per_class_accuracy.png",
+      "sha256": "40a20d8fd808b201cb55f1f16cfb07a94894747b244297498f76a95faa1006e3"
+    },
+    {
+      "source": "shallowconvnet_results_summary.png",
+      "destination": "archive/supporting_figures/shallowconvnet_results_summary.png",
+      "sha256": "2570fed0a384163fa82b7ecad596ba3357e09e5d9e90330104cc52d53a574d10"
+    },
+    {
+      "source": "README.md",
+      "destination": "archive/historical_context/README.md",
+      "sha256": "2ed08389d24fe1be6aaf4cc4be0246e4277a9e76dc0643e87051c316d7f2a7f9"
+    },
+    {
+      "source": "PAPER_CONTRIBUTIONS.md",
+      "destination": "archive/historical_context/PAPER_CONTRIBUTIONS.md",
+      "sha256": "223804848acc23491c5cababa49c6ab9d970095d24de1fcc08a9847c055dc940"
+    },
+    {
+      "source": "PAPER2_SNN_QNN_HEAD_CONTRIBUTIONS.md",
+      "destination": "archive/historical_context/PAPER2_SNN_QNN_HEAD_CONTRIBUTIONS.md",
+      "sha256": "a193df76ec235ef4089292ad589295d83a4f4789ab7a15e3dd55d1739d73dd28"
+    },
+    {
+      "source": "research_expansion_fold1_report.md",
+      "destination": "archive/historical_context/research_expansion_fold1_report.md",
+      "sha256": "8cc1047d8865f8b30c3d291040ec0b631bdc4dc80e2be29c6e366ab195040d09"
+    }
+  ],
+  "note": "Hashes identify source copies before documented portability changes. Historical JSON remains byte-identical.",
+  "porting_record": "docs/PORTING.md"
+}

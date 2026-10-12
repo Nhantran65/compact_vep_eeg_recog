@@ -1,0 +1,238 @@
+[
+  {
+    "path": "CSV-FEATURES/Apple/A1/Apple_A1_sub15_A1_RAW14_epochs.csv",
+    "epochs": 36
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A1/Apple_A1_sub20_A1_RAW14_epochs.csv",
+    "epochs": 1
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A1/Apple_A1_sub29_A1_RAW14_epochs.csv",
+    "epochs": 57
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A1/Apple_A1_sub32_A1_RAW14_epochs.csv",
+    "epochs": 19
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A1/Apple_A1_sub3_A1_RAW14_epochs.csv",
+    "epochs": 95
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A1/Apple_A1_sub6_A1_RAW14_epochs.csv",
+    "epochs": 79
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A1/Apple_A1_sub8_A1_RAW14_epochs.csv",
+    "epochs": 11
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A2/Apple_A2_sub10_A2_RAW14_epochs.csv",
+    "epochs": 86
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A2/Apple_A2_sub12_A2_RAW14_epochs.csv",
+    "epochs": 108
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A2/Apple_A2_sub30_A2_RAW14_epochs.csv",
+    "epochs": 40
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A2/Apple_A2_sub5_A2_RAW14_epochs.csv",
+    "epochs": 81
+  },
+  {
+    "path": "CSV-FEATURES/Apple/A2/Apple_A2_sub9_A2_RAW14_epochs.csv",
+    "epochs": 33
+  },
+  {
+    "path": "CSV-FEATURES/Car/C1/Car_C1_sub11_C1_RAW14_epochs.csv",
+    "epochs": 96
+  },
+  {
+    "path": "CSV-FEATURES/Car/C1/Car_C1_sub16_C1_RAW14_epochs.csv",
+    "epochs": 12
+  },
+  {
+    "path": "CSV-FEATURES/Car/C1/Car_C1_sub22_C1_RAW14_epochs.csv",
+    "epochs": 81
+  },
+  {
+    "path": "CSV-FEATURES/Car/C1/Car_C1_sub28_C1_RAW14_epochs.csv",
+    "epochs": 29
+  },
+  {
+    "path": "CSV-FEATURES/Car/C1/Car_C1_sub2_C1_RAW14_epochs.csv",
+    "epochs": 64
+  },
+  {
+    "path": "CSV-FEATURES/Car/C1/Car_C1_sub4_C1_RAW14_epochs.csv",
+    "epochs": 89
+  },
+  {
+    "path": "CSV-FEATURES/Car/C1/Car_C1_sub6_C1_RAW14_epochs.csv",
+    "epochs": 40
+  },
+  {
+    "path": "CSV-FEATURES/Car/C2/Car_C2_sub10_C2_RAW14_epochs.csv",
+    "epochs": 104
+  },
+  {
+    "path": "CSV-FEATURES/Car/C2/Car_C2_sub12_C2_RAW14_epochs.csv",
+    "epochs": 104
+  },
+  {
+    "path": "CSV-FEATURES/Car/C2/Car_C2_sub13_C2_RAW14_epochs.csv",
+    "epochs": 56
+  },
+  {
+    "path": "CSV-FEATURES/Car/C2/Car_C2_sub18_C2_RAW14_epochs.csv",
+    "epochs": 43
+  },
+  {
+    "path": "CSV-FEATURES/Car/C2/Car_C2_sub19_C2_RAW14_epochs.csv",
+    "epochs": 34
+  },
+  {
+    "path": "CSV-FEATURES/Car/C2/Car_C2_sub21_C2_RAW14_epochs.csv",
+    "epochs": 60
+  },
+  {
+    "path": "CSV-FEATURES/Car/C2/Car_C2_sub24_C2_RAW14_epochs.csv",
+    "epochs": 16
+  },
+  {
+    "path": "CSV-FEATURES/Car/C2/Car_C2_sub8_C2_RAW14_epochs.csv",
+    "epochs": 44
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F1/Flower_F1_sub14_F1_RAW14_epochs.csv",
+    "epochs": 97
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F1/Flower_F1_sub16_F1_RAW14_epochs.csv",
+    "epochs": 68
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F1/Flower_F1_sub1_F1_RAW14_epochs.csv",
+    "epochs": 15
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F1/Flower_F1_sub22_F1_RAW14_epochs.csv",
+    "epochs": 22
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F1/Flower_F1_sub23_F1_RAW14_epochs.csv",
+    "epochs": 72
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F1/Flower_F1_sub26_F1_RAW14_epochs.csv",
+    "epochs": 86
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F1/Flower_F1_sub31_F1_RAW14_epochs.csv",
+    "epochs": 110
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F1/Flower_F1_sub7_F1_RAW14_epochs.csv",
+    "epochs": 55
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F2/Flower_F2_sub13_F2_RAW14_epochs.csv",
+    "epochs": 89
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F2/Flower_F2_sub17_F2_RAW14_epochs.csv",
+    "epochs": 99
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F2/Flower_F2_sub18_F2_RAW14_epochs.csv",
+    "epochs": 40
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F2/Flower_F2_sub19_F2_RAW14_epochs.csv",
+    "epochs": 55
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F2/Flower_F2_sub28_F2_RAW14_epochs.csv",
+    "epochs": 39
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F2/Flower_F2_sub4_F2_RAW14_epochs.csv",
+    "epochs": 87
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F2/Flower_F2_sub5_F2_RAW14_epochs.csv",
+    "epochs": 95
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F2/Flower_F2_sub7_F2_RAW14_epochs.csv",
+    "epochs": 40
+  },
+  {
+    "path": "CSV-FEATURES/Flower/F2/Flower_F2_sub9_F2_RAW14_epochs.csv",
+    "epochs": 30
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub14_P1_RAW14_epochs.csv",
+    "epochs": 94
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub20_P1_RAW14_epochs.csv",
+    "epochs": 1
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub25_P1_RAW14_epochs.csv",
+    "epochs": 48
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub2_P1_RAW14_epochs.csv",
+    "epochs": 89
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub30_P1_RAW14_epochs.csv",
+    "epochs": 29
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub32_P1_RAW14_epochs.csv",
+    "epochs": 29
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P1/Human Face_P1_sub3_P1_RAW14_epochs.csv",
+    "epochs": 82
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub11_P2_RAW14_epochs.csv",
+    "epochs": 99
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub15_P2_RAW14_epochs.csv",
+    "epochs": 81
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub17_P2_RAW14_epochs.csv",
+    "epochs": 101
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub1_P2_RAW14_epochs.csv",
+    "epochs": 14
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub21_P2_RAW14_epochs.csv",
+    "epochs": 96
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub24_P2_RAW14_epochs.csv",
+    "epochs": 34
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub29_P2_RAW14_epochs.csv",
+    "epochs": 81
+  },
+  {
+    "path": "CSV-FEATURES/Human Face/P2/Human Face_P2_sub31_P2_RAW14_epochs.csv",
+    "epochs": 117
+  }
+]

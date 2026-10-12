@@ -1,0 +1,57 @@
+{
+  "protocol": "legacy_epoch_stratified_seed42",
+  "input_order": "saved SVM notebook console output, 59 CSVs",
+  "not_subject_disjoint": true,
+  "folds": [
+    {
+      "fold": 1,
+      "train_samples": 2889,
+      "test_samples": 723,
+      "shared_source_recordings": 57,
+      "sha256": {
+        "train": "0c79bf008d5474e6fab47238acf9325bb5fdc18c000e225a17121ff6820f5d76",
+        "test": "ad6341cfb76426b279d9e4eb664cb63c18195ebfffbf25c1861ee14490f21b68"
+      }
+    },
+    {
+      "fold": 2,
+      "train_samples": 2889,
+      "test_samples": 723,
+      "shared_source_recordings": 57,
+      "sha256": {
+        "train": "8de9875382eb94e9737ddfec64365c8bebb0c6970351118983a60ea91c8e2e63",
+        "test": "afc8aafe0f3b24962ab08bff307c484c3aa6f56ba566cf95d65b04d9a4482c37"
+      }
+    },
+    {
+      "fold": 3,
+      "train_samples": 2890,
+      "test_samples": 722,
+      "shared_source_recordings": 57,
+      "sha256": {
+        "train": "008a001196691b71e8b49676e57247e321b3196ae9d5436450afd13aa01e6f9c",
+        "test": "01af10f1c562c8cd5900a3570612a0d00e14d42ec6c123b8eca494c335c5d8b9"
+      }
+    },
+    {
+      "fold": 4,
+      "train_samples": 2890,
+      "test_samples": 722,
+      "shared_source_recordings": 57,
+      "sha256": {
+        "train": "4da337a0ce8bcc431e0be542e5ee4daef67f3b19ba3ce212fa6e032010785fcc",
+        "test": "b97c1708577bc012a457560fbf4c619badc555d17b35d42a4f1fd36b539d4d93"
+      }
+    },
+    {
+      "fold": 5,
+      "train_samples": 2890,
+      "test_samples": 722,
+      "shared_source_recordings": 57,
+      "sha256": {
+        "train": "cc6cb918fa10e0aee6a01c2e851f5168ab9fcf3a5b3d63a6a47edb748fd5243f",
+        "test": "34307a399060d3885ee85c30d2fbb2d975b3f31edec49187dad43bc42fe8c395"
+      }
+    }
+  ]
+}

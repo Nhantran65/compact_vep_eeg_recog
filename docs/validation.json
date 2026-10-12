@@ -1,0 +1,171 @@
+{
+  "backbone_class_ast_identical": true,
+  "environment": {
+    "torch": "2.12.1",
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.8.0",
+    "PyYAML": "6.0.3",
+    "tqdm": "4.67.3",
+    "snntorch": "0.9.4",
+    "setuptools": "81.0.0"
+  },
+  "artifact_metric_recomputation": {
+    "metric_rows": 693,
+    "confusion_matrices_recomputed": 693,
+    "tolerance": 1e-09
+  },
+  "probe_reproduction": [
+    {
+      "fold": 1,
+      "head": "linearsvc_c1",
+      "historical_accuracy": 0.8395573997233748,
+      "rerun_accuracy": 0.8409405255878285,
+      "delta_pp": 0.13831258644536604,
+      "same_confusion_matrix": false
+    },
+    {
+      "fold": 1,
+      "head": "rbf_svc_c10_gamma_scale",
+      "historical_accuracy": 0.8533886583679114,
+      "rerun_accuracy": 0.8547717842323651,
+      "delta_pp": 0.13831258644536604,
+      "same_confusion_matrix": false
+    },
+    {
+      "fold": 1,
+      "head": "pca128_rbf_svc_c3_gamma_scale",
+      "historical_accuracy": 0.8547717842323651,
+      "rerun_accuracy": 0.8547717842323651,
+      "delta_pp": 0.0,
+      "same_confusion_matrix": true
+    },
+    {
+      "fold": 2,
+      "head": "linearsvc_c1",
+      "historical_accuracy": 0.8312586445366529,
+      "rerun_accuracy": 0.8312586445366529,
+      "delta_pp": 0.0,
+      "same_confusion_matrix": true
+    },
+    {
+      "fold": 2,
+      "head": "rbf_svc_c10_gamma_scale",
+      "historical_accuracy": 0.8478561549100968,
+      "rerun_accuracy": 0.8478561549100968,
+      "delta_pp": 0.0,
+      "same_confusion_matrix": true
+    },
+    {
+      "fold": 2,
+      "head": "pca128_rbf_svc_c3_gamma_scale",
+      "historical_accuracy": 0.8464730290456431,
+      "rerun_accuracy": 0.8492392807745505,
+      "delta_pp": 0.2766251728907321,
+      "same_confusion_matrix": false
+    },
+    {
+      "fold": 3,
+      "head": "linearsvc_c1",
+      "historical_accuracy": 0.853185595567867,
+      "rerun_accuracy": 0.853185595567867,
+      "delta_pp": 0.0,
+      "same_confusion_matrix": true
+    },
+    {
+      "fold": 3,
+      "head": "rbf_svc_c10_gamma_scale",
+      "historical_accuracy": 0.8628808864265928,
+      "rerun_accuracy": 0.8628808864265928,
+      "delta_pp": 0.0,
+      "same_confusion_matrix": false
+    },
+    {
+      "fold": 3,
+      "head": "pca128_rbf_svc_c3_gamma_scale",
+      "historical_accuracy": 0.8545706371191135,
+      "rerun_accuracy": 0.853185595567867,
+      "delta_pp": -0.13850415512465242,
+      "same_confusion_matrix": false
+    },
+    {
+      "fold": 4,
+      "head": "linearsvc_c1",
+      "historical_accuracy": 0.8282548476454293,
+      "rerun_accuracy": 0.8282548476454293,
+      "delta_pp": 0.0,
+      "same_confusion_matrix": false
+    },
+    {
+      "fold": 4,
+      "head": "rbf_svc_c10_gamma_scale",
+      "historical_accuracy": 0.8698060941828255,
+      "rerun_accuracy": 0.8698060941828255,
+      "delta_pp": 0.0,
+      "same_confusion_matrix": true
+    },
+    {
+      "fold": 4,
+      "head": "pca128_rbf_svc_c3_gamma_scale",
+      "historical_accuracy": 0.8601108033240997,
+      "rerun_accuracy": 0.8614958448753463,
+      "delta_pp": 0.13850415512465242,
+      "same_confusion_matrix": false
+    },
+    {
+      "fold": 5,
+      "head": "linearsvc_c1",
+      "historical_accuracy": 0.8476454293628809,
+      "rerun_accuracy": 0.8490304709141274,
+      "delta_pp": 0.13850415512465242,
+      "same_confusion_matrix": false
+    },
+    {
+      "fold": 5,
+      "head": "rbf_svc_c10_gamma_scale",
+      "historical_accuracy": 0.8670360110803325,
+      "rerun_accuracy": 0.8670360110803325,
+      "delta_pp": 0.0,
+      "same_confusion_matrix": true
+    },
+    {
+      "fold": 5,
+      "head": "pca128_rbf_svc_c3_gamma_scale",
+      "historical_accuracy": 0.8698060941828255,
+      "rerun_accuracy": 0.8698060941828255,
+      "delta_pp": 0.0,
+      "same_confusion_matrix": true
+    }
+  ],
+  "rerun_rbf_accuracy_mean": 0.8604701861664426,
+  "rerun_rbf_accuracy_std_ddof1": 0.009050777317071644,
+  "limitation": "Original fold CSV hashes are absent. Reconstructed folds and current environment produce close but not identical probe results; no attribution of differences is established.",
+  "project_verification": {
+    "package_files_verified": 517,
+    "historical_hybrid_checkpoints_loaded": 10,
+    "backbone_checkpoints_loaded": 5,
+    "feature_shapes": [
+      [
+        2,
+        80
+      ],
+      [
+        2,
+        40,
+        104
+      ]
+    ],
+    "surrogate_gradient_step": "passed",
+    "legacy_fold_hashes": "passed",
+    "subject_manifest_disjointness": "passed"
+  },
+  "cli_smoke_tests": [
+    "run_shallow_snn_probe",
+    "run_shallow_snn_hybrid",
+    "run_fold",
+    "run_probe",
+    "run_snn_v2_controls",
+    "run_snn_prefix_distill"
+  ],
+  "package_build_and_isolated_install": "passed: pip --no-deps --no-build-isolation --target; installed Shallow class produces 80 features"
+}

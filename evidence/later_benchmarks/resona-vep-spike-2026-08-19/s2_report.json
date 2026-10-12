@@ -1,0 +1,163 @@
+{
+  "decision": "Frozen RF/LIF features carry no usable class information on real SSVEP (neither bank clears 0.20 test accuracy on at least 2/3 subjects). Unlike S1/S1-R this is a genuine RESULT, not a harness failure: no optimizer is involved. Report with C and D as context.",
+  "expected_feature_count_abc": 384,
+  "gate_g_feat": {
+    "per_subject_max_ab_test_acc": [
+      {
+        "max_a_b_test_acc": 0.16666666666666666,
+        "subject": 1
+      },
+      {
+        "max_a_b_test_acc": 0.06666666666666667,
+        "subject": 2
+      },
+      {
+        "max_a_b_test_acc": 0.26666666666666666,
+        "subject": 3
+      }
+    ],
+    "subjects_passing": 1,
+    "subjects_required": 2,
+    "threshold": 0.2,
+    "verdict": "fail"
+  },
+  "gate_g_rq1": {
+    "reason": "G-feat failed",
+    "verdict": "not_evaluated"
+  },
+  "gate_g_wire": {
+    "per_subject": [
+      {
+        "abs_diff": 0.0003333333333332966,
+        "s1_expected": 0.933,
+        "s2_observed": 0.9333333333333333,
+        "subject": 1,
+        "within_tolerance": true
+      },
+      {
+        "abs_diff": 0.06666666666666665,
+        "s1_expected": 0.35,
+        "s2_observed": 0.2833333333333333,
+        "subject": 2,
+        "within_tolerance": true
+      },
+      {
+        "abs_diff": 0.0003333333333332966,
+        "s1_expected": 0.883,
+        "s2_observed": 0.8833333333333333,
+        "subject": 3,
+        "within_tolerance": true
+      }
+    ],
+    "tolerance_abs": 0.1,
+    "verdict": "pass"
+  },
+  "locked_contract": {
+    "fft_band_hz": [
+      6.0,
+      18.0
+    ],
+    "fft_bins_per_channel": 48,
+    "k_per_channel": 48,
+    "lif_beta_range": [
+      0.5,
+      0.99
+    ],
+    "probe": "StandardScaler(train-only) -> LogisticRegression(max_iter=5000, sklearn defaults)",
+    "probe_seed": 42,
+    "rf_w_band_hz": [
+      6.0,
+      18.0
+    ],
+    "subjects": [
+      1,
+      2,
+      3
+    ]
+  },
+  "moabb_dataset": "Nakanishi2015",
+  "neural_models_trained": 0,
+  "schema_version": 1,
+  "stage": "RESONA-VEP S2 (Amendment 2: frozen filter banks, classical probe)",
+  "subjects": [
+    {
+      "A_rf_bank": {
+        "test_acc": 0.16666666666666666,
+        "train_acc": 1.0
+      },
+      "B_lif_bank": {
+        "test_acc": 0.13333333333333333,
+        "train_acc": 1.0
+      },
+      "C_fft_power": {
+        "test_acc": 0.36666666666666664,
+        "train_acc": 1.0
+      },
+      "D_raw_linear": {
+        "test_acc": 0.9333333333333333,
+        "train_acc": 1.0
+      },
+      "E_fbcca_context_only": {
+        "gated": false,
+        "test_acc": 0.75
+      },
+      "n_test": 60,
+      "n_train": 120,
+      "subject": 1
+    },
+    {
+      "A_rf_bank": {
+        "test_acc": 0.05,
+        "train_acc": 1.0
+      },
+      "B_lif_bank": {
+        "test_acc": 0.06666666666666667,
+        "train_acc": 0.8333333333333334
+      },
+      "C_fft_power": {
+        "test_acc": 0.15,
+        "train_acc": 1.0
+      },
+      "D_raw_linear": {
+        "test_acc": 0.2833333333333333,
+        "train_acc": 1.0
+      },
+      "E_fbcca_context_only": {
+        "gated": false,
+        "test_acc": 0.6166666666666667
+      },
+      "n_test": 60,
+      "n_train": 120,
+      "subject": 2
+    },
+    {
+      "A_rf_bank": {
+        "test_acc": 0.26666666666666666,
+        "train_acc": 1.0
+      },
+      "B_lif_bank": {
+        "test_acc": 0.08333333333333333,
+        "train_acc": 1.0
+      },
+      "C_fft_power": {
+        "test_acc": 0.6833333333333333,
+        "train_acc": 1.0
+      },
+      "D_raw_linear": {
+        "test_acc": 0.8833333333333333,
+        "train_acc": 1.0
+      },
+      "E_fbcca_context_only": {
+        "gated": false,
+        "test_acc": 0.9833333333333333
+      },
+      "n_test": 60,
+      "n_train": 120,
+      "subject": 3
+    }
+  ],
+  "subjects_used_S2": 3,
+  "throwaway_spike": true,
+  "tsinghua_benchmark_or_beta_accessed": false,
+  "wall_seconds_total": 18.905107777565718
+}

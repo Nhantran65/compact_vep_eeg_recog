@@ -1,0 +1,158 @@
+{
+  "calibration_percentile": 90,
+  "decision": "P3 FAIL: the instrument is still broken. Report the tuning table. No further variant without a fresh human decision.",
+  "expected_feature_count_abc": 384,
+  "gate_g_feat": {
+    "reason": "P3 failed",
+    "verdict": "not_evaluated"
+  },
+  "gate_g_rq1": {
+    "reason": "P3 failed",
+    "verdict": "not_evaluated"
+  },
+  "gate_g_wire": {
+    "reason": "P3 failed",
+    "verdict": "not_evaluated"
+  },
+  "moabb_dataset": "Nakanishi2015",
+  "neural_models_trained": 0,
+  "p2_snr_power_stop_rule": {
+    "reason": "P3 failed",
+    "verdict": "not_evaluated"
+  },
+  "p3_instrument_unit_test": {
+    "calibration_percentile": 90,
+    "calibration_snr_db": -10.0,
+    "contrast_threshold": 0.8,
+    "peak_tolerance_hz": 0.25,
+    "rows": [
+      {
+        "argmax_nominal_hz": 10.595745086669922,
+        "contrast": 1.0,
+        "f_in_hz": 9.25,
+        "measured_peak_hz": 10.774118423461914,
+        "pass": false,
+        "peak_error_hz": 1.524118423461914,
+        "rate_max": 0.056640625,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 10.595745086669922,
+        "contrast": 1.0,
+        "f_in_hz": 9.75,
+        "measured_peak_hz": 10.774118423461914,
+        "pass": false,
+        "peak_error_hz": 1.024118423461914,
+        "rate_max": 0.048828125,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 10.595745086669922,
+        "contrast": 1.0,
+        "f_in_hz": 10.25,
+        "measured_peak_hz": 10.774118423461914,
+        "pass": false,
+        "peak_error_hz": 0.5241184234619141,
+        "rate_max": 0.05078125,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 11.106383323669434,
+        "contrast": 1.0,
+        "f_in_hz": 10.75,
+        "measured_peak_hz": 11.3067626953125,
+        "pass": false,
+        "peak_error_hz": 0.5567626953125,
+        "rate_max": 0.048828125,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 12.127659797668457,
+        "contrast": 1.0,
+        "f_in_hz": 11.25,
+        "measured_peak_hz": 12.378137588500977,
+        "pass": false,
+        "peak_error_hz": 1.1281375885009766,
+        "rate_max": 0.046875,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 11.361701965332031,
+        "contrast": 1.0,
+        "f_in_hz": 11.75,
+        "measured_peak_hz": 11.573822975158691,
+        "pass": true,
+        "peak_error_hz": 0.1761770248413086,
+        "rate_max": 0.044921875,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 12.638298034667969,
+        "contrast": 1.0,
+        "f_in_hz": 12.25,
+        "measured_peak_hz": 12.917105674743652,
+        "pass": false,
+        "peak_error_hz": 0.6671056747436523,
+        "rate_max": 0.044921875,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 14.93617057800293,
+        "contrast": 1.0,
+        "f_in_hz": 12.75,
+        "measured_peak_hz": 15.373427391052246,
+        "pass": false,
+        "peak_error_hz": 2.623427391052246,
+        "rate_max": 0.056640625,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 14.93617057800293,
+        "contrast": 1.0,
+        "f_in_hz": 13.25,
+        "measured_peak_hz": 15.373427391052246,
+        "pass": false,
+        "peak_error_hz": 2.123427391052246,
+        "rate_max": 0.064453125,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 15.446808815002441,
+        "contrast": 1.0,
+        "f_in_hz": 13.75,
+        "measured_peak_hz": 15.926972389221191,
+        "pass": false,
+        "peak_error_hz": 2.1769723892211914,
+        "rate_max": 0.0703125,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 16.212766647338867,
+        "contrast": 1.0,
+        "f_in_hz": 14.25,
+        "measured_peak_hz": 16.76318359375,
+        "pass": false,
+        "peak_error_hz": 2.51318359375,
+        "rate_max": 0.076171875,
+        "rate_min": 0.0
+      },
+      {
+        "argmax_nominal_hz": 16.212766647338867,
+        "contrast": 1.0,
+        "f_in_hz": 14.75,
+        "measured_peak_hz": 16.76318359375,
+        "pass": false,
+        "peak_error_hz": 2.01318359375,
+        "rate_max": 0.078125,
+        "rate_min": 0.0
+      }
+    ],
+    "verdict": "fail"
+  },
+  "real_eeg_touched_in_S3": false,
+  "schema_version": 1,
+  "stage": "RESONA-VEP S3 (Amendment 3: recalibrated frozen banks)",
+  "throwaway_spike": true,
+  "tsinghua_benchmark_or_beta_accessed": false,
+  "wall_seconds_total": 0.4823577292263508
+}

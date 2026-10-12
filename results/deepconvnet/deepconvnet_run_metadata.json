@@ -1,0 +1,15 @@
+{
+  "fold_dir": "trainfold",
+  "folds": 5,
+  "seed": 42,
+  "std_ddof": 1,
+  "preprocessing": "StandardScaler fit on train fold only",
+  "architecture": "DeepConvNet notebook architecture",
+  "batch_size": 32,
+  "epochs": 100,
+  "patience": 15,
+  "learning_rate": 0.001,
+  "dropout": 0.5,
+  "device": "cuda",
+  "torch_version": "2.12.0+cu130"
+}

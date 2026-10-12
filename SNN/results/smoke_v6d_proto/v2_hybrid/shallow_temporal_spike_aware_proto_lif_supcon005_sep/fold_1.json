@@ -1,0 +1,261 @@
+{
+  "name": "shallow_temporal_spike_aware_proto_lif_supcon005_sep",
+  "fold": 1,
+  "config": {
+    "name": "shallow_temporal_spike_aware_proto_lif_supcon005_sep",
+    "model": {
+      "architecture": "shallow_temporal_spike_aware_proto_lif",
+      "feature_mode": "temporal_map",
+      "hidden_dim": 64,
+      "beta": 0.9,
+      "threshold": 1.0,
+      "learn_beta": false,
+      "learn_threshold": false,
+      "surrogate": "atan",
+      "dropout": 0.3,
+      "gate_kernel": 9,
+      "prototypes_per_class": 4,
+      "init_gamma": 8.0,
+      "learn_gamma": true,
+      "learn_prototype_bias": true,
+      "prototype_sep_margin": 0.0
+    },
+    "loss": {
+      "lambda_supcon": 0.05,
+      "lambda_proto_sep": 0.01,
+      "supcon_temperature": 0.1
+    },
+    "training": {
+      "batch_size": 64,
+      "feature_batch_size": 256,
+      "epochs": 120,
+      "patience": 20,
+      "val_size": 0.2,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "scheduler_patience": 8,
+      "scheduler_factor": 0.5,
+      "seed": 42
+    },
+    "encoder": {},
+    "config_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/configs/shallow_temporal_spike_aware_proto_lif_supcon005_sep.yaml"
+  },
+  "data": {
+    "fold": 1,
+    "feature_mode": "temporal_map",
+    "checkpoint_template": "QNN/checkpoints/shallow_original_fold{fold}_seed42.pth",
+    "checkpoint_path": "QNN/checkpoints/shallow_original_fold1_seed42.pth",
+    "scaler_fit": "full_train_fold",
+    "train_size": 2311,
+    "val_size_count": 578,
+    "full_train_size": 2889,
+    "test_size": 723,
+    "feature_shape": [
+      40,
+      104
+    ]
+  },
+  "best_epoch": 1,
+  "best_val_metrics": {
+    "accuracy": 0.9463667820069204,
+    "macro_f1": 0.9471582270014521,
+    "balanced_accuracy": 0.9504504158905148,
+    "confusion_matrix": [
+      [
+        100,
+        2,
+        0,
+        1
+      ],
+      [
+        3,
+        134,
+        0,
+        3
+      ],
+      [
+        3,
+        8,
+        156,
+        9
+      ],
+      [
+        0,
+        1,
+        1,
+        157
+      ]
+    ],
+    "loss": 0.27707427907670656,
+    "total_loss": 0.27707427907670656,
+    "ce_loss": 0.1754024664719934,
+    "supcon_loss": 2.0328561690439404,
+    "proto_sep_loss": 0.0028999894857406616,
+    "spike_rate": 0.2709384947209745,
+    "mean_gate": 0.5109483631881507,
+    "gamma": 8.034972190856934
+  },
+  "train_metrics": {
+    "accuracy": 0.9515361315447858,
+    "macro_f1": 0.950405452046588,
+    "balanced_accuracy": 0.9519725921663996,
+    "confusion_matrix": [
+      [
+        394,
+        14,
+        1,
+        4
+      ],
+      [
+        14,
+        529,
+        8,
+        7
+      ],
+      [
+        7,
+        17,
+        660,
+        19
+      ],
+      [
+        7,
+        7,
+        7,
+        616
+      ]
+    ],
+    "loss": 0.22752893579723205,
+    "total_loss": 0.22752893579723205,
+    "ce_loss": 0.12810009744377787,
+    "supcon_loss": 1.9879967746978093,
+    "proto_sep_loss": 0.0028999894857406616,
+    "spike_rate": 0.2662579811852554,
+    "mean_gate": 0.5110906214549624,
+    "gamma": 8.034972190856934
+  },
+  "test_metrics": {
+    "accuracy": 0.8105117565698479,
+    "macro_f1": 0.8040161262957167,
+    "balanced_accuracy": 0.8079909231875962,
+    "confusion_matrix": [
+      [
+        101,
+        17,
+        5,
+        7
+      ],
+      [
+        14,
+        139,
+        11,
+        10
+      ],
+      [
+        13,
+        17,
+        172,
+        18
+      ],
+      [
+        13,
+        10,
+        2,
+        174
+      ]
+    ],
+    "loss": 0.8016236957064721,
+    "total_loss": 0.8016236957064721,
+    "ce_loss": 0.6387605793802467,
+    "supcon_loss": 3.256682086287692,
+    "proto_sep_loss": 0.0028999894857406616,
+    "spike_rate": 0.2684913465510244,
+    "mean_gate": 0.5116674038379089,
+    "gamma": 8.034972190856934
+  },
+  "seconds": 12.963483333587646,
+  "checkpoint_path": "SNN/artifacts/checkpoints/smoke_v6d_proto/v2_hybrid/shallow_temporal_spike_aware_proto_lif_supcon005_sep/fold_1.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "train": {
+        "accuracy": 0.7836434443963652,
+        "macro_f1": 0.7783603968747266,
+        "balanced_accuracy": 0.7770046921926416,
+        "confusion_matrix": [
+          [
+            304,
+            36,
+            27,
+            46
+          ],
+          [
+            42,
+            415,
+            64,
+            37
+          ],
+          [
+            18,
+            52,
+            584,
+            49
+          ],
+          [
+            35,
+            44,
+            50,
+            508
+          ]
+        ],
+        "loss": 0.63604189686345,
+        "total_loss": 0.63604189686345,
+        "ce_loss": 0.5247492243437889,
+        "supcon_loss": 2.225101023461075,
+        "proto_sep_loss": 0.0037621242525753187,
+        "spike_rate": 0.2785363207603323,
+        "mean_gate": 0.5056062912118846,
+        "gamma": 8.007937714149213
+      },
+      "val": {
+        "accuracy": 0.9463667820069204,
+        "macro_f1": 0.9471582270014521,
+        "balanced_accuracy": 0.9504504158905148,
+        "confusion_matrix": [
+          [
+            100,
+            2,
+            0,
+            1
+          ],
+          [
+            3,
+            134,
+            0,
+            3
+          ],
+          [
+            3,
+            8,
+            156,
+            9
+          ],
+          [
+            0,
+            1,
+            1,
+            157
+          ]
+        ],
+        "loss": 0.27707427907670656,
+        "total_loss": 0.27707427907670656,
+        "ce_loss": 0.1754024664719934,
+        "supcon_loss": 2.0328561690439404,
+        "proto_sep_loss": 0.0028999894857406616,
+        "spike_rate": 0.2709384947209745,
+        "mean_gate": 0.5109483631881507,
+        "gamma": 8.034972190856934
+      }
+    }
+  ]
+}

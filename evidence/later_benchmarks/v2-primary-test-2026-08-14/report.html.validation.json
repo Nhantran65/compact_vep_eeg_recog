@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "html": "/home/kiettqa/EEG-Foundation-Model-Paper/paper2_benchmark/reports/v2-primary-test-2026-08-14/report.html",
+  "stages": {
+    "package": "passed_with_audited_reader_override",
+    "payload_equality": "passed",
+    "static_charts": "passed",
+    "verification": "passed"
+  },
+  "sharedReaderOverride": {
+    "reason": "The upstream 100vw sticky bar includes scrollbar width, while negative layout-item margins escape the mobile report grid.",
+    "rule": ".analytics-top-bar width/margins and non-editable report item margin/padding cancellation only"
+  },
+  "counts": {
+    "blocks": 20,
+    "charts": 4,
+    "html": 0,
+    "metrics": 0,
+    "tables": 4
+  },
+  "sourceDialog": "passed",
+  "sourceInteraction": "keyboard_menu_semantic_click",
+  "viewports": [
+    1440,
+    390
+  ],
+  "timings": {
+    "browserRunMs": 2042.9,
+    "readerReadyMs": 141.3,
+    "contentChecksMs": 32.1,
+    "sourceDialogMs": 32,
+    "responsiveChecksMs": 32,
+    "totalMs": 2069.3
+  }
+}

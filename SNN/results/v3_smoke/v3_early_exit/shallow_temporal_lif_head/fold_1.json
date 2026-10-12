@@ -1,0 +1,103 @@
+{
+  "name": "shallow_temporal_lif_head",
+  "fold": 1,
+  "checkpoint_path": "SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_1.pt",
+  "data": {
+    "fold": 1,
+    "feature_mode": "temporal_map",
+    "checkpoint_template": "QNN/checkpoints/shallow_original_fold{fold}_seed42.pth",
+    "checkpoint_path": "QNN/checkpoints/shallow_original_fold1_seed42.pth",
+    "scaler_fit": "full_train_fold",
+    "train_size": 2311,
+    "val_size_count": 578,
+    "full_train_size": 2889,
+    "test_size": 723,
+    "feature_shape": [
+      40,
+      104
+    ]
+  },
+  "timing_repeats": 1,
+  "prefix_results": [
+    {
+      "prefix_steps": 8,
+      "coverage_samples": 32,
+      "coverage_ms": 250.0,
+      "metrics": {
+        "accuracy": 0.6002766251728907,
+        "macro_f1": 0.5972970992200579,
+        "balanced_accuracy": 0.5982421350381842,
+        "confusion_matrix": [
+          [
+            76,
+            25,
+            14,
+            15
+          ],
+          [
+            23,
+            98,
+            20,
+            33
+          ],
+          [
+            16,
+            35,
+            128,
+            41
+          ],
+          [
+            15,
+            37,
+            15,
+            132
+          ]
+        ],
+        "loss": 1.942809512836145,
+        "spike_rate": 0.30056387931108475,
+        "head_inference_ms_per_sample": 0.18160140082590479
+      },
+      "relative_latency_vs_104": 0.5850254037552219
+    },
+    {
+      "prefix_steps": 104,
+      "coverage_samples": 128,
+      "coverage_ms": 1000.0,
+      "metrics": {
+        "accuracy": 0.8215767634854771,
+        "macro_f1": 0.8149609814115459,
+        "balanced_accuracy": 0.8130337252131569,
+        "confusion_matrix": [
+          [
+            97,
+            16,
+            10,
+            7
+          ],
+          [
+            9,
+            136,
+            13,
+            16
+          ],
+          [
+            4,
+            17,
+            187,
+            12
+          ],
+          [
+            9,
+            13,
+            3,
+            174
+          ]
+        ],
+        "loss": 1.0334518223609337,
+        "spike_rate": 0.3224061181147893,
+        "head_inference_ms_per_sample": 0.31041626510613524
+      },
+      "relative_latency_vs_104": 1.0
+    }
+  ]
+}

@@ -1,0 +1,561 @@
+model,fold,true_label,pred_label,count
+Random Forest,1,1,1,34
+Random Forest,1,1,2,28
+Random Forest,1,1,3,40
+Random Forest,1,1,4,28
+Random Forest,1,2,1,13
+Random Forest,1,2,2,62
+Random Forest,1,2,3,67
+Random Forest,1,2,4,32
+Random Forest,1,3,1,11
+Random Forest,1,3,2,30
+Random Forest,1,3,3,143
+Random Forest,1,3,4,36
+Random Forest,1,4,1,13
+Random Forest,1,4,2,22
+Random Forest,1,4,3,64
+Random Forest,1,4,4,100
+SVM (RBF),1,1,1,24
+SVM (RBF),1,1,2,29
+SVM (RBF),1,1,3,39
+SVM (RBF),1,1,4,38
+SVM (RBF),1,2,1,12
+SVM (RBF),1,2,2,53
+SVM (RBF),1,2,3,64
+SVM (RBF),1,2,4,45
+SVM (RBF),1,3,1,8
+SVM (RBF),1,3,2,17
+SVM (RBF),1,3,3,119
+SVM (RBF),1,3,4,76
+SVM (RBF),1,4,1,11
+SVM (RBF),1,4,2,22
+SVM (RBF),1,4,3,49
+SVM (RBF),1,4,4,117
+AdaBoost,1,1,1,19
+AdaBoost,1,1,2,19
+AdaBoost,1,1,3,64
+AdaBoost,1,1,4,28
+AdaBoost,1,2,1,14
+AdaBoost,1,2,2,35
+AdaBoost,1,2,3,85
+AdaBoost,1,2,4,40
+AdaBoost,1,3,1,7
+AdaBoost,1,3,2,23
+AdaBoost,1,3,3,137
+AdaBoost,1,3,4,53
+AdaBoost,1,4,1,15
+AdaBoost,1,4,2,11
+AdaBoost,1,4,3,119
+AdaBoost,1,4,4,54
+Decision Tree,1,1,1,34
+Decision Tree,1,1,2,18
+Decision Tree,1,1,3,41
+Decision Tree,1,1,4,37
+Decision Tree,1,2,1,35
+Decision Tree,1,2,2,48
+Decision Tree,1,2,3,52
+Decision Tree,1,2,4,39
+Decision Tree,1,3,1,34
+Decision Tree,1,3,2,52
+Decision Tree,1,3,3,78
+Decision Tree,1,3,4,56
+Decision Tree,1,4,1,31
+Decision Tree,1,4,2,41
+Decision Tree,1,4,3,57
+Decision Tree,1,4,4,70
+Logistic Regression,1,1,1,27
+Logistic Regression,1,1,2,33
+Logistic Regression,1,1,3,33
+Logistic Regression,1,1,4,37
+Logistic Regression,1,2,1,30
+Logistic Regression,1,2,2,43
+Logistic Regression,1,2,3,50
+Logistic Regression,1,2,4,51
+Logistic Regression,1,3,1,34
+Logistic Regression,1,3,2,64
+Logistic Regression,1,3,3,61
+Logistic Regression,1,3,4,61
+Logistic Regression,1,4,1,34
+Logistic Regression,1,4,2,58
+Logistic Regression,1,4,3,54
+Logistic Regression,1,4,4,53
+XGBoost,1,1,1,25
+XGBoost,1,1,2,34
+XGBoost,1,1,3,39
+XGBoost,1,1,4,32
+XGBoost,1,2,1,18
+XGBoost,1,2,2,56
+XGBoost,1,2,3,66
+XGBoost,1,2,4,34
+XGBoost,1,3,1,15
+XGBoost,1,3,2,36
+XGBoost,1,3,3,124
+XGBoost,1,3,4,45
+XGBoost,1,4,1,15
+XGBoost,1,4,2,19
+XGBoost,1,4,3,75
+XGBoost,1,4,4,90
+LightGBM,1,1,1,34
+LightGBM,1,1,2,34
+LightGBM,1,1,3,28
+LightGBM,1,1,4,34
+LightGBM,1,2,1,21
+LightGBM,1,2,2,65
+LightGBM,1,2,3,57
+LightGBM,1,2,4,31
+LightGBM,1,3,1,15
+LightGBM,1,3,2,40
+LightGBM,1,3,3,116
+LightGBM,1,3,4,49
+LightGBM,1,4,1,15
+LightGBM,1,4,2,26
+LightGBM,1,4,3,65
+LightGBM,1,4,4,93
+Random Forest,2,1,1,31
+Random Forest,2,1,2,25
+Random Forest,2,1,3,45
+Random Forest,2,1,4,28
+Random Forest,2,2,1,10
+Random Forest,2,2,2,49
+Random Forest,2,2,3,75
+Random Forest,2,2,4,41
+Random Forest,2,3,1,4
+Random Forest,2,3,2,29
+Random Forest,2,3,3,134
+Random Forest,2,3,4,53
+Random Forest,2,4,1,11
+Random Forest,2,4,2,25
+Random Forest,2,4,3,77
+Random Forest,2,4,4,86
+SVM (RBF),2,1,1,15
+SVM (RBF),2,1,2,22
+SVM (RBF),2,1,3,51
+SVM (RBF),2,1,4,41
+SVM (RBF),2,2,1,6
+SVM (RBF),2,2,2,48
+SVM (RBF),2,2,3,68
+SVM (RBF),2,2,4,53
+SVM (RBF),2,3,1,4
+SVM (RBF),2,3,2,17
+SVM (RBF),2,3,3,136
+SVM (RBF),2,3,4,63
+SVM (RBF),2,4,1,6
+SVM (RBF),2,4,2,23
+SVM (RBF),2,4,3,68
+SVM (RBF),2,4,4,102
+AdaBoost,2,1,1,13
+AdaBoost,2,1,2,26
+AdaBoost,2,1,3,64
+AdaBoost,2,1,4,26
+AdaBoost,2,2,1,15
+AdaBoost,2,2,2,39
+AdaBoost,2,2,3,83
+AdaBoost,2,2,4,38
+AdaBoost,2,3,1,11
+AdaBoost,2,3,2,34
+AdaBoost,2,3,3,115
+AdaBoost,2,3,4,60
+AdaBoost,2,4,1,11
+AdaBoost,2,4,2,27
+AdaBoost,2,4,3,104
+AdaBoost,2,4,4,57
+Decision Tree,2,1,1,28
+Decision Tree,2,1,2,27
+Decision Tree,2,1,3,42
+Decision Tree,2,1,4,32
+Decision Tree,2,2,1,33
+Decision Tree,2,2,2,46
+Decision Tree,2,2,3,55
+Decision Tree,2,2,4,41
+Decision Tree,2,3,1,35
+Decision Tree,2,3,2,56
+Decision Tree,2,3,3,72
+Decision Tree,2,3,4,57
+Decision Tree,2,4,1,33
+Decision Tree,2,4,2,47
+Decision Tree,2,4,3,59
+Decision Tree,2,4,4,60
+Logistic Regression,2,1,1,29
+Logistic Regression,2,1,2,28
+Logistic Regression,2,1,3,38
+Logistic Regression,2,1,4,34
+Logistic Regression,2,2,1,41
+Logistic Regression,2,2,2,39
+Logistic Regression,2,2,3,57
+Logistic Regression,2,2,4,38
+Logistic Regression,2,3,1,31
+Logistic Regression,2,3,2,54
+Logistic Regression,2,3,3,70
+Logistic Regression,2,3,4,65
+Logistic Regression,2,4,1,39
+Logistic Regression,2,4,2,47
+Logistic Regression,2,4,3,66
+Logistic Regression,2,4,4,47
+XGBoost,2,1,1,27
+XGBoost,2,1,2,30
+XGBoost,2,1,3,40
+XGBoost,2,1,4,32
+XGBoost,2,2,1,14
+XGBoost,2,2,2,60
+XGBoost,2,2,3,60
+XGBoost,2,2,4,41
+XGBoost,2,3,1,10
+XGBoost,2,3,2,31
+XGBoost,2,3,3,133
+XGBoost,2,3,4,46
+XGBoost,2,4,1,12
+XGBoost,2,4,2,28
+XGBoost,2,4,3,75
+XGBoost,2,4,4,84
+LightGBM,2,1,1,26
+LightGBM,2,1,2,28
+LightGBM,2,1,3,41
+LightGBM,2,1,4,34
+LightGBM,2,2,1,14
+LightGBM,2,2,2,71
+LightGBM,2,2,3,57
+LightGBM,2,2,4,33
+LightGBM,2,3,1,14
+LightGBM,2,3,2,34
+LightGBM,2,3,3,124
+LightGBM,2,3,4,48
+LightGBM,2,4,1,10
+LightGBM,2,4,2,29
+LightGBM,2,4,3,71
+LightGBM,2,4,4,89
+Random Forest,3,1,1,22
+Random Forest,3,1,2,27
+Random Forest,3,1,3,46
+Random Forest,3,1,4,34
+Random Forest,3,2,1,10
+Random Forest,3,2,2,62
+Random Forest,3,2,3,61
+Random Forest,3,2,4,42
+Random Forest,3,3,1,6
+Random Forest,3,3,2,30
+Random Forest,3,3,3,126
+Random Forest,3,3,4,57
+Random Forest,3,4,1,9
+Random Forest,3,4,2,19
+Random Forest,3,4,3,63
+Random Forest,3,4,4,108
+SVM (RBF),3,1,1,19
+SVM (RBF),3,1,2,17
+SVM (RBF),3,1,3,51
+SVM (RBF),3,1,4,42
+SVM (RBF),3,2,1,5
+SVM (RBF),3,2,2,41
+SVM (RBF),3,2,3,66
+SVM (RBF),3,2,4,63
+SVM (RBF),3,3,1,3
+SVM (RBF),3,3,2,14
+SVM (RBF),3,3,3,132
+SVM (RBF),3,3,4,70
+SVM (RBF),3,4,1,8
+SVM (RBF),3,4,2,17
+SVM (RBF),3,4,3,67
+SVM (RBF),3,4,4,107
+AdaBoost,3,1,1,12
+AdaBoost,3,1,2,29
+AdaBoost,3,1,3,49
+AdaBoost,3,1,4,39
+AdaBoost,3,2,1,10
+AdaBoost,3,2,2,44
+AdaBoost,3,2,3,68
+AdaBoost,3,2,4,53
+AdaBoost,3,3,1,9
+AdaBoost,3,3,2,20
+AdaBoost,3,3,3,128
+AdaBoost,3,3,4,62
+AdaBoost,3,4,1,9
+AdaBoost,3,4,2,26
+AdaBoost,3,4,3,93
+AdaBoost,3,4,4,71
+Decision Tree,3,1,1,26
+Decision Tree,3,1,2,23
+Decision Tree,3,1,3,38
+Decision Tree,3,1,4,42
+Decision Tree,3,2,1,29
+Decision Tree,3,2,2,38
+Decision Tree,3,2,3,53
+Decision Tree,3,2,4,55
+Decision Tree,3,3,1,35
+Decision Tree,3,3,2,42
+Decision Tree,3,3,3,86
+Decision Tree,3,3,4,56
+Decision Tree,3,4,1,30
+Decision Tree,3,4,2,44
+Decision Tree,3,4,3,54
+Decision Tree,3,4,4,71
+Logistic Regression,3,1,1,26
+Logistic Regression,3,1,2,31
+Logistic Regression,3,1,3,45
+Logistic Regression,3,1,4,27
+Logistic Regression,3,2,1,23
+Logistic Regression,3,2,2,52
+Logistic Regression,3,2,3,46
+Logistic Regression,3,2,4,54
+Logistic Regression,3,3,1,41
+Logistic Regression,3,3,2,55
+Logistic Regression,3,3,3,71
+Logistic Regression,3,3,4,52
+Logistic Regression,3,4,1,34
+Logistic Regression,3,4,2,54
+Logistic Regression,3,4,3,62
+Logistic Regression,3,4,4,49
+XGBoost,3,1,1,31
+XGBoost,3,1,2,22
+XGBoost,3,1,3,46
+XGBoost,3,1,4,30
+XGBoost,3,2,1,8
+XGBoost,3,2,2,58
+XGBoost,3,2,3,60
+XGBoost,3,2,4,49
+XGBoost,3,3,1,8
+XGBoost,3,3,2,27
+XGBoost,3,3,3,136
+XGBoost,3,3,4,48
+XGBoost,3,4,1,8
+XGBoost,3,4,2,21
+XGBoost,3,4,3,57
+XGBoost,3,4,4,113
+LightGBM,3,1,1,32
+LightGBM,3,1,2,22
+LightGBM,3,1,3,36
+LightGBM,3,1,4,39
+LightGBM,3,2,1,5
+LightGBM,3,2,2,73
+LightGBM,3,2,3,48
+LightGBM,3,2,4,49
+LightGBM,3,3,1,7
+LightGBM,3,3,2,25
+LightGBM,3,3,3,130
+LightGBM,3,3,4,57
+LightGBM,3,4,1,14
+LightGBM,3,4,2,26
+LightGBM,3,4,3,51
+LightGBM,3,4,4,108
+Random Forest,4,1,1,26
+Random Forest,4,1,2,34
+Random Forest,4,1,3,44
+Random Forest,4,1,4,25
+Random Forest,4,2,1,5
+Random Forest,4,2,2,54
+Random Forest,4,2,3,73
+Random Forest,4,2,4,42
+Random Forest,4,3,1,9
+Random Forest,4,3,2,26
+Random Forest,4,3,3,138
+Random Forest,4,3,4,47
+Random Forest,4,4,1,7
+Random Forest,4,4,2,20
+Random Forest,4,4,3,60
+Random Forest,4,4,4,112
+SVM (RBF),4,1,1,17
+SVM (RBF),4,1,2,23
+SVM (RBF),4,1,3,52
+SVM (RBF),4,1,4,37
+SVM (RBF),4,2,1,4
+SVM (RBF),4,2,2,31
+SVM (RBF),4,2,3,69
+SVM (RBF),4,2,4,70
+SVM (RBF),4,3,1,2
+SVM (RBF),4,3,2,21
+SVM (RBF),4,3,3,124
+SVM (RBF),4,3,4,73
+SVM (RBF),4,4,1,10
+SVM (RBF),4,4,2,17
+SVM (RBF),4,4,3,50
+SVM (RBF),4,4,4,122
+AdaBoost,4,1,1,13
+AdaBoost,4,1,2,24
+AdaBoost,4,1,3,49
+AdaBoost,4,1,4,43
+AdaBoost,4,2,1,12
+AdaBoost,4,2,2,32
+AdaBoost,4,2,3,66
+AdaBoost,4,2,4,64
+AdaBoost,4,3,1,7
+AdaBoost,4,3,2,34
+AdaBoost,4,3,3,111
+AdaBoost,4,3,4,68
+AdaBoost,4,4,1,13
+AdaBoost,4,4,2,14
+AdaBoost,4,4,3,77
+AdaBoost,4,4,4,95
+Decision Tree,4,1,1,36
+Decision Tree,4,1,2,24
+Decision Tree,4,1,3,33
+Decision Tree,4,1,4,36
+Decision Tree,4,2,1,33
+Decision Tree,4,2,2,41
+Decision Tree,4,2,3,53
+Decision Tree,4,2,4,47
+Decision Tree,4,3,1,39
+Decision Tree,4,3,2,67
+Decision Tree,4,3,3,70
+Decision Tree,4,3,4,44
+Decision Tree,4,4,1,31
+Decision Tree,4,4,2,49
+Decision Tree,4,4,3,62
+Decision Tree,4,4,4,57
+Logistic Regression,4,1,1,30
+Logistic Regression,4,1,2,26
+Logistic Regression,4,1,3,31
+Logistic Regression,4,1,4,42
+Logistic Regression,4,2,1,36
+Logistic Regression,4,2,2,38
+Logistic Regression,4,2,3,50
+Logistic Regression,4,2,4,50
+Logistic Regression,4,3,1,32
+Logistic Regression,4,3,2,60
+Logistic Regression,4,3,3,66
+Logistic Regression,4,3,4,62
+Logistic Regression,4,4,1,34
+Logistic Regression,4,4,2,49
+Logistic Regression,4,4,3,64
+Logistic Regression,4,4,4,52
+XGBoost,4,1,1,22
+XGBoost,4,1,2,29
+XGBoost,4,1,3,53
+XGBoost,4,1,4,25
+XGBoost,4,2,1,13
+XGBoost,4,2,2,57
+XGBoost,4,2,3,67
+XGBoost,4,2,4,37
+XGBoost,4,3,1,14
+XGBoost,4,3,2,34
+XGBoost,4,3,3,127
+XGBoost,4,3,4,45
+XGBoost,4,4,1,12
+XGBoost,4,4,2,20
+XGBoost,4,4,3,60
+XGBoost,4,4,4,107
+LightGBM,4,1,1,25
+LightGBM,4,1,2,33
+LightGBM,4,1,3,43
+LightGBM,4,1,4,28
+LightGBM,4,2,1,9
+LightGBM,4,2,2,64
+LightGBM,4,2,3,65
+LightGBM,4,2,4,36
+LightGBM,4,3,1,13
+LightGBM,4,3,2,38
+LightGBM,4,3,3,116
+LightGBM,4,3,4,53
+LightGBM,4,4,1,13
+LightGBM,4,4,2,23
+LightGBM,4,4,3,59
+LightGBM,4,4,4,104
+Random Forest,5,1,1,17
+Random Forest,5,1,2,26
+Random Forest,5,1,3,54
+Random Forest,5,1,4,32
+Random Forest,5,2,1,14
+Random Forest,5,2,2,58
+Random Forest,5,2,3,72
+Random Forest,5,2,4,30
+Random Forest,5,3,1,4
+Random Forest,5,3,2,30
+Random Forest,5,3,3,142
+Random Forest,5,3,4,44
+Random Forest,5,4,1,3
+Random Forest,5,4,2,26
+Random Forest,5,4,3,64
+Random Forest,5,4,4,106
+SVM (RBF),5,1,1,19
+SVM (RBF),5,1,2,18
+SVM (RBF),5,1,3,56
+SVM (RBF),5,1,4,36
+SVM (RBF),5,2,1,7
+SVM (RBF),5,2,2,48
+SVM (RBF),5,2,3,79
+SVM (RBF),5,2,4,40
+SVM (RBF),5,3,1,5
+SVM (RBF),5,3,2,25
+SVM (RBF),5,3,3,135
+SVM (RBF),5,3,4,55
+SVM (RBF),5,4,1,8
+SVM (RBF),5,4,2,19
+SVM (RBF),5,4,3,69
+SVM (RBF),5,4,4,103
+AdaBoost,5,1,1,18
+AdaBoost,5,1,2,13
+AdaBoost,5,1,3,64
+AdaBoost,5,1,4,34
+AdaBoost,5,2,1,17
+AdaBoost,5,2,2,37
+AdaBoost,5,2,3,75
+AdaBoost,5,2,4,45
+AdaBoost,5,3,1,17
+AdaBoost,5,3,2,18
+AdaBoost,5,3,3,125
+AdaBoost,5,3,4,60
+AdaBoost,5,4,1,9
+AdaBoost,5,4,2,20
+AdaBoost,5,4,3,96
+AdaBoost,5,4,4,74
+Decision Tree,5,1,1,34
+Decision Tree,5,1,2,33
+Decision Tree,5,1,3,35
+Decision Tree,5,1,4,27
+Decision Tree,5,2,1,26
+Decision Tree,5,2,2,49
+Decision Tree,5,2,3,54
+Decision Tree,5,2,4,45
+Decision Tree,5,3,1,40
+Decision Tree,5,3,2,56
+Decision Tree,5,3,3,71
+Decision Tree,5,3,4,53
+Decision Tree,5,4,1,31
+Decision Tree,5,4,2,43
+Decision Tree,5,4,3,52
+Decision Tree,5,4,4,73
+Logistic Regression,5,1,1,30
+Logistic Regression,5,1,2,31
+Logistic Regression,5,1,3,28
+Logistic Regression,5,1,4,40
+Logistic Regression,5,2,1,44
+Logistic Regression,5,2,2,42
+Logistic Regression,5,2,3,42
+Logistic Regression,5,2,4,46
+Logistic Regression,5,3,1,38
+Logistic Regression,5,3,2,45
+Logistic Regression,5,3,3,69
+Logistic Regression,5,3,4,68
+Logistic Regression,5,4,1,40
+Logistic Regression,5,4,2,32
+Logistic Regression,5,4,3,67
+Logistic Regression,5,4,4,60
+XGBoost,5,1,1,30
+XGBoost,5,1,2,25
+XGBoost,5,1,3,45
+XGBoost,5,1,4,29
+XGBoost,5,2,1,17
+XGBoost,5,2,2,57
+XGBoost,5,2,3,69
+XGBoost,5,2,4,31
+XGBoost,5,3,1,5
+XGBoost,5,3,2,41
+XGBoost,5,3,3,128
+XGBoost,5,3,4,46
+XGBoost,5,4,1,7
+XGBoost,5,4,2,16
+XGBoost,5,4,3,59
+XGBoost,5,4,4,117
+LightGBM,5,1,1,32
+LightGBM,5,1,2,31
+LightGBM,5,1,3,37
+LightGBM,5,1,4,29
+LightGBM,5,2,1,9
+LightGBM,5,2,2,68
+LightGBM,5,2,3,67
+LightGBM,5,2,4,30
+LightGBM,5,3,1,7
+LightGBM,5,3,2,45
+LightGBM,5,3,3,120
+LightGBM,5,3,4,48
+LightGBM,5,4,1,10
+LightGBM,5,4,2,26
+LightGBM,5,4,3,58
+LightGBM,5,4,4,105

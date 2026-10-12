@@ -1,0 +1,90 @@
+{
+  "name": "delta_flat_control",
+  "transform": "delta",
+  "fold": 1,
+  "feature_shape": {
+    "train": [
+      2889,
+      1792
+    ],
+    "test": [
+      723,
+      1792
+    ]
+  },
+  "heads": [
+    {
+      "name": "rbf_svc_c10_gamma_scale",
+      "family": "rbf_svc",
+      "config": {
+        "C": 10.0,
+        "kernel": "rbf",
+        "gamma": "scale"
+      },
+      "train_metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            516,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            698,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            879,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            796
+          ]
+        ]
+      },
+      "test_metrics": {
+        "accuracy": 0.34024896265560167,
+        "macro_f1": 0.32927692595787617,
+        "balanced_accuracy": 0.32721016565021066,
+        "confusion_matrix": [
+          [
+            28,
+            32,
+            35,
+            35
+          ],
+          [
+            15,
+            55,
+            45,
+            59
+          ],
+          [
+            17,
+            42,
+            87,
+            74
+          ],
+          [
+            21,
+            36,
+            66,
+            76
+          ]
+        ]
+      },
+      "seconds": 5.292714834213257,
+      "warnings": []
+    }
+  ]
+}

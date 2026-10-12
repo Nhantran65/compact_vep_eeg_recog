@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "dataset_id": "current_vep",
+  "protocol": "subject_disjoint_v1",
+  "seed": 42,
+  "fold": 3,
+  "dataset_snapshot_sha256": "f11bd9e1d5d1fd53824b262b84548f6991f13a302bb5096423e152e65d42c7b6",
+  "trial_manifest_sha256": "45b224f96ab41e623da95e0d0aef26b96297d2898ef1dd0fa31014565c758be6",
+  "train_subjects": [
+    "sub-01",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-06",
+    "sub-07",
+    "sub-09",
+    "sub-11",
+    "sub-14",
+    "sub-17",
+    "sub-18",
+    "sub-19",
+    "sub-21",
+    "sub-22",
+    "sub-23",
+    "sub-24",
+    "sub-28",
+    "sub-29",
+    "sub-32"
+  ],
+  "validation_subjects": [
+    "sub-02",
+    "sub-08",
+    "sub-12",
+    "sub-20",
+    "sub-26",
+    "sub-31"
+  ],
+  "test_subjects": [
+    "sub-10",
+    "sub-13",
+    "sub-15",
+    "sub-16",
+    "sub-25",
+    "sub-30"
+  ],
+  "partition_counts": {
+    "train": {
+      "subjects": 19,
+      "trials": 2228,
+      "trials_by_class": {
+        "Apple": 364,
+        "Car": 488,
+        "Flower": 746,
+        "Human Face": 630
+      }
+    },
+    "validation": {
+      "subjects": 6,
+      "trials": 735,
+      "trials_by_class": {
+        "Apple": 120,
+        "Car": 212,
+        "Flower": 196,
+        "Human Face": 207
+      }
+    },
+    "test": {
+      "subjects": 6,
+      "trials": 649,
+      "trials_by_class": {
+        "Apple": 162,
+        "Car": 172,
+        "Flower": 157,
+        "Human Face": 158
+      }
+    }
+  },
+  "split_hash": "cc13e74271f4aa4f06dc82873467b1ce1c400f0a45d9ffc137a77b4e1b7caf7e"
+}

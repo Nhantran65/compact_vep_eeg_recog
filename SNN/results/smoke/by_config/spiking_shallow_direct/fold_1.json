@@ -1,0 +1,217 @@
+{
+  "name": "spiking_shallow_direct",
+  "fold": 1,
+  "config": {
+    "name": "spiking_shallow_direct",
+    "encoder": {
+      "name": "direct",
+      "rate_gain": 1.0,
+      "delta_threshold": 0.2
+    },
+    "model": {
+      "architecture": "spiking_shallow_convnet",
+      "n_filters": 40,
+      "temporal_kernel": 25,
+      "beta": 0.9,
+      "threshold": 1.0,
+      "surrogate": "atan",
+      "dropout": 0.5,
+      "readout": "mean_membrane"
+    },
+    "training": {
+      "batch_size": 64,
+      "epochs": 120,
+      "patience": 20,
+      "val_size": 0.2,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "scheduler_patience": 8,
+      "scheduler_factor": 0.5,
+      "seed": 42
+    },
+    "config_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/configs/spiking_shallow_direct.yaml"
+  },
+  "data": {
+    "fold": 1,
+    "val_size": 0.2,
+    "seed": 42,
+    "scaler_fit": "stratified_train_split",
+    "train_size": 2311,
+    "val_size_count": 578,
+    "full_train_size": 2889,
+    "test_size": 723
+  },
+  "best_epoch": 1,
+  "best_val_metrics": {
+    "accuracy": 0.25,
+    "macro_f1": 0.22236024844720498,
+    "balanced_accuracy": 0.25595238095238093,
+    "confusion_matrix": [
+      [
+        3,
+        1,
+        3,
+        0
+      ],
+      [
+        2,
+        3,
+        2,
+        0
+      ],
+      [
+        7,
+        2,
+        2,
+        1
+      ],
+      [
+        4,
+        1,
+        1,
+        0
+      ]
+    ],
+    "loss": 1.5997374653816223,
+    "spike_rate": 0.11685791239142418
+  },
+  "train_metrics": {
+    "accuracy": 0.28125,
+    "macro_f1": 0.22045454545454546,
+    "balanced_accuracy": 0.23457792207792205,
+    "confusion_matrix": [
+      [
+        2,
+        3,
+        2,
+        1
+      ],
+      [
+        3,
+        1,
+        2,
+        1
+      ],
+      [
+        4,
+        0,
+        6,
+        1
+      ],
+      [
+        3,
+        0,
+        3,
+        0
+      ]
+    ],
+    "loss": 1.9871337413787842,
+    "spike_rate": 0.10312500223517418
+  },
+  "test_metrics": {
+    "accuracy": 0.25,
+    "macro_f1": 0.13333333333333333,
+    "balanced_accuracy": 0.25,
+    "confusion_matrix": [
+      [
+        8,
+        8,
+        16,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "loss": 1.5510089993476868,
+    "spike_rate": 0.15338745713233948
+  },
+  "seconds": 0.2758152484893799,
+  "checkpoint_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/artifacts/smoke_checkpoints/spiking_shallow_direct/fold_1.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "train": {
+        "accuracy": 0.34375,
+        "macro_f1": 0.3345924908424909,
+        "balanced_accuracy": 0.4681818181818182,
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            4,
+            2
+          ],
+          [
+            3,
+            1,
+            4,
+            0
+          ],
+          [
+            3,
+            1,
+            5,
+            1
+          ]
+        ],
+        "loss": 3.23233962059021,
+        "spike_rate": 0.2396545484662056
+      },
+      "val": {
+        "accuracy": 0.25,
+        "macro_f1": 0.22236024844720498,
+        "balanced_accuracy": 0.25595238095238093,
+        "confusion_matrix": [
+          [
+            3,
+            1,
+            3,
+            0
+          ],
+          [
+            2,
+            3,
+            2,
+            0
+          ],
+          [
+            7,
+            2,
+            2,
+            1
+          ],
+          [
+            4,
+            1,
+            1,
+            0
+          ]
+        ],
+        "loss": 1.5997374653816223,
+        "spike_rate": 0.11685791239142418
+      }
+    }
+  ]
+}

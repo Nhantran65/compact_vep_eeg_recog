@@ -1,0 +1,239 @@
+{
+  "name": "signed_delta_flat_control",
+  "transform": "signed_delta",
+  "fold": 5,
+  "feature_shape": {
+    "train": [
+      2890,
+      3584
+    ],
+    "test": [
+      722,
+      3584
+    ]
+  },
+  "heads": [
+    {
+      "name": "linearsvc_c1",
+      "family": "linear_margin",
+      "config": {
+        "C": 1.0,
+        "dual": true,
+        "max_iter": 5000,
+        "tol": 0.001
+      },
+      "train_metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            517,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            698,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            879,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            796
+          ]
+        ]
+      },
+      "test_metrics": {
+        "accuracy": 0.34349030470914127,
+        "macro_f1": 0.33974638731345574,
+        "balanced_accuracy": 0.34200700380471527,
+        "confusion_matrix": [
+          [
+            47,
+            28,
+            31,
+            23
+          ],
+          [
+            32,
+            45,
+            50,
+            47
+          ],
+          [
+            43,
+            49,
+            81,
+            47
+          ],
+          [
+            26,
+            39,
+            59,
+            75
+          ]
+        ]
+      },
+      "seconds": 11.355064868927002,
+      "warnings": []
+    },
+    {
+      "name": "rbf_svc_c10_gamma_scale",
+      "family": "rbf_svc",
+      "config": {
+        "C": 10.0,
+        "kernel": "rbf",
+        "gamma": "scale"
+      },
+      "train_metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            517,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            698,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            879,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            796
+          ]
+        ]
+      },
+      "test_metrics": {
+        "accuracy": 0.4376731301939058,
+        "macro_f1": 0.43243281053955535,
+        "balanced_accuracy": 0.43023649937862135,
+        "confusion_matrix": [
+          [
+            51,
+            22,
+            33,
+            23
+          ],
+          [
+            19,
+            70,
+            47,
+            38
+          ],
+          [
+            28,
+            35,
+            118,
+            39
+          ],
+          [
+            13,
+            40,
+            69,
+            77
+          ]
+        ]
+      },
+      "seconds": 12.814553499221802,
+      "warnings": []
+    },
+    {
+      "name": "pca128_rbf_svc_c3_gamma_scale",
+      "family": "pca_rbf_svc",
+      "config": {
+        "pca_components": 128,
+        "requested_pca_components": 128,
+        "C": 3.0,
+        "kernel": "rbf",
+        "gamma": "scale"
+      },
+      "train_metrics": {
+        "accuracy": 0.9460207612456747,
+        "macro_f1": 0.945469652429627,
+        "balanced_accuracy": 0.9414876083903065,
+        "confusion_matrix": [
+          [
+            468,
+            26,
+            11,
+            12
+          ],
+          [
+            7,
+            651,
+            29,
+            11
+          ],
+          [
+            1,
+            8,
+            850,
+            20
+          ],
+          [
+            0,
+            3,
+            28,
+            765
+          ]
+        ]
+      },
+      "test_metrics": {
+        "accuracy": 0.5110803324099723,
+        "macro_f1": 0.4981516774022464,
+        "balanced_accuracy": 0.5002537458867323,
+        "confusion_matrix": [
+          [
+            63,
+            20,
+            24,
+            22
+          ],
+          [
+            14,
+            55,
+            59,
+            46
+          ],
+          [
+            31,
+            21,
+            135,
+            33
+          ],
+          [
+            17,
+            12,
+            54,
+            116
+          ]
+        ]
+      },
+      "seconds": 0.8811819553375244,
+      "warnings": []
+    }
+  ]
+}

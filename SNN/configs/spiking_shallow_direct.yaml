@@ -1,0 +1,24 @@
+name: spiking_shallow_direct
+encoder:
+  name: direct
+  rate_gain: 1.0
+  delta_threshold: 0.20
+model:
+  architecture: spiking_shallow_convnet
+  n_filters: 40
+  temporal_kernel: 25
+  beta: 0.90
+  threshold: 1.0
+  surrogate: atan
+  dropout: 0.50
+  readout: mean_membrane
+training:
+  batch_size: 64
+  epochs: 120
+  patience: 20
+  val_size: 0.20
+  lr: 0.001
+  weight_decay: 0.0001
+  scheduler_patience: 8
+  scheduler_factor: 0.5
+  seed: 42

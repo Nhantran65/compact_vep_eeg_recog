@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "dataset_id": "current_vep",
+  "status": "passed",
+  "input_policy": "use_existing_preprocessed_windows_without_reprocessing",
+  "label_origin": "legacy_recording_folder",
+  "identity_authority": {
+    "participant_table": "Participant_info.xlsx",
+    "participant_table_sha256": "a9c81814ebc73ff24191803bc5ff39a079668a979842a37a0aaee1fe498dd07a",
+    "epoching_report": "EEGLAB-SET_STEP3_EPOCHED/epoching_report.csv",
+    "epoching_report_sha256": "4fcb3ef9dfbda79c6feffeea1f7e7ee7f049c491f1d8f2d1bab7501178210f06",
+    "public_dataset_doi": "10.17632/g9shp2gxhy.2"
+  },
+  "counts": {
+    "expected_subjects": 32,
+    "usable_subjects": 31,
+    "subjects_without_trials": 1,
+    "expected_recordings": 64,
+    "recording_status": {
+      "available": 59,
+      "missing_raw_edf": 1,
+      "preprocessing_failed": 4
+    },
+    "trials": 3612,
+    "trials_by_class": {
+      "Apple": 646,
+      "Car": 872,
+      "Flower": 1099,
+      "Human Face": 995
+    },
+    "trials_by_phase": {
+      "A1": 298,
+      "A2": 348,
+      "C1": 411,
+      "C2": 461,
+      "F1": 525,
+      "F2": 574,
+      "P1": 372,
+      "P2": 623
+    }
+  },
+  "usable_subjects": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-06",
+    "sub-07",
+    "sub-08",
+    "sub-09",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18",
+    "sub-19",
+    "sub-20",
+    "sub-21",
+    "sub-22",
+    "sub-23",
+    "sub-24",
+    "sub-25",
+    "sub-26",
+    "sub-28",
+    "sub-29",
+    "sub-30",
+    "sub-31",
+    "sub-32"
+  ],
+  "subjects_without_trials": [
+    "sub-27"
+  ],
+  "dataset_snapshot_sha256": "f11bd9e1d5d1fd53824b262b84548f6991f13a302bb5096423e152e65d42c7b6",
+  "limitations": [
+    "Trials retain the existing one-second, 50%-overlap preprocessing.",
+    "Labels come from the legacy recording folder and are not stimulus-marker labels.",
+    "No raw or preprocessed EEG payload was modified by manifest generation."
+  ],
+  "recording_manifest_sha256": "0148882b5428e3f0c20d6c143f2defaaa4c9957283ed8d6245bb608c2fc068e7",
+  "trial_manifest_sha256": "45b224f96ab41e623da95e0d0aef26b96297d2898ef1dd0fa31014565c758be6",
+  "split_summary_sha256": "10ab39340efaceae11712e5f78bd5767042979324494277eea0ae7f068ca3612"
+}

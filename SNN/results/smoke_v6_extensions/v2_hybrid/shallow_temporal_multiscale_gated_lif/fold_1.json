@@ -1,0 +1,225 @@
+{
+  "name": "shallow_temporal_multiscale_gated_lif",
+  "fold": 1,
+  "config": {
+    "name": "shallow_temporal_multiscale_gated_lif",
+    "model": {
+      "architecture": "shallow_temporal_multiscale_gated_lif",
+      "feature_mode": "temporal_map",
+      "hidden_dim": 64,
+      "beta": 0.9,
+      "threshold": 1.0,
+      "learn_beta": false,
+      "learn_threshold": false,
+      "surrogate": "atan",
+      "dropout": 0.3,
+      "gate_kernels": [
+        3,
+        9,
+        17
+      ]
+    },
+    "training": {
+      "batch_size": 64,
+      "feature_batch_size": 256,
+      "epochs": 120,
+      "patience": 20,
+      "val_size": 0.2,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "scheduler_patience": 8,
+      "scheduler_factor": 0.5,
+      "seed": 42
+    },
+    "encoder": {},
+    "config_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/configs/shallow_temporal_multiscale_gated_lif.yaml"
+  },
+  "data": {
+    "fold": 1,
+    "feature_mode": "temporal_map",
+    "checkpoint_template": "QNN/checkpoints/shallow_original_fold{fold}_seed42.pth",
+    "checkpoint_path": "QNN/checkpoints/shallow_original_fold1_seed42.pth",
+    "scaler_fit": "full_train_fold",
+    "train_size": 2311,
+    "val_size_count": 578,
+    "full_train_size": 2889,
+    "test_size": 723,
+    "feature_shape": [
+      40,
+      104
+    ]
+  },
+  "best_epoch": 1,
+  "best_val_metrics": {
+    "accuracy": 0.9221453287197232,
+    "macro_f1": 0.9171562179522554,
+    "balanced_accuracy": 0.9256138711917015,
+    "confusion_matrix": [
+      [
+        103,
+        0,
+        0,
+        0
+      ],
+      [
+        18,
+        118,
+        3,
+        1
+      ],
+      [
+        4,
+        1,
+        169,
+        2
+      ],
+      [
+        9,
+        2,
+        5,
+        143
+      ]
+    ],
+    "loss": 0.34430594952409654,
+    "spike_rate": 0.2689087278134114
+  },
+  "train_metrics": {
+    "accuracy": 0.9138900908697534,
+    "macro_f1": 0.908011525542052,
+    "balanced_accuracy": 0.9161836090757972,
+    "confusion_matrix": [
+      [
+        408,
+        3,
+        2,
+        0
+      ],
+      [
+        65,
+        465,
+        25,
+        3
+      ],
+      [
+        7,
+        6,
+        689,
+        1
+      ],
+      [
+        63,
+        6,
+        18,
+        550
+      ]
+    ],
+    "loss": 0.38148834623722017,
+    "spike_rate": 0.26379652763235156
+  },
+  "test_metrics": {
+    "accuracy": 0.7621023513139695,
+    "macro_f1": 0.7552273972337793,
+    "balanced_accuracy": 0.7643711332565085,
+    "confusion_matrix": [
+      [
+        110,
+        9,
+        9,
+        2
+      ],
+      [
+        33,
+        115,
+        20,
+        6
+      ],
+      [
+        15,
+        15,
+        183,
+        7
+      ],
+      [
+        40,
+        6,
+        10,
+        143
+      ]
+    ],
+    "loss": 0.7266401714061801,
+    "spike_rate": 0.2665324403863886
+  },
+  "seconds": 11.619805335998535,
+  "checkpoint_path": "SNN/artifacts/checkpoints/smoke_v6_extensions/v2_hybrid/shallow_temporal_multiscale_gated_lif/fold_1.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "train": {
+        "accuracy": 0.6784941583729988,
+        "macro_f1": 0.6689202772608007,
+        "balanced_accuracy": 0.6670807017230759,
+        "confusion_matrix": [
+          [
+            241,
+            66,
+            47,
+            59
+          ],
+          [
+            51,
+            344,
+            89,
+            74
+          ],
+          [
+            38,
+            53,
+            508,
+            104
+          ],
+          [
+            42,
+            79,
+            41,
+            475
+          ]
+        ],
+        "loss": 1.050905583367519,
+        "spike_rate": 0.27923924152193397
+      },
+      "val": {
+        "accuracy": 0.9221453287197232,
+        "macro_f1": 0.9171562179522554,
+        "balanced_accuracy": 0.9256138711917015,
+        "confusion_matrix": [
+          [
+            103,
+            0,
+            0,
+            0
+          ],
+          [
+            18,
+            118,
+            3,
+            1
+          ],
+          [
+            4,
+            1,
+            169,
+            2
+          ],
+          [
+            9,
+            2,
+            5,
+            143
+          ]
+        ],
+        "loss": 0.34430594952409654,
+        "spike_rate": 0.2689087278134114
+      }
+    }
+  ]
+}

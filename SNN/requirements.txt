@@ -1,0 +1,7 @@
+torch
+numpy
+pandas
+scikit-learn
+PyYAML
+tqdm
+snntorch>=0.9.4

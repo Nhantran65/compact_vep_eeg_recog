@@ -1,0 +1,60 @@
+Filename,Class,Phase,Subject,nEpochs,nChannels
+Apple_A1_sub15_A1_RAW14_epoched.set,Apple,A1,15,36,14
+Apple_A1_sub20_A1_RAW14_epoched.set,Apple,A1,20,1,14
+Apple_A1_sub29_A1_RAW14_epoched.set,Apple,A1,29,57,14
+Apple_A1_sub32_A1_RAW14_epoched.set,Apple,A1,32,19,14
+Apple_A1_sub3_A1_RAW14_epoched.set,Apple,A1,3,95,14
+Apple_A1_sub6_A1_RAW14_epoched.set,Apple,A1,6,79,14
+Apple_A1_sub8_A1_RAW14_epoched.set,Apple,A1,8,11,14
+Apple_A2_sub10_A2_RAW14_epoched.set,Apple,A2,10,86,14
+Apple_A2_sub12_A2_RAW14_epoched.set,Apple,A2,12,108,14
+Apple_A2_sub30_A2_RAW14_epoched.set,Apple,A2,30,40,14
+Apple_A2_sub5_A2_RAW14_epoched.set,Apple,A2,5,81,14
+Apple_A2_sub9_A2_RAW14_epoched.set,Apple,A2,9,33,14
+Car_C1_sub11_C1_RAW14_epoched.set,Car,C1,11,96,14
+Car_C1_sub16_C1_RAW14_epoched.set,Car,C1,16,12,14
+Car_C1_sub22_C1_RAW14_epoched.set,Car,C1,22,81,14
+Car_C1_sub28_C1_RAW14_epoched.set,Car,C1,28,29,14
+Car_C1_sub2_C1_RAW14_epoched.set,Car,C1,2,64,14
+Car_C1_sub4_C1_RAW14_epoched.set,Car,C1,4,89,14
+Car_C1_sub6_C1_RAW14_epoched.set,Car,C1,6,40,14
+Car_C2_sub10_C2_RAW14_epoched.set,Car,C2,10,104,14
+Car_C2_sub12_C2_RAW14_epoched.set,Car,C2,12,104,14
+Car_C2_sub13_C2_RAW14_epoched.set,Car,C2,13,56,14
+Car_C2_sub18_C2_RAW14_epoched.set,Car,C2,18,43,14
+Car_C2_sub19_C2_RAW14_epoched.set,Car,C2,19,34,14
+Car_C2_sub21_C2_RAW14_epoched.set,Car,C2,21,60,14
+Car_C2_sub24_C2_RAW14_epoched.set,Car,C2,24,16,14
+Car_C2_sub8_C2_RAW14_epoched.set,Car,C2,8,44,14
+Flower_F1_sub14_F1_RAW14_epoched.set,Flower,F1,14,97,14
+Flower_F1_sub16_F1_RAW14_epoched.set,Flower,F1,16,68,14
+Flower_F1_sub1_F1_RAW14_epoched.set,Flower,F1,1,15,14
+Flower_F1_sub22_F1_RAW14_epoched.set,Flower,F1,22,22,14
+Flower_F1_sub23_F1_RAW14_epoched.set,Flower,F1,23,72,14
+Flower_F1_sub26_F1_RAW14_epoched.set,Flower,F1,26,86,14
+Flower_F1_sub31_F1_RAW14_epoched.set,Flower,F1,31,110,14
+Flower_F1_sub7_F1_RAW14_epoched.set,Flower,F1,7,55,14
+Flower_F2_sub13_F2_RAW14_epoched.set,Flower,F2,13,89,14
+Flower_F2_sub17_F2_RAW14_epoched.set,Flower,F2,17,99,14
+Flower_F2_sub18_F2_RAW14_epoched.set,Flower,F2,18,40,14
+Flower_F2_sub19_F2_RAW14_epoched.set,Flower,F2,19,55,14
+Flower_F2_sub28_F2_RAW14_epoched.set,Flower,F2,28,39,14
+Flower_F2_sub4_F2_RAW14_epoched.set,Flower,F2,4,87,14
+Flower_F2_sub5_F2_RAW14_epoched.set,Flower,F2,5,95,14
+Flower_F2_sub7_F2_RAW14_epoched.set,Flower,F2,7,40,14
+Flower_F2_sub9_F2_RAW14_epoched.set,Flower,F2,9,30,14
+Human Face_P1_sub14_P1_RAW14_epoched.set,Human Face,P1,14,94,14
+Human Face_P1_sub20_P1_RAW14_epoched.set,Human Face,P1,20,1,14
+Human Face_P1_sub25_P1_RAW14_epoched.set,Human Face,P1,25,48,14
+Human Face_P1_sub2_P1_RAW14_epoched.set,Human Face,P1,2,89,14
+Human Face_P1_sub30_P1_RAW14_epoched.set,Human Face,P1,30,29,14
+Human Face_P1_sub32_P1_RAW14_epoched.set,Human Face,P1,32,29,14
+Human Face_P1_sub3_P1_RAW14_epoched.set,Human Face,P1,3,82,14
+Human Face_P2_sub11_P2_RAW14_epoched.set,Human Face,P2,11,99,14
+Human Face_P2_sub15_P2_RAW14_epoched.set,Human Face,P2,15,81,14
+Human Face_P2_sub17_P2_RAW14_epoched.set,Human Face,P2,17,101,14
+Human Face_P2_sub1_P2_RAW14_epoched.set,Human Face,P2,1,14,14
+Human Face_P2_sub21_P2_RAW14_epoched.set,Human Face,P2,21,96,14
+Human Face_P2_sub24_P2_RAW14_epoched.set,Human Face,P2,24,34,14
+Human Face_P2_sub29_P2_RAW14_epoched.set,Human Face,P2,29,81,14
+Human Face_P2_sub31_P2_RAW14_epoched.set,Human Face,P2,31,117,14

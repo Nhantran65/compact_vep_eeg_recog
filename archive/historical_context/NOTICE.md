@@ -1,0 +1,1 @@
+These documents are copied historical context from the broader original repository. They include out-of-scope quantum/foundation-model comparisons and superseded protocol claims. Use docs/EXPERIMENTS.md for the audited project scope and limitations.

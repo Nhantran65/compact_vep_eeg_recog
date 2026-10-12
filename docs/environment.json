@@ -1,0 +1,10 @@
+{
+  "torch": "2.12.1",
+  "numpy": "2.4.4",
+  "pandas": "3.0.3",
+  "scikit-learn": "1.8.0",
+  "PyYAML": "6.0.3",
+  "tqdm": "4.67.3",
+  "snntorch": "0.9.4",
+  "setuptools": "81.0.0"
+}

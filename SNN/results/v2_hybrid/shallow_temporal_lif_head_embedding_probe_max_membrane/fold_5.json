@@ -1,0 +1,248 @@
+{
+  "name": "shallow_temporal_lif_head_embedding_probe_max_membrane",
+  "source_config": {
+    "name": "shallow_temporal_lif_head",
+    "model": {
+      "architecture": "shallow_feature_snn_head",
+      "feature_mode": "temporal_map",
+      "hidden_dim": 64,
+      "beta": 0.9,
+      "threshold": 1.0,
+      "learn_beta": false,
+      "learn_threshold": false,
+      "surrogate": "atan",
+      "dropout": 0.3,
+      "readout": "mean_membrane"
+    },
+    "training": {
+      "batch_size": 64,
+      "feature_batch_size": 256,
+      "epochs": 120,
+      "patience": 20,
+      "val_size": 0.2,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "scheduler_patience": 8,
+      "scheduler_factor": 0.5,
+      "seed": 42
+    },
+    "encoder": {},
+    "config_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/configs/shallow_temporal_lif_head.yaml"
+  },
+  "fold": 5,
+  "checkpoint_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/artifacts/checkpoints/v2_hybrid/shallow_temporal_lif_head/fold_5.pt",
+  "embedding_mode": "max_membrane",
+  "embedding_shape": {
+    "train": [
+      2890,
+      64
+    ],
+    "test": [
+      722,
+      64
+    ]
+  },
+  "heads": [
+    {
+      "name": "linearsvc_c1",
+      "test_metrics": {
+        "accuracy": 0.775623268698061,
+        "macro_f1": 0.7642503328150843,
+        "balanced_accuracy": 0.7625611136287009,
+        "confusion_matrix": [
+          [
+            88,
+            16,
+            12,
+            13
+          ],
+          [
+            20,
+            117,
+            21,
+            16
+          ],
+          [
+            7,
+            18,
+            184,
+            11
+          ],
+          [
+            5,
+            11,
+            12,
+            171
+          ]
+        ]
+      },
+      "train_metrics": {
+        "accuracy": 0.9186851211072664,
+        "macro_f1": 0.9186750595463011,
+        "balanced_accuracy": 0.9170309935479002,
+        "confusion_matrix": [
+          [
+            473,
+            22,
+            4,
+            18
+          ],
+          [
+            14,
+            621,
+            42,
+            21
+          ],
+          [
+            7,
+            24,
+            822,
+            26
+          ],
+          [
+            11,
+            10,
+            36,
+            739
+          ]
+        ]
+      },
+      "seconds": 0.05285382270812988,
+      "warnings": []
+    },
+    {
+      "name": "rbf_svc_c10_gamma_scale",
+      "test_metrics": {
+        "accuracy": 0.8199445983379502,
+        "macro_f1": 0.8123722482142853,
+        "balanced_accuracy": 0.8102225056902211,
+        "confusion_matrix": [
+          [
+            94,
+            14,
+            11,
+            10
+          ],
+          [
+            10,
+            137,
+            19,
+            8
+          ],
+          [
+            9,
+            14,
+            186,
+            11
+          ],
+          [
+            6,
+            10,
+            8,
+            175
+          ]
+        ]
+      },
+      "train_metrics": {
+        "accuracy": 0.9768166089965398,
+        "macro_f1": 0.9760793939106731,
+        "balanced_accuracy": 0.9756169219578392,
+        "confusion_matrix": [
+          [
+            499,
+            14,
+            2,
+            2
+          ],
+          [
+            8,
+            680,
+            10,
+            0
+          ],
+          [
+            3,
+            6,
+            862,
+            8
+          ],
+          [
+            1,
+            3,
+            10,
+            782
+          ]
+        ]
+      },
+      "seconds": 0.23342609405517578,
+      "warnings": []
+    },
+    {
+      "name": "pca128_rbf_svc_c3_gamma_scale",
+      "test_metrics": {
+        "accuracy": 0.8337950138504155,
+        "macro_f1": 0.8258302601883232,
+        "balanced_accuracy": 0.823888605685471,
+        "confusion_matrix": [
+          [
+            95,
+            14,
+            10,
+            10
+          ],
+          [
+            9,
+            140,
+            16,
+            9
+          ],
+          [
+            9,
+            16,
+            187,
+            8
+          ],
+          [
+            5,
+            8,
+            6,
+            180
+          ]
+        ]
+      },
+      "train_metrics": {
+        "accuracy": 0.9664359861591696,
+        "macro_f1": 0.9656492644150673,
+        "balanced_accuracy": 0.9647384752964175,
+        "confusion_matrix": [
+          [
+            493,
+            17,
+            2,
+            5
+          ],
+          [
+            8,
+            666,
+            19,
+            5
+          ],
+          [
+            3,
+            7,
+            856,
+            13
+          ],
+          [
+            4,
+            4,
+            10,
+            778
+          ]
+        ]
+      },
+      "seconds": 0.2505970001220703,
+      "warnings": []
+    }
+  ]
+}

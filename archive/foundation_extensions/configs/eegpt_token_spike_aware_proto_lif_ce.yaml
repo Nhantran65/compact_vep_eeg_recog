@@ -1,0 +1,30 @@
+name: eegpt_token_spike_aware_proto_lif_ce
+data:
+  embedding_template: FoundationModel_EEGPT/results/embeddings/fold_{fold}_eegpt_1s.pt
+  standardize_tokens: true
+model:
+  architecture: eegpt_token_spike_aware_proto_lif
+  hidden_dim: 64
+  beta: 0.90
+  threshold: 1.0
+  learn_beta: false
+  learn_threshold: false
+  surrogate: atan
+  dropout: 0.30
+  gate_kernel: 3
+  prototypes_per_class: 4
+  init_gamma: 8.0
+  learn_gamma: true
+  learn_prototype_bias: true
+loss:
+  label_smoothing: 0.0
+training:
+  batch_size: 64
+  epochs: 120
+  patience: 20
+  val_size: 0.20
+  lr: 0.001
+  weight_decay: 0.0001
+  scheduler_patience: 8
+  scheduler_factor: 0.5
+  seed: 42

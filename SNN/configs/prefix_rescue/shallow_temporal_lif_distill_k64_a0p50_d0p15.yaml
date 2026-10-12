@@ -1,0 +1,27 @@
+name: shallow_temporal_lif_distill_k64_a0p50_d0p15
+model:
+  architecture: shallow_feature_snn_head
+  feature_mode: temporal_map
+  hidden_dim: 64
+  beta: 0.90
+  threshold: 1.0
+  learn_beta: false
+  learn_threshold: false
+  surrogate: atan
+  dropout: 0.15
+  readout: mean_membrane
+distillation:
+  prefix_steps: 64
+  alpha: 0.5
+  temperature: 2.0
+training:
+  batch_size: 64
+  feature_batch_size: 256
+  epochs: 120
+  patience: 20
+  val_size: 0.20
+  lr: 0.001
+  weight_decay: 0.0001
+  scheduler_patience: 8
+  scheduler_factor: 0.5
+  seed: 42

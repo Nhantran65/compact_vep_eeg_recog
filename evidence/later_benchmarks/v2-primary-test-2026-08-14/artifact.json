@@ -1,0 +1,2449 @@
+{
+  "manifest": {
+    "blocks": [
+      {
+        "body": "# Paper 2 primary test results",
+        "id": "title",
+        "type": "markdown"
+      },
+      {
+        "body": "## Held-out results narrow the paper's strongest claims\n\n**Amended positive exact-control results:** MSS: LIF \u2212 continuous (+0.48 pp); MSS: LIF prototype \u2212 continuous prototype (+0.34 pp); MSS: Quantum kernel \u2212 random features (+1.94 pp). These results satisfy positive effects in both frontends and Holm-adjusted p < 0.05, but the p-value operationalization was locked after test access and is therefore not fully preregistered.\n\n**Holm-confirmed adverse exact-control results:** MSS: Spike-rate RBF \u2212 continuous-stat RBF (-0.61 pp). Raw and Holm decisions agree for 17/18 tests; the sole multiplicity-sensitive result is MSS Quantum QDelta \u2212 classical QDelta.\n\n**Full-test leaders are regime-specific:** Current VEP: Classical QDelta (0.258); MSS: Temporal MLP (0.076); Human Infant: Temporal MLP (0.098). The quantum kernel is excluded from this ranking because its frozen test evaluation is capped at 25 examples per class.\n\n**Same-budget MSS scaling is not uniformly positive:** 5k exceeds 1k in 44/50 paired fold/frontend/head cells, averaging +0.75 pp. V3 remains validation-only context: its fixed-frontend 1k\u21925k gain was +0.92 pp in 49/50 cells.",
+        "id": "technical_summary",
+        "sourceId": "test_summary",
+        "type": "markdown"
+      },
+      {
+        "body": "## All 490 held-out results pass the artifact and metric audit\n\nEvery condition has one claim and one verified result. Four interrupted claims are connected to their actual recovery commit by immutable recovery records. Every prediction component was rehashed, and all five stored metrics were independently recomputed from the saved prediction arrays with no discrepancy.",
+        "id": "quality_intro",
+        "sourceId": "test_summary",
+        "type": "markdown"
+      },
+      {
+        "id": "quality_block",
+        "tableId": "quality_table",
+        "type": "table"
+      },
+      {
+        "body": "## Exact controls separate dataset-specific effects from broad family claims\n\nThe signed bars show the equal-frontend-weight held-out effect for each predeclared comparison. The table is the inferential authority: percentile intervals quantify clustered uncertainty, while Holm-adjusted p-values control the six-comparison family inside each dataset. Quantum-kernel controls are recomputed on the exact capped quantum trial IDs; all other pairs use the complete out-of-fold test inventory.",
+        "id": "exact_intro",
+        "sourceId": "test_summary",
+        "type": "markdown"
+      },
+      {
+        "chartId": "exact_control_chart",
+        "id": "exact_chart_block",
+        "type": "chart"
+      },
+      {
+        "id": "exact_table_block",
+        "tableId": "exact_table",
+        "type": "table"
+      },
+      {
+        "body": "## Validation direction is informative but not sufficient\n\nEach point compares the descriptive validation delta used during model selection with the paired held-out effect. Distance from sign agreement exposes findings that shrink or reverse after selection. Quantum-kernel validation points are contextual only because the archived validation controls were not recomputed on the kernel's capped subset.",
+        "id": "generalization_intro",
+        "sourceId": "test_summary",
+        "type": "markdown"
+      },
+      {
+        "chartId": "validation_test_chart",
+        "id": "validation_test_chart_block",
+        "type": "chart"
+      },
+      {
+        "body": "## No readout is a universal full-test winner\n\nThe heatmap keeps datasets separate because class inventories and difficulty differ. Rankings cover the twelve heads evaluated on each complete test partition. Quantum kernel remains in the lookup table with an explicit capped-scope label, so its absolute macro-F1 is not presented as directly rank-comparable.",
+        "id": "ranking_intro",
+        "sourceId": "test_summary",
+        "type": "markdown"
+      },
+      {
+        "chartId": "ranking_chart",
+        "id": "ranking_chart_block",
+        "type": "chart"
+      },
+      {
+        "id": "ranking_table_block",
+        "tableId": "ranking_table",
+        "type": "table"
+      },
+      {
+        "body": "## More same-budget MSS data has a heterogeneous held-out effect\n\nThe grouped bars show the discrete 1k, 5k, and 20k anchors averaged over five representative heads. The table keeps the head/frontend pairing visible. This V2 curve changes frontend and readout data together; it cannot identify representation versus readout mechanisms by itself.",
+        "id": "scaling_intro",
+        "sourceId": "test_summary",
+        "type": "markdown"
+      },
+      {
+        "chartId": "scaling_chart",
+        "id": "scaling_chart_block",
+        "type": "chart"
+      },
+      {
+        "id": "scaling_table_block",
+        "tableId": "scaling_table",
+        "type": "table"
+      },
+      {
+        "body": "## Scope, cohorts, and metrics\n\nThe primary surface is frozen V2 seed 42: three visual-EEG datasets, two fold-specific frontends, five outer folds, thirteen heads, and 390 primary plus 100 MSS scaling conditions. Macro-F1 is computed with the complete class inventory and `zero_division=0`. Exact-control inference pools the five disjoint test folds into out-of-fold predictions, clusters by `subject_id`, and gives the two frontends equal weight.",
+        "id": "scope",
+        "sourceId": "test_summary",
+        "type": "markdown"
+      },
+      {
+        "body": "## Inference uses subject-cluster bootstrap and within-dataset Holm correction\n\nFor each dataset/comparison, 10,000 deterministic subject-resampling draws are reused across both frontends and both members of the pair. The point effect is the equal-weight mean of frontend-specific macro-F1 differences. Intervals are two-sided percentile intervals. Two-sided p-values use the locked null-centered bootstrap rule with +1 correction, followed by Holm adjustment across six hypotheses per dataset.",
+        "id": "methodology",
+        "sourceId": "analysis_amendment",
+        "type": "markdown"
+      },
+      {
+        "body": "## The evidence is held out, but the inferential label needs a caveat\n\nThe bootstrap p-value formula was omitted from the original frozen contract and locked only after test access, before aggregate outcomes were read. Holm results are therefore amended inference rather than fully preregistered confirmation. Raw and Holm decisions agree for 17/18 comparisons: MSS Quantum QDelta \u2212 classical QDelta is negative with raw p < 0.05 but does not survive Holm correction. The quantum kernel uses a deterministic 25-per-class cap and analytic simulation, so its absolute score is not directly comparable with full-test heads and does not establish quantum advantage. V3 is validation-only, and its fixed-frontend decomposition remains descriptive rather than additive causal attribution.",
+        "id": "limitations",
+        "sourceId": "analysis_amendment",
+        "type": "markdown"
+      },
+      {
+        "body": "## Recommended paper update\n\n1. Base the main efficacy wording on the held-out V2 exact-control table, with dataset-specific rather than universal claims.\n2. Label Holm results as amended inference and retain effect sizes plus clustered intervals as the primary evidence.\n3. Keep quantum-kernel absolute rankings out of full-test leader claims; report only its exact subset-matched controls and compute caveat.\n4. Use V3 to explain validation-side readout-sample behavior, not as held-out efficacy evidence.\n5. Generate manuscript figures and contribution wording from this immutable snapshot without changing comparison families or thresholds.",
+        "id": "next_steps",
+        "type": "markdown"
+      },
+      {
+        "body": "## Further questions\n\n- Do the amended positive effects remain scientifically meaningful after considering their absolute magnitude and compute cost?\n- Should the manuscript present the bootstrap-Holm analysis as exploratory-confirmatory or reserve formal confirmation for a future fully preregistered replication?\n- Which dataset-specific findings are central enough for the abstract versus the limitations and appendix?",
+        "id": "questions",
+        "type": "markdown"
+      }
+    ],
+    "charts": [
+      {
+        "comparisonContext": {
+          "grain": "dataset \u00d7 exact-control hypothesis",
+          "unit": "macro-F1 percentage points"
+        },
+        "dataset": "exact_controls",
+        "encodings": {
+          "color": {
+            "field": "dataset",
+            "label": "Dataset",
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "ci_low_pp",
+              "label": "95% CI low",
+              "type": "quantitative"
+            },
+            {
+              "field": "ci_high_pp",
+              "label": "95% CI high",
+              "type": "quantitative"
+            },
+            {
+              "field": "holm_adjusted_p",
+              "label": "Holm-adjusted p",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "field": "comparison",
+            "label": "Candidate \u2212 control",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "effect_pp",
+            "label": "\u0394 macro-F1 (pp)",
+            "type": "quantitative"
+          }
+        },
+        "id": "exact_control_chart",
+        "intent": "comparison",
+        "question": "Which isolated readout components improve held-out macro-F1 within each dataset?",
+        "rationale": "Grouped signed bars preserve all 18 predeclared dataset-level effects while the adjacent table carries uncertainty and multiplicity.",
+        "sourceId": "test_summary",
+        "subtitle": "Candidate minus control, equal-weight average over two frontends; percentage points",
+        "title": "Exact-control test macro-F1 effects",
+        "type": "horizontalBar"
+      },
+      {
+        "comparisonContext": {
+          "grain": "dataset \u00d7 exact-control hypothesis",
+          "unit": "macro-F1 percentage points"
+        },
+        "dataset": "exact_controls",
+        "encodings": {
+          "color": {
+            "field": "dataset",
+            "label": "Dataset",
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "comparison",
+              "label": "Comparison",
+              "type": "nominal"
+            }
+          ],
+          "x": {
+            "field": "validation_delta_pp",
+            "label": "Validation \u0394F1 (pp)",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "effect_pp",
+            "label": "Test \u0394F1 (pp)",
+            "type": "quantitative"
+          }
+        },
+        "id": "validation_test_chart",
+        "intent": "relationship",
+        "question": "Did the direction and magnitude selected on validation reproduce on held-out test data?",
+        "rationale": "A same-grain scatter exposes sign reversals and optimism without pooling heterogeneous datasets.",
+        "sourceId": "test_summary",
+        "subtitle": "Eighteen dataset-level comparisons; quantum-kernel validation controls were not subset-matched",
+        "title": "Validation and test exact-control effects",
+        "type": "scatter"
+      },
+      {
+        "dataset": "comparable_rankings",
+        "encodings": {
+          "color": {
+            "field": "head",
+            "label": "Readout",
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "rank",
+              "label": "Within-dataset rank",
+              "type": "quantitative"
+            },
+            {
+              "field": "sd_macro_f1",
+              "label": "Context SD",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "field": "dataset",
+            "label": "Dataset",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "mean_macro_f1",
+            "label": "Mean macro-F1",
+            "type": "quantitative"
+          }
+        },
+        "id": "ranking_chart",
+        "intent": "relationship",
+        "question": "Does one full-test readout lead consistently across all three datasets?",
+        "rationale": "A heatmap shows the full 3-by-12 surface without treating heterogeneous datasets as exchangeable.",
+        "sourceId": "test_summary",
+        "subtitle": "Twelve full-test heads; mean over two frontends and five outer folds",
+        "title": "Held-out macro-F1 by dataset and readout",
+        "type": "heatmap"
+      },
+      {
+        "comparisonContext": {
+          "grain": "frontend \u00d7 budget aggregate",
+          "unit": "test macro-F1"
+        },
+        "dataset": "scaling_curve",
+        "encodings": {
+          "color": {
+            "field": "frontend",
+            "label": "Frontend",
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "sd_macro_f1",
+              "label": "Observation SD",
+              "type": "quantitative"
+            },
+            {
+              "field": "observations",
+              "label": "Observations",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "field": "budget_label",
+            "label": "Training budget",
+            "type": "ordinal"
+          },
+          "y": {
+            "field": "mean_macro_f1",
+            "label": "Mean macro-F1",
+            "type": "quantitative"
+          }
+        },
+        "id": "scaling_chart",
+        "intent": "comparison",
+        "question": "How does held-out performance change as frontend and readout budgets grow together?",
+        "rationale": "Grouped bars are honest for the three discrete 1k, 5k, and 20k budget anchors.",
+        "sourceId": "test_summary",
+        "subtitle": "Five representative heads; 25 fold/head observations per frontend and budget",
+        "title": "MSS same-budget held-out macro-F1",
+        "type": "bar"
+      }
+    ],
+    "description": "Technical held-out synthesis of V2 readout rankings, exact controls, clustered uncertainty, MSS scaling, and V3 validation context.",
+    "generatedAt": "2026-08-14T23:20:00+07:00",
+    "sources": [
+      {
+        "id": "test_summary",
+        "label": "Paper 2 V2 primary-test reviewed snapshot",
+        "path": "paper2_benchmark/reports/v2-primary-test-2026-08-14/analysis.sqlite",
+        "query": {
+          "description": "Returns the bounded reviewed rows materialized from all 490 immutable V2 primary-test artifacts.",
+          "engine": "sqlite",
+          "executed_at": "2026-08-14T23:20:00+07:00",
+          "filters": [
+            "V2 seed 42 only",
+            "390 primary plus 100 MSS scaling conditions",
+            "quantum-kernel exact controls use the exact capped candidate trial IDs"
+          ],
+          "language": "sql",
+          "metric_definitions": {
+            "effect_pp": "100 times the equal-frontend-weight candidate minus control out-of-fold test macro-F1",
+            "holm_adjusted_p": "Holm adjustment across six exact-control hypotheses separately within each dataset",
+            "macro_f1": "unweighted mean of class-specific F1 using the complete frozen class inventory and zero_division=0",
+            "scaling_delta_pp": "100 times 5k minus 1k same-budget MSS test macro-F1"
+          },
+          "sql": "SELECT dataset, row_index, row_json FROM report_snapshot_rows ORDER BY dataset, row_index",
+          "tables_used": [
+            "report_snapshot_rows"
+          ]
+        }
+      },
+      {
+        "id": "protocol_v2",
+        "label": "Frozen Paper 2 protocol V2",
+        "path": "paper2_benchmark/configs/protocol_v2.yaml"
+      },
+      {
+        "id": "test_contract",
+        "label": "Frozen primary-test analysis contract",
+        "path": "paper2_benchmark/configs/test_analysis_v1.json"
+      },
+      {
+        "id": "analysis_amendment",
+        "label": "Post-access, pre-aggregate bootstrap p-value amendment",
+        "path": "paper2_benchmark/configs/test_analysis_amendment_v1.json"
+      },
+      {
+        "id": "validation_report",
+        "label": "V2\u2013V3 validation synthesis snapshot",
+        "path": "paper2_benchmark/reports/v2-v3-validation-synthesis-2026-08-14/summary.json"
+      },
+      {
+        "id": "execution_plan",
+        "label": "V2 primary-test execution and recovery plan",
+        "path": "docs/plans/completed/paper2-v2-v3-test-evaluation.md"
+      }
+    ],
+    "surface": "report",
+    "tables": [
+      {
+        "columns": [
+          {
+            "field": "check",
+            "label": "Check",
+            "type": "text"
+          },
+          {
+            "field": "observed",
+            "label": "Observed",
+            "type": "text"
+          },
+          {
+            "field": "expected",
+            "label": "Expected",
+            "type": "text"
+          },
+          {
+            "field": "status",
+            "label": "Status",
+            "type": "text"
+          }
+        ],
+        "dataset": "data_quality",
+        "defaultSort": {
+          "direction": "asc",
+          "field": "check"
+        },
+        "density": "spacious",
+        "id": "quality_table",
+        "sourceId": "test_summary",
+        "subtitle": "Coverage, recovery binding, hash integrity, and independent metric recomputation",
+        "title": "Primary-test artifact and calculation audit"
+      },
+      {
+        "columns": [
+          {
+            "field": "dataset",
+            "label": "Dataset",
+            "type": "text"
+          },
+          {
+            "field": "comparison",
+            "label": "Comparison",
+            "type": "text"
+          },
+          {
+            "field": "effect_pp",
+            "format": "number",
+            "label": "\u0394F1 (pp)",
+            "movement": true
+          },
+          {
+            "field": "ci_low_pp",
+            "format": "number",
+            "label": "95% CI low"
+          },
+          {
+            "field": "ci_high_pp",
+            "format": "number",
+            "label": "95% CI high"
+          },
+          {
+            "field": "holm_adjusted_p",
+            "format": "number",
+            "label": "Holm p"
+          },
+          {
+            "field": "frontends_positive",
+            "format": "number",
+            "label": "Positive FE"
+          },
+          {
+            "field": "amended_positive",
+            "label": "Positive result",
+            "type": "boolean"
+          }
+        ],
+        "dataset": "exact_controls",
+        "defaultSort": {
+          "direction": "asc",
+          "field": "dataset"
+        },
+        "density": "dense",
+        "id": "exact_table",
+        "sourceId": "test_summary",
+        "subtitle": "10,000 subject-cluster bootstrap replicates; six-hypothesis Holm family per dataset",
+        "title": "Dataset-level exact-control inference"
+      },
+      {
+        "columns": [
+          {
+            "field": "dataset",
+            "label": "Dataset",
+            "type": "text"
+          },
+          {
+            "field": "rank",
+            "format": "number",
+            "label": "Rank"
+          },
+          {
+            "field": "head",
+            "label": "Readout",
+            "type": "text"
+          },
+          {
+            "field": "mean_macro_f1",
+            "format": "number",
+            "label": "Mean macro-F1"
+          },
+          {
+            "field": "sd_macro_f1",
+            "format": "number",
+            "label": "SD"
+          },
+          {
+            "field": "evaluation_scope",
+            "label": "Evaluation scope",
+            "type": "text"
+          }
+        ],
+        "dataset": "rankings",
+        "defaultSort": {
+          "direction": "desc",
+          "field": "mean_macro_f1"
+        },
+        "density": "dense",
+        "id": "ranking_table",
+        "sourceId": "test_summary",
+        "subtitle": "Quantum kernel is listed but not ranked because its test set is capped at 25 examples per class",
+        "title": "Held-out readout lookup"
+      },
+      {
+        "columns": [
+          {
+            "field": "frontend",
+            "label": "Frontend",
+            "type": "text"
+          },
+          {
+            "field": "head",
+            "label": "Readout",
+            "type": "text"
+          },
+          {
+            "field": "mean_delta_pp",
+            "format": "number",
+            "label": "5k\u22121k \u0394F1 (pp)",
+            "movement": true
+          },
+          {
+            "field": "sd_delta_pp",
+            "format": "number",
+            "label": "SD (pp)"
+          },
+          {
+            "field": "wins",
+            "format": "number",
+            "label": "Positive folds"
+          }
+        ],
+        "dataset": "scaling_detail",
+        "defaultSort": {
+          "direction": "desc",
+          "field": "mean_delta_pp"
+        },
+        "density": "dense",
+        "id": "scaling_table",
+        "sourceId": "test_summary",
+        "subtitle": "Paired fold-level test macro-F1 changes; descriptive only",
+        "title": "MSS 1k-to-5k same-budget changes"
+      }
+    ],
+    "title": "Paper 2 primary test results",
+    "version": 1
+  },
+  "snapshot": {
+    "datasets": {
+      "comparable_rankings": [
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Classical QDelta",
+          "head_id": "classical_qdelta",
+          "mean_macro_f1": 0.25834625441713255,
+          "rank": 1,
+          "sd_macro_f1": 0.04070070643582672
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Quantum QDelta",
+          "head_id": "quantum_qdelta",
+          "mean_macro_f1": 0.2488261507634386,
+          "rank": 2,
+          "sd_macro_f1": 0.05068238455904337
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Temporal MLP",
+          "head_id": "temporal_mlp",
+          "mean_macro_f1": 0.24288091897241607,
+          "rank": 3,
+          "sd_macro_f1": 0.03497854074058569
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Continuous prototype",
+          "head_id": "continuous_leaky_prototype",
+          "mean_macro_f1": 0.24140998330233804,
+          "rank": 4,
+          "sd_macro_f1": 0.039743839044455664
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "LIF",
+          "head_id": "lif",
+          "mean_macro_f1": 0.2392456572775959,
+          "rank": 5,
+          "sd_macro_f1": 0.04150185869596516
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Continuous leaky",
+          "head_id": "continuous_leaky",
+          "mean_macro_f1": 0.2333118884288688,
+          "rank": 6,
+          "sd_macro_f1": 0.031462256818278286
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Spike-rate RBF",
+          "head_id": "spike_rate_rbf",
+          "mean_macro_f1": 0.2329043707032718,
+          "rank": 7,
+          "sd_macro_f1": 0.0352982057479504
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "RBF kernel",
+          "head_id": "rbf_kernel",
+          "mean_macro_f1": 0.2301916261842245,
+          "rank": 8,
+          "sd_macro_f1": 0.04927775779952683
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Random-feature kernel",
+          "head_id": "random_feature_kernel",
+          "mean_macro_f1": 0.22850570317450086,
+          "rank": 9,
+          "sd_macro_f1": 0.05804448708239418
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "LIF prototype",
+          "head_id": "lif_prototype",
+          "mean_macro_f1": 0.22716856494408622,
+          "rank": 10,
+          "sd_macro_f1": 0.041788405994123784
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Linear",
+          "head_id": "linear",
+          "mean_macro_f1": 0.22589366323915172,
+          "rank": 11,
+          "sd_macro_f1": 0.03225008319048921
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Continuous-stat RBF",
+          "head_id": "continuous_statistics_rbf",
+          "mean_macro_f1": 0.21606011001843672,
+          "rank": 12,
+          "sd_macro_f1": 0.036739010586199675
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Temporal MLP",
+          "head_id": "temporal_mlp",
+          "mean_macro_f1": 0.07614975668276903,
+          "rank": 1,
+          "sd_macro_f1": 0.008449269026748413
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Linear",
+          "head_id": "linear",
+          "mean_macro_f1": 0.06918178509976922,
+          "rank": 2,
+          "sd_macro_f1": 0.00945001295199831
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Classical QDelta",
+          "head_id": "classical_qdelta",
+          "mean_macro_f1": 0.06842905405254819,
+          "rank": 3,
+          "sd_macro_f1": 0.009105791757695008
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Quantum QDelta",
+          "head_id": "quantum_qdelta",
+          "mean_macro_f1": 0.06602920353778191,
+          "rank": 4,
+          "sd_macro_f1": 0.011343387308228063
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "LIF prototype",
+          "head_id": "lif_prototype",
+          "mean_macro_f1": 0.06207689177641357,
+          "rank": 5,
+          "sd_macro_f1": 0.015634181871646252
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "RBF kernel",
+          "head_id": "rbf_kernel",
+          "mean_macro_f1": 0.061477971587051386,
+          "rank": 6,
+          "sd_macro_f1": 0.00976643258137154
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Continuous prototype",
+          "head_id": "continuous_leaky_prototype",
+          "mean_macro_f1": 0.057437935895228255,
+          "rank": 7,
+          "sd_macro_f1": 0.01848812635865364
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "LIF",
+          "head_id": "lif",
+          "mean_macro_f1": 0.05611617308006882,
+          "rank": 8,
+          "sd_macro_f1": 0.010902757958930701
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Continuous-stat RBF",
+          "head_id": "continuous_statistics_rbf",
+          "mean_macro_f1": 0.04771305009213105,
+          "rank": 9,
+          "sd_macro_f1": 0.029645530372276893
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Continuous leaky",
+          "head_id": "continuous_leaky",
+          "mean_macro_f1": 0.047073183937475616,
+          "rank": 10,
+          "sd_macro_f1": 0.008139632389901584
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Random-feature kernel",
+          "head_id": "random_feature_kernel",
+          "mean_macro_f1": 0.039044661073322426,
+          "rank": 11,
+          "sd_macro_f1": 0.020286476673074275
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Spike-rate RBF",
+          "head_id": "spike_rate_rbf",
+          "mean_macro_f1": 0.03722899395510337,
+          "rank": 12,
+          "sd_macro_f1": 0.011443746298510506
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Temporal MLP",
+          "head_id": "temporal_mlp",
+          "mean_macro_f1": 0.09818254517213598,
+          "rank": 1,
+          "sd_macro_f1": 0.0045728205808246904
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Continuous-stat RBF",
+          "head_id": "continuous_statistics_rbf",
+          "mean_macro_f1": 0.09757253447365169,
+          "rank": 2,
+          "sd_macro_f1": 0.003818877036024309
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Linear",
+          "head_id": "linear",
+          "mean_macro_f1": 0.09719319619893382,
+          "rank": 3,
+          "sd_macro_f1": 0.0032332928267117533
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "LIF",
+          "head_id": "lif",
+          "mean_macro_f1": 0.09631272523770798,
+          "rank": 4,
+          "sd_macro_f1": 0.0027383243347396573
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "RBF kernel",
+          "head_id": "rbf_kernel",
+          "mean_macro_f1": 0.09587142745780505,
+          "rank": 5,
+          "sd_macro_f1": 0.003268047901746756
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Spike-rate RBF",
+          "head_id": "spike_rate_rbf",
+          "mean_macro_f1": 0.09548486346085314,
+          "rank": 6,
+          "sd_macro_f1": 0.0038836721543258203
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Quantum QDelta",
+          "head_id": "quantum_qdelta",
+          "mean_macro_f1": 0.09505030435824703,
+          "rank": 7,
+          "sd_macro_f1": 0.004542957694677499
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Classical QDelta",
+          "head_id": "classical_qdelta",
+          "mean_macro_f1": 0.09453122029221683,
+          "rank": 8,
+          "sd_macro_f1": 0.002597350697360977
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Continuous prototype",
+          "head_id": "continuous_leaky_prototype",
+          "mean_macro_f1": 0.09404382506823979,
+          "rank": 9,
+          "sd_macro_f1": 0.004194141221937113
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "LIF prototype",
+          "head_id": "lif_prototype",
+          "mean_macro_f1": 0.09311526232393576,
+          "rank": 10,
+          "sd_macro_f1": 0.005280784077547465
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Continuous leaky",
+          "head_id": "continuous_leaky",
+          "mean_macro_f1": 0.09307160596808622,
+          "rank": 11,
+          "sd_macro_f1": 0.0025703266391985413
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Random-feature kernel",
+          "head_id": "random_feature_kernel",
+          "mean_macro_f1": 0.08924184197288187,
+          "rank": 12,
+          "sd_macro_f1": 0.0038159957970803457
+        }
+      ],
+      "data_quality": [
+        {
+          "check": "Eligible test artifacts",
+          "expected": 490,
+          "observed": 490,
+          "status": "pass"
+        },
+        {
+          "check": "Atomic test claims",
+          "expected": 490,
+          "observed": 490,
+          "status": "pass"
+        },
+        {
+          "check": "Audited recoveries",
+          "expected": 4,
+          "observed": 4,
+          "status": "pass"
+        },
+        {
+          "check": "Metric recomputations",
+          "expected": 490,
+          "observed": 490,
+          "status": "pass"
+        },
+        {
+          "check": "Frontend test contexts",
+          "expected": 50,
+          "observed": 50,
+          "status": "pass"
+        },
+        {
+          "check": "Quantum-kernel capped conditions",
+          "expected": 30,
+          "observed": 30,
+          "status": "pass"
+        },
+        {
+          "check": "Duplicate / extra / invalid",
+          "expected": "0 / 0 / 0",
+          "observed": "0 / 0 / 0",
+          "status": "pass"
+        }
+      ],
+      "exact_controls": [
+        {
+          "amended_positive": false,
+          "candidate": "LIF",
+          "ci_high_pp": 4.410012770170684,
+          "ci_low_pp": -3.109608547881668,
+          "comparison": "LIF \u2212 continuous",
+          "comparison_id": "lif_vs_continuous",
+          "control": "Continuous leaky",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": 0.7504313900555892,
+          "frontends_positive": 1,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 3612,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.6990300969903009,
+          "subjects": 31,
+          "validation_delta_pp": 2.2199263948223953
+        },
+        {
+          "amended_positive": false,
+          "candidate": "LIF prototype",
+          "ci_high_pp": 0.9797338569183159,
+          "ci_low_pp": -3.575641098870946,
+          "comparison": "LIF prototype \u2212 continuous prototype",
+          "comparison_id": "lif_prototype_vs_continuous_prototype",
+          "control": "Continuous prototype",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -1.3493029274442931,
+          "frontends_positive": 0,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 3612,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.24847515248475152,
+          "subjects": 31,
+          "validation_delta_pp": 0.5268444715707649
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Spike-rate RBF",
+          "ci_high_pp": 2.866832699748506,
+          "ci_low_pp": -0.7000994379923985,
+          "comparison": "Spike-rate RBF \u2212 continuous-stat RBF",
+          "comparison_id": "spike_rbf_vs_continuous_rbf",
+          "control": "Continuous-stat RBF",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": 1.058721508240787,
+          "frontends_positive": 2,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 3612,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.24847515248475152,
+          "subjects": 31,
+          "validation_delta_pp": 0.39134200906720035
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Quantum QDelta",
+          "ci_high_pp": 0.13206429451669072,
+          "ci_low_pp": -1.7309067138922207,
+          "comparison": "Quantum QDelta \u2212 classical QDelta",
+          "comparison_id": "quantum_qdelta_vs_classical_qdelta",
+          "control": "Classical QDelta",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -0.7911766491432576,
+          "frontends_positive": 0,
+          "holm_adjusted_p": 0.5765423457654235,
+          "holm_significant": false,
+          "paired_trials": 3612,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.09609039096090391,
+          "subjects": 31,
+          "validation_delta_pp": -0.3870561402726083
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Quantum kernel",
+          "ci_high_pp": 4.362152775309207,
+          "ci_low_pp": -3.4337374662273046,
+          "comparison": "Quantum kernel \u2212 RBF kernel",
+          "comparison_id": "quantum_kernel_vs_rbf",
+          "control": "RBF kernel",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": 0.42583684760954116,
+          "frontends_positive": 1,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 500,
+          "quantum_kernel_capped": true,
+          "raw_p_value": 0.839016098390161,
+          "subjects": 31,
+          "validation_delta_pp": 3.9013719416158663
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Quantum kernel",
+          "ci_high_pp": 4.442601471345451,
+          "ci_low_pp": -4.939512182014316,
+          "comparison": "Quantum kernel \u2212 random features",
+          "comparison_id": "quantum_kernel_vs_random_features",
+          "control": "Random-feature kernel",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -0.28707052394912475,
+          "frontends_positive": 1,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 500,
+          "quantum_kernel_capped": true,
+          "raw_p_value": 0.9000099990001,
+          "subjects": 31,
+          "validation_delta_pp": 5.345415406729854
+        },
+        {
+          "amended_positive": true,
+          "candidate": "LIF",
+          "ci_high_pp": 0.8659745071957582,
+          "ci_low_pp": 0.12837715974489095,
+          "comparison": "LIF \u2212 continuous",
+          "comparison_id": "lif_vs_continuous",
+          "control": "Continuous leaky",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 0.4750382403997173,
+          "frontends_positive": 2,
+          "holm_adjusted_p": 0.040495950404959506,
+          "holm_significant": true,
+          "paired_trials": 40000,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.013498650134986502,
+          "subjects": 32,
+          "validation_delta_pp": 0.8835638408810116
+        },
+        {
+          "amended_positive": true,
+          "candidate": "LIF prototype",
+          "ci_high_pp": 0.6077569135945111,
+          "ci_low_pp": 0.11187513609139292,
+          "comparison": "LIF prototype \u2212 continuous prototype",
+          "comparison_id": "lif_prototype_vs_continuous_prototype",
+          "control": "Continuous prototype",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 0.33872618213635736,
+          "frontends_positive": 2,
+          "holm_adjusted_p": 0.031996800319968,
+          "holm_significant": true,
+          "paired_trials": 40000,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.007999200079992,
+          "subjects": 32,
+          "validation_delta_pp": 0.25892349098059775
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Spike-rate RBF",
+          "ci_high_pp": -0.27881054273630596,
+          "ci_low_pp": -1.0044329597417139,
+          "comparison": "Spike-rate RBF \u2212 continuous-stat RBF",
+          "comparison_id": "spike_rbf_vs_continuous_rbf",
+          "control": "Continuous-stat RBF",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": -0.6082732629807165,
+          "frontends_positive": 1,
+          "holm_adjusted_p": 0.007999200079992,
+          "holm_significant": true,
+          "paired_trials": 40000,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.0015998400159984002,
+          "subjects": 32,
+          "validation_delta_pp": -1.0487427197651005
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Quantum QDelta",
+          "ci_high_pp": -0.02563341668523091,
+          "ci_low_pp": -0.4197612688223223,
+          "comparison": "Quantum QDelta \u2212 classical QDelta",
+          "comparison_id": "quantum_qdelta_vs_classical_qdelta",
+          "control": "Classical QDelta",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": -0.226404249353912,
+          "frontends_positive": 0,
+          "holm_adjusted_p": 0.055594440555944404,
+          "holm_significant": false,
+          "paired_trials": 40000,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.027797220277972202,
+          "subjects": 32,
+          "validation_delta_pp": -0.26995634134278385
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Quantum kernel",
+          "ci_high_pp": 0.7741081329051327,
+          "ci_low_pp": -0.5569635595187542,
+          "comparison": "Quantum kernel \u2212 RBF kernel",
+          "comparison_id": "quantum_kernel_vs_rbf",
+          "control": "RBF kernel",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 0.1546421368417636,
+          "frontends_positive": 1,
+          "holm_adjusted_p": 0.6424357564243576,
+          "holm_significant": false,
+          "paired_trials": 2500,
+          "quantum_kernel_capped": true,
+          "raw_p_value": 0.6424357564243576,
+          "subjects": 32,
+          "validation_delta_pp": 0.7037132430411381
+        },
+        {
+          "amended_positive": true,
+          "candidate": "Quantum kernel",
+          "ci_high_pp": 2.813018727525457,
+          "ci_low_pp": 1.0141874757538174,
+          "comparison": "Quantum kernel \u2212 random features",
+          "comparison_id": "quantum_kernel_vs_random_features",
+          "control": "Random-feature kernel",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 1.9423315475536596,
+          "frontends_positive": 2,
+          "holm_adjusted_p": 0.0011998800119988001,
+          "holm_significant": true,
+          "paired_trials": 2500,
+          "quantum_kernel_capped": true,
+          "raw_p_value": 0.00019998000199980003,
+          "subjects": 32,
+          "validation_delta_pp": 2.9623402003625845
+        },
+        {
+          "amended_positive": false,
+          "candidate": "LIF",
+          "ci_high_pp": 0.3932031613828685,
+          "ci_low_pp": -0.07306392657889225,
+          "comparison": "LIF \u2212 continuous",
+          "comparison_id": "lif_vs_continuous",
+          "control": "Continuous leaky",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": 0.1608208019485101,
+          "frontends_positive": 2,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 35106,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.1787821217878212,
+          "subjects": 34,
+          "validation_delta_pp": 0.12274654516941375
+        },
+        {
+          "amended_positive": false,
+          "candidate": "LIF prototype",
+          "ci_high_pp": 0.17354934610101128,
+          "ci_low_pp": -0.3314957817654304,
+          "comparison": "LIF prototype \u2212 continuous prototype",
+          "comparison_id": "lif_prototype_vs_continuous_prototype",
+          "control": "Continuous prototype",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -0.07698721694180191,
+          "frontends_positive": 1,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 35106,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.5508449155084492,
+          "subjects": 34,
+          "validation_delta_pp": 0.24267182263253279
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Spike-rate RBF",
+          "ci_high_pp": 0.17356451144979804,
+          "ci_low_pp": -0.33347530009415377,
+          "comparison": "Spike-rate RBF \u2212 continuous-stat RBF",
+          "comparison_id": "spike_rbf_vs_continuous_rbf",
+          "control": "Continuous-stat RBF",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -0.06814306767756323,
+          "frontends_positive": 1,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 35106,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.6069393060693931,
+          "subjects": 34,
+          "validation_delta_pp": -0.11905932021928148
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Quantum QDelta",
+          "ci_high_pp": 0.17266561496733374,
+          "ci_low_pp": -0.17427834825642124,
+          "comparison": "Quantum QDelta \u2212 classical QDelta",
+          "comparison_id": "quantum_qdelta_vs_classical_qdelta",
+          "control": "Classical QDelta",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -0.0017940764306043078,
+          "frontends_positive": 1,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 35106,
+          "quantum_kernel_capped": false,
+          "raw_p_value": 0.9852014798520148,
+          "subjects": 34,
+          "validation_delta_pp": 0.016000451883097927
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Quantum kernel",
+          "ci_high_pp": 0.7846279739979025,
+          "ci_low_pp": -2.570346263638134,
+          "comparison": "Quantum kernel \u2212 RBF kernel",
+          "comparison_id": "quantum_kernel_vs_rbf",
+          "control": "RBF kernel",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -0.8323161365640007,
+          "frontends_positive": 0,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 1250,
+          "quantum_kernel_capped": true,
+          "raw_p_value": 0.31486851314868514,
+          "subjects": 34,
+          "validation_delta_pp": 2.8704525375445664
+        },
+        {
+          "amended_positive": false,
+          "candidate": "Quantum kernel",
+          "ci_high_pp": 1.2402936287175825,
+          "ci_low_pp": -1.5437814031769201,
+          "comparison": "Quantum kernel \u2212 random features",
+          "comparison_id": "quantum_kernel_vs_random_features",
+          "control": "Random-feature kernel",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -0.16276105683158612,
+          "frontends_positive": 1,
+          "holm_adjusted_p": 1.0,
+          "holm_significant": false,
+          "paired_trials": 1250,
+          "quantum_kernel_capped": true,
+          "raw_p_value": 0.8208179182081792,
+          "subjects": 34,
+          "validation_delta_pp": 3.537534085891145
+        }
+      ],
+      "frontend_effects": [
+        {
+          "comparison": "LIF \u2212 continuous",
+          "comparison_id": "lif_vs_continuous",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": 2.8827529653492556,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 31,
+          "trials": 3612
+        },
+        {
+          "comparison": "LIF \u2212 continuous",
+          "comparison_id": "lif_vs_continuous",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -1.3818901852380772,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 31,
+          "trials": 3612
+        },
+        {
+          "comparison": "LIF prototype \u2212 continuous prototype",
+          "comparison_id": "lif_prototype_vs_continuous_prototype",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -1.0866282897097927,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 31,
+          "trials": 3612
+        },
+        {
+          "comparison": "LIF prototype \u2212 continuous prototype",
+          "comparison_id": "lif_prototype_vs_continuous_prototype",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -1.611977565178793,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 31,
+          "trials": 3612
+        },
+        {
+          "comparison": "Spike-rate RBF \u2212 continuous-stat RBF",
+          "comparison_id": "spike_rbf_vs_continuous_rbf",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": 1.9311459410633058,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 31,
+          "trials": 3612
+        },
+        {
+          "comparison": "Spike-rate RBF \u2212 continuous-stat RBF",
+          "comparison_id": "spike_rbf_vs_continuous_rbf",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": 0.186297075418268,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 31,
+          "trials": 3612
+        },
+        {
+          "comparison": "Quantum QDelta \u2212 classical QDelta",
+          "comparison_id": "quantum_qdelta_vs_classical_qdelta",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -0.548182843450451,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 31,
+          "trials": 3612
+        },
+        {
+          "comparison": "Quantum QDelta \u2212 classical QDelta",
+          "comparison_id": "quantum_qdelta_vs_classical_qdelta",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -1.0341704548360642,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 31,
+          "trials": 3612
+        },
+        {
+          "comparison": "Quantum kernel \u2212 RBF kernel",
+          "comparison_id": "quantum_kernel_vs_rbf",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -2.007152541488927,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 31,
+          "trials": 500
+        },
+        {
+          "comparison": "Quantum kernel \u2212 RBF kernel",
+          "comparison_id": "quantum_kernel_vs_rbf",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": 2.8588262367080093,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 31,
+          "trials": 500
+        },
+        {
+          "comparison": "Quantum kernel \u2212 random features",
+          "comparison_id": "quantum_kernel_vs_random_features",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": -0.771513499611054,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 31,
+          "trials": 500
+        },
+        {
+          "comparison": "Quantum kernel \u2212 random features",
+          "comparison_id": "quantum_kernel_vs_random_features",
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "effect_pp": 0.1973724517128045,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 31,
+          "trials": 500
+        },
+        {
+          "comparison": "LIF \u2212 continuous",
+          "comparison_id": "lif_vs_continuous",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 0.5530521218802875,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 32,
+          "trials": 40000
+        },
+        {
+          "comparison": "LIF \u2212 continuous",
+          "comparison_id": "lif_vs_continuous",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 0.39702435891914717,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 32,
+          "trials": 40000
+        },
+        {
+          "comparison": "LIF prototype \u2212 continuous prototype",
+          "comparison_id": "lif_prototype_vs_continuous_prototype",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 0.5950990488926645,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 32,
+          "trials": 40000
+        },
+        {
+          "comparison": "LIF prototype \u2212 continuous prototype",
+          "comparison_id": "lif_prototype_vs_continuous_prototype",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 0.08235331538005014,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 32,
+          "trials": 40000
+        },
+        {
+          "comparison": "Spike-rate RBF \u2212 continuous-stat RBF",
+          "comparison_id": "spike_rbf_vs_continuous_rbf",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 1.7092177093851815,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 32,
+          "trials": 40000
+        },
+        {
+          "comparison": "Spike-rate RBF \u2212 continuous-stat RBF",
+          "comparison_id": "spike_rbf_vs_continuous_rbf",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": -2.9257642353466147,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 32,
+          "trials": 40000
+        },
+        {
+          "comparison": "Quantum QDelta \u2212 classical QDelta",
+          "comparison_id": "quantum_qdelta_vs_classical_qdelta",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": -0.013027581762156681,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 32,
+          "trials": 40000
+        },
+        {
+          "comparison": "Quantum QDelta \u2212 classical QDelta",
+          "comparison_id": "quantum_qdelta_vs_classical_qdelta",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": -0.43978091694566734,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 32,
+          "trials": 40000
+        },
+        {
+          "comparison": "Quantum kernel \u2212 RBF kernel",
+          "comparison_id": "quantum_kernel_vs_rbf",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 0.42738235391971136,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 32,
+          "trials": 2500
+        },
+        {
+          "comparison": "Quantum kernel \u2212 RBF kernel",
+          "comparison_id": "quantum_kernel_vs_rbf",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": -0.11809808023618418,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 32,
+          "trials": 2500
+        },
+        {
+          "comparison": "Quantum kernel \u2212 random features",
+          "comparison_id": "quantum_kernel_vs_random_features",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 0.3866557623035567,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 32,
+          "trials": 2500
+        },
+        {
+          "comparison": "Quantum kernel \u2212 random features",
+          "comparison_id": "quantum_kernel_vs_random_features",
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "effect_pp": 3.4980073328037626,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 32,
+          "trials": 2500
+        },
+        {
+          "comparison": "LIF \u2212 continuous",
+          "comparison_id": "lif_vs_continuous",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": 0.10641289268611825,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 34,
+          "trials": 35106
+        },
+        {
+          "comparison": "LIF \u2212 continuous",
+          "comparison_id": "lif_vs_continuous",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": 0.21522871121090192,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 34,
+          "trials": 35106
+        },
+        {
+          "comparison": "LIF prototype \u2212 continuous prototype",
+          "comparison_id": "lif_prototype_vs_continuous_prototype",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -0.23126615265170042,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 34,
+          "trials": 35106
+        },
+        {
+          "comparison": "LIF prototype \u2212 continuous prototype",
+          "comparison_id": "lif_prototype_vs_continuous_prototype",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": 0.0772917187680966,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 34,
+          "trials": 35106
+        },
+        {
+          "comparison": "Spike-rate RBF \u2212 continuous-stat RBF",
+          "comparison_id": "spike_rbf_vs_continuous_rbf",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -0.40273175725967364,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 34,
+          "trials": 35106
+        },
+        {
+          "comparison": "Spike-rate RBF \u2212 continuous-stat RBF",
+          "comparison_id": "spike_rbf_vs_continuous_rbf",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": 0.2664456219045472,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 34,
+          "trials": 35106
+        },
+        {
+          "comparison": "Quantum QDelta \u2212 classical QDelta",
+          "comparison_id": "quantum_qdelta_vs_classical_qdelta",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -0.09085193452997853,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 34,
+          "trials": 35106
+        },
+        {
+          "comparison": "Quantum QDelta \u2212 classical QDelta",
+          "comparison_id": "quantum_qdelta_vs_classical_qdelta",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": 0.08726378166876991,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 34,
+          "trials": 35106
+        },
+        {
+          "comparison": "Quantum kernel \u2212 RBF kernel",
+          "comparison_id": "quantum_kernel_vs_rbf",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -0.6383959579012749,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 34,
+          "trials": 1250
+        },
+        {
+          "comparison": "Quantum kernel \u2212 RBF kernel",
+          "comparison_id": "quantum_kernel_vs_rbf",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -1.0262363152267264,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 34,
+          "trials": 1250
+        },
+        {
+          "comparison": "Quantum kernel \u2212 random features",
+          "comparison_id": "quantum_kernel_vs_random_features",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": 0.9558901435577943,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "subjects": 34,
+          "trials": 1250
+        },
+        {
+          "comparison": "Quantum kernel \u2212 random features",
+          "comparison_id": "quantum_kernel_vs_random_features",
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "effect_pp": -1.2814122572209665,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "subjects": 34,
+          "trials": 1250
+        }
+      ],
+      "rankings": [
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Classical QDelta",
+          "head_id": "classical_qdelta",
+          "mean_macro_f1": 0.25834625441713255,
+          "rank": 1,
+          "sd_macro_f1": 0.04070070643582672
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Quantum QDelta",
+          "head_id": "quantum_qdelta",
+          "mean_macro_f1": 0.2488261507634386,
+          "rank": 2,
+          "sd_macro_f1": 0.05068238455904337
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Temporal MLP",
+          "head_id": "temporal_mlp",
+          "mean_macro_f1": 0.24288091897241607,
+          "rank": 3,
+          "sd_macro_f1": 0.03497854074058569
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Continuous prototype",
+          "head_id": "continuous_leaky_prototype",
+          "mean_macro_f1": 0.24140998330233804,
+          "rank": 4,
+          "sd_macro_f1": 0.039743839044455664
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "LIF",
+          "head_id": "lif",
+          "mean_macro_f1": 0.2392456572775959,
+          "rank": 5,
+          "sd_macro_f1": 0.04150185869596516
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Continuous leaky",
+          "head_id": "continuous_leaky",
+          "mean_macro_f1": 0.2333118884288688,
+          "rank": 6,
+          "sd_macro_f1": 0.031462256818278286
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Spike-rate RBF",
+          "head_id": "spike_rate_rbf",
+          "mean_macro_f1": 0.2329043707032718,
+          "rank": 7,
+          "sd_macro_f1": 0.0352982057479504
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "RBF kernel",
+          "head_id": "rbf_kernel",
+          "mean_macro_f1": 0.2301916261842245,
+          "rank": 8,
+          "sd_macro_f1": 0.04927775779952683
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Random-feature kernel",
+          "head_id": "random_feature_kernel",
+          "mean_macro_f1": 0.22850570317450086,
+          "rank": 9,
+          "sd_macro_f1": 0.05804448708239418
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "LIF prototype",
+          "head_id": "lif_prototype",
+          "mean_macro_f1": 0.22716856494408622,
+          "rank": 10,
+          "sd_macro_f1": 0.041788405994123784
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Linear",
+          "head_id": "linear",
+          "mean_macro_f1": 0.22589366323915172,
+          "rank": 11,
+          "sd_macro_f1": 0.03225008319048921
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "full test",
+          "head": "Continuous-stat RBF",
+          "head_id": "continuous_statistics_rbf",
+          "mean_macro_f1": 0.21606011001843672,
+          "rank": 12,
+          "sd_macro_f1": 0.036739010586199675
+        },
+        {
+          "comparable_full_test": false,
+          "contexts": 10,
+          "dataset": "Current VEP",
+          "dataset_id": "current_vep",
+          "evaluation_scope": "25/class cap",
+          "head": "Quantum kernel",
+          "head_id": "quantum_kernel",
+          "mean_macro_f1": 0.24069080831982131,
+          "rank": null,
+          "sd_macro_f1": 0.0564193987862193
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Temporal MLP",
+          "head_id": "temporal_mlp",
+          "mean_macro_f1": 0.07614975668276903,
+          "rank": 1,
+          "sd_macro_f1": 0.008449269026748413
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Linear",
+          "head_id": "linear",
+          "mean_macro_f1": 0.06918178509976922,
+          "rank": 2,
+          "sd_macro_f1": 0.00945001295199831
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Classical QDelta",
+          "head_id": "classical_qdelta",
+          "mean_macro_f1": 0.06842905405254819,
+          "rank": 3,
+          "sd_macro_f1": 0.009105791757695008
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Quantum QDelta",
+          "head_id": "quantum_qdelta",
+          "mean_macro_f1": 0.06602920353778191,
+          "rank": 4,
+          "sd_macro_f1": 0.011343387308228063
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "LIF prototype",
+          "head_id": "lif_prototype",
+          "mean_macro_f1": 0.06207689177641357,
+          "rank": 5,
+          "sd_macro_f1": 0.015634181871646252
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "RBF kernel",
+          "head_id": "rbf_kernel",
+          "mean_macro_f1": 0.061477971587051386,
+          "rank": 6,
+          "sd_macro_f1": 0.00976643258137154
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Continuous prototype",
+          "head_id": "continuous_leaky_prototype",
+          "mean_macro_f1": 0.057437935895228255,
+          "rank": 7,
+          "sd_macro_f1": 0.01848812635865364
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "LIF",
+          "head_id": "lif",
+          "mean_macro_f1": 0.05611617308006882,
+          "rank": 8,
+          "sd_macro_f1": 0.010902757958930701
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Continuous-stat RBF",
+          "head_id": "continuous_statistics_rbf",
+          "mean_macro_f1": 0.04771305009213105,
+          "rank": 9,
+          "sd_macro_f1": 0.029645530372276893
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Continuous leaky",
+          "head_id": "continuous_leaky",
+          "mean_macro_f1": 0.047073183937475616,
+          "rank": 10,
+          "sd_macro_f1": 0.008139632389901584
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Random-feature kernel",
+          "head_id": "random_feature_kernel",
+          "mean_macro_f1": 0.039044661073322426,
+          "rank": 11,
+          "sd_macro_f1": 0.020286476673074275
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "full test",
+          "head": "Spike-rate RBF",
+          "head_id": "spike_rate_rbf",
+          "mean_macro_f1": 0.03722899395510337,
+          "rank": 12,
+          "sd_macro_f1": 0.011443746298510506
+        },
+        {
+          "comparable_full_test": false,
+          "contexts": 10,
+          "dataset": "MSS",
+          "dataset_id": "mss_visual_object_recognition",
+          "evaluation_scope": "25/class cap",
+          "head": "Quantum kernel",
+          "head_id": "quantum_kernel",
+          "mean_macro_f1": 0.0671219660915691,
+          "rank": null,
+          "sd_macro_f1": 0.015114513704958943
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Temporal MLP",
+          "head_id": "temporal_mlp",
+          "mean_macro_f1": 0.09818254517213598,
+          "rank": 1,
+          "sd_macro_f1": 0.0045728205808246904
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Continuous-stat RBF",
+          "head_id": "continuous_statistics_rbf",
+          "mean_macro_f1": 0.09757253447365169,
+          "rank": 2,
+          "sd_macro_f1": 0.003818877036024309
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Linear",
+          "head_id": "linear",
+          "mean_macro_f1": 0.09719319619893382,
+          "rank": 3,
+          "sd_macro_f1": 0.0032332928267117533
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "LIF",
+          "head_id": "lif",
+          "mean_macro_f1": 0.09631272523770798,
+          "rank": 4,
+          "sd_macro_f1": 0.0027383243347396573
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "RBF kernel",
+          "head_id": "rbf_kernel",
+          "mean_macro_f1": 0.09587142745780505,
+          "rank": 5,
+          "sd_macro_f1": 0.003268047901746756
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Spike-rate RBF",
+          "head_id": "spike_rate_rbf",
+          "mean_macro_f1": 0.09548486346085314,
+          "rank": 6,
+          "sd_macro_f1": 0.0038836721543258203
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Quantum QDelta",
+          "head_id": "quantum_qdelta",
+          "mean_macro_f1": 0.09505030435824703,
+          "rank": 7,
+          "sd_macro_f1": 0.004542957694677499
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Classical QDelta",
+          "head_id": "classical_qdelta",
+          "mean_macro_f1": 0.09453122029221683,
+          "rank": 8,
+          "sd_macro_f1": 0.002597350697360977
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Continuous prototype",
+          "head_id": "continuous_leaky_prototype",
+          "mean_macro_f1": 0.09404382506823979,
+          "rank": 9,
+          "sd_macro_f1": 0.004194141221937113
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "LIF prototype",
+          "head_id": "lif_prototype",
+          "mean_macro_f1": 0.09311526232393576,
+          "rank": 10,
+          "sd_macro_f1": 0.005280784077547465
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Continuous leaky",
+          "head_id": "continuous_leaky",
+          "mean_macro_f1": 0.09307160596808622,
+          "rank": 11,
+          "sd_macro_f1": 0.0025703266391985413
+        },
+        {
+          "comparable_full_test": true,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "full test",
+          "head": "Random-feature kernel",
+          "head_id": "random_feature_kernel",
+          "mean_macro_f1": 0.08924184197288187,
+          "rank": 12,
+          "sd_macro_f1": 0.0038159957970803457
+        },
+        {
+          "comparable_full_test": false,
+          "contexts": 10,
+          "dataset": "Human Infant",
+          "dataset_id": "human_infant_200_objects",
+          "evaluation_scope": "25/class cap",
+          "head": "Quantum kernel",
+          "head_id": "quantum_kernel",
+          "mean_macro_f1": 0.09296019701951594,
+          "rank": null,
+          "sd_macro_f1": 0.016414803699693243
+        }
+      ],
+      "scaling_curve": [
+        {
+          "budget": 1000,
+          "budget_label": "1k",
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "mean_macro_f1": 0.04070665504099508,
+          "observations": 25,
+          "sd_macro_f1": 0.009876748841414982
+        },
+        {
+          "budget": 5000,
+          "budget_label": "5k",
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "mean_macro_f1": 0.048065492208181064,
+          "observations": 25,
+          "sd_macro_f1": 0.012736916661894308
+        },
+        {
+          "budget": 20000,
+          "budget_label": "20k",
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "mean_macro_f1": 0.06221653301387347,
+          "observations": 25,
+          "sd_macro_f1": 0.014327081808258755
+        },
+        {
+          "budget": 1000,
+          "budget_label": "1k",
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "mean_macro_f1": 0.033671798265498494,
+          "observations": 25,
+          "sd_macro_f1": 0.0062162822465536855
+        },
+        {
+          "budget": 5000,
+          "budget_label": "5k",
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "mean_macro_f1": 0.04134676722601676,
+          "observations": 25,
+          "sd_macro_f1": 0.0052879147846098505
+        },
+        {
+          "budget": 20000,
+          "budget_label": "20k",
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "mean_macro_f1": 0.060515226869184036,
+          "observations": 25,
+          "sd_macro_f1": 0.011286463034583687
+        }
+      ],
+      "scaling_detail": [
+        {
+          "folds": 5,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "head": "Linear",
+          "head_id": "linear",
+          "mean_delta_pp": 1.0371181984713473,
+          "sd_delta_pp": 0.4976953783351111,
+          "wins": 5
+        },
+        {
+          "folds": 5,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "head": "Continuous leaky",
+          "head_id": "continuous_leaky",
+          "mean_delta_pp": 0.35874438508864065,
+          "sd_delta_pp": 0.7157712554371165,
+          "wins": 4
+        },
+        {
+          "folds": 5,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "head": "LIF",
+          "head_id": "lif",
+          "mean_delta_pp": 0.34694684973433493,
+          "sd_delta_pp": 0.7848396410286945,
+          "wins": 3
+        },
+        {
+          "folds": 5,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "head": "Classical QDelta",
+          "head_id": "classical_qdelta",
+          "mean_delta_pp": 1.0353106262199354,
+          "sd_delta_pp": 0.3243940414959806,
+          "wins": 5
+        },
+        {
+          "folds": 5,
+          "frontend": "ShallowConvNet",
+          "frontend_id": "flexible_shallowconvnet",
+          "head": "Quantum QDelta",
+          "head_id": "quantum_qdelta",
+          "mean_delta_pp": 0.9012985240787351,
+          "sd_delta_pp": 0.472257629767921,
+          "wins": 5
+        },
+        {
+          "folds": 5,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "head": "Linear",
+          "head_id": "linear",
+          "mean_delta_pp": 1.099908133124239,
+          "sd_delta_pp": 0.7657010019907288,
+          "wins": 4
+        },
+        {
+          "folds": 5,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "head": "Continuous leaky",
+          "head_id": "continuous_leaky",
+          "mean_delta_pp": 0.4950099081669988,
+          "sd_delta_pp": 0.5464023344523031,
+          "wins": 4
+        },
+        {
+          "folds": 5,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "head": "LIF",
+          "head_id": "lif",
+          "mean_delta_pp": 0.6197028672147958,
+          "sd_delta_pp": 0.5666520124624119,
+          "wins": 4
+        },
+        {
+          "folds": 5,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "head": "Classical QDelta",
+          "head_id": "classical_qdelta",
+          "mean_delta_pp": 0.46923988343606415,
+          "sd_delta_pp": 0.4493573962077368,
+          "wins": 5
+        },
+        {
+          "folds": 5,
+          "frontend": "EEGNet",
+          "frontend_id": "flexible_eegnet",
+          "head": "Quantum QDelta",
+          "head_id": "quantum_qdelta",
+          "mean_delta_pp": 1.1536236883170379,
+          "sd_delta_pp": 0.6270761211142796,
+          "wins": 5
+        }
+      ]
+    },
+    "generatedAt": "2026-08-14T23:20:00+07:00",
+    "status": "ready",
+    "version": 1
+  },
+  "sources": [
+    {
+      "id": "test_summary",
+      "label": "Paper 2 V2 primary-test reviewed snapshot",
+      "path": "paper2_benchmark/reports/v2-primary-test-2026-08-14/analysis.sqlite",
+      "query": {
+        "description": "Returns the bounded reviewed rows materialized from all 490 immutable V2 primary-test artifacts.",
+        "engine": "sqlite",
+        "executed_at": "2026-08-14T23:20:00+07:00",
+        "filters": [
+          "V2 seed 42 only",
+          "390 primary plus 100 MSS scaling conditions",
+          "quantum-kernel exact controls use the exact capped candidate trial IDs"
+        ],
+        "language": "sql",
+        "metric_definitions": {
+          "effect_pp": "100 times the equal-frontend-weight candidate minus control out-of-fold test macro-F1",
+          "holm_adjusted_p": "Holm adjustment across six exact-control hypotheses separately within each dataset",
+          "macro_f1": "unweighted mean of class-specific F1 using the complete frozen class inventory and zero_division=0",
+          "scaling_delta_pp": "100 times 5k minus 1k same-budget MSS test macro-F1"
+        },
+        "sql": "SELECT dataset, row_index, row_json FROM report_snapshot_rows ORDER BY dataset, row_index",
+        "tables_used": [
+          "report_snapshot_rows"
+        ]
+      }
+    },
+    {
+      "id": "protocol_v2",
+      "label": "Frozen Paper 2 protocol V2",
+      "path": "paper2_benchmark/configs/protocol_v2.yaml"
+    },
+    {
+      "id": "test_contract",
+      "label": "Frozen primary-test analysis contract",
+      "path": "paper2_benchmark/configs/test_analysis_v1.json"
+    },
+    {
+      "id": "analysis_amendment",
+      "label": "Post-access, pre-aggregate bootstrap p-value amendment",
+      "path": "paper2_benchmark/configs/test_analysis_amendment_v1.json"
+    },
+    {
+      "id": "validation_report",
+      "label": "V2\u2013V3 validation synthesis snapshot",
+      "path": "paper2_benchmark/reports/v2-v3-validation-synthesis-2026-08-14/summary.json"
+    },
+    {
+      "id": "execution_plan",
+      "label": "V2 primary-test execution and recovery plan",
+      "path": "docs/plans/completed/paper2-v2-v3-test-evaluation.md"
+    }
+  ],
+  "surface": "report"
+}

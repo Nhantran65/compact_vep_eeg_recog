@@ -1,0 +1,5 @@
+config,head,folds,accuracy_mean,accuracy_std,macro_f1_mean,macro_f1_std,balanced_accuracy_mean,balanced_accuracy_std
+snn_embedding_probe,linearsvc_c1,1,0.3872752420470263,0.0,0.36968173650702946,0.0,0.3689801339710368,0.0
+snn_embedding_probe,pca128_rbf_svc_c3_gamma_scale,1,0.5297372060857538,0.0,0.5232341625447088,0.0,0.5233955273918018,0.0
+snn_embedding_probe,rbf_svc_c10_gamma_scale,1,0.5408022130013831,0.0,0.5335252343455761,0.0,0.5355001233965018,0.0
+spiking_shallow_direct,supervised,1,0.25,0.0,0.13333333333333333,0.0,0.25,0.0

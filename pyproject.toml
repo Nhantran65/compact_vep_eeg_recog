@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compact-vep-eeg-recog"
+version = "0.1.0"
+description = "Compact VEP EEG classical, deep and spiking neural experiment workspace"
+requires-python = ">=3.10"
+dependencies = ["torch", "numpy", "pandas", "scikit-learn", "PyYAML", "tqdm", "snntorch>=0.9.4"]
+
+[project.optional-dependencies]
+classical = ["xgboost", "lightgbm"]
+notebooks = ["jupyter", "matplotlib", "seaborn", "catboost"]
+
+[tool.setuptools.packages.find]
+where = ["SNN/src"]

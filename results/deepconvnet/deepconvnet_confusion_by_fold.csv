@@ -1,0 +1,81 @@
+model,fold,true_label,pred_label,count
+DeepConvNet,1,Apple,Apple,112
+DeepConvNet,1,Apple,Car,8
+DeepConvNet,1,Apple,Flower,5
+DeepConvNet,1,Apple,Human Face,5
+DeepConvNet,1,Car,Apple,29
+DeepConvNet,1,Car,Car,98
+DeepConvNet,1,Car,Flower,22
+DeepConvNet,1,Car,Human Face,25
+DeepConvNet,1,Flower,Apple,7
+DeepConvNet,1,Flower,Car,5
+DeepConvNet,1,Flower,Flower,193
+DeepConvNet,1,Flower,Human Face,15
+DeepConvNet,1,Human Face,Apple,19
+DeepConvNet,1,Human Face,Car,5
+DeepConvNet,1,Human Face,Flower,7
+DeepConvNet,1,Human Face,Human Face,168
+DeepConvNet,2,Apple,Apple,75
+DeepConvNet,2,Apple,Car,31
+DeepConvNet,2,Apple,Flower,7
+DeepConvNet,2,Apple,Human Face,16
+DeepConvNet,2,Car,Apple,9
+DeepConvNet,2,Car,Car,115
+DeepConvNet,2,Car,Flower,17
+DeepConvNet,2,Car,Human Face,34
+DeepConvNet,2,Flower,Apple,4
+DeepConvNet,2,Flower,Car,9
+DeepConvNet,2,Flower,Flower,164
+DeepConvNet,2,Flower,Human Face,43
+DeepConvNet,2,Human Face,Apple,15
+DeepConvNet,2,Human Face,Car,2
+DeepConvNet,2,Human Face,Flower,3
+DeepConvNet,2,Human Face,Human Face,179
+DeepConvNet,3,Apple,Apple,96
+DeepConvNet,3,Apple,Car,11
+DeepConvNet,3,Apple,Flower,13
+DeepConvNet,3,Apple,Human Face,9
+DeepConvNet,3,Car,Apple,24
+DeepConvNet,3,Car,Car,91
+DeepConvNet,3,Car,Flower,34
+DeepConvNet,3,Car,Human Face,26
+DeepConvNet,3,Flower,Apple,0
+DeepConvNet,3,Flower,Car,5
+DeepConvNet,3,Flower,Flower,199
+DeepConvNet,3,Flower,Human Face,15
+DeepConvNet,3,Human Face,Apple,12
+DeepConvNet,3,Human Face,Car,2
+DeepConvNet,3,Human Face,Flower,8
+DeepConvNet,3,Human Face,Human Face,177
+DeepConvNet,4,Apple,Apple,106
+DeepConvNet,4,Apple,Car,7
+DeepConvNet,4,Apple,Flower,12
+DeepConvNet,4,Apple,Human Face,4
+DeepConvNet,4,Car,Apple,37
+DeepConvNet,4,Car,Car,93
+DeepConvNet,4,Car,Flower,20
+DeepConvNet,4,Car,Human Face,24
+DeepConvNet,4,Flower,Apple,4
+DeepConvNet,4,Flower,Car,5
+DeepConvNet,4,Flower,Flower,185
+DeepConvNet,4,Flower,Human Face,26
+DeepConvNet,4,Human Face,Apple,20
+DeepConvNet,4,Human Face,Car,2
+DeepConvNet,4,Human Face,Flower,7
+DeepConvNet,4,Human Face,Human Face,170
+DeepConvNet,5,Apple,Apple,105
+DeepConvNet,5,Apple,Car,8
+DeepConvNet,5,Apple,Flower,7
+DeepConvNet,5,Apple,Human Face,9
+DeepConvNet,5,Car,Apple,22
+DeepConvNet,5,Car,Car,99
+DeepConvNet,5,Car,Flower,18
+DeepConvNet,5,Car,Human Face,35
+DeepConvNet,5,Flower,Apple,4
+DeepConvNet,5,Flower,Car,8
+DeepConvNet,5,Flower,Flower,176
+DeepConvNet,5,Flower,Human Face,32
+DeepConvNet,5,Human Face,Apple,10
+DeepConvNet,5,Human Face,Car,2
+DeepConvNet,5,Human Face,Flower,2
+DeepConvNet,5,Human Face,Human Face,185

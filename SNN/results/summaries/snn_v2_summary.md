@@ -1,0 +1,49 @@
+# SNN V2/V5a/V6a Summary
+
+| Section | Config | Head | Folds | Accuracy | Macro-F1 | Balanced acc |
+|---|---|---|---:|---:|---:|---:|
+| v2_controls | delta_flat_control | linearsvc_c1 | 5 | 26.30 +/- 1.63% | 25.79 +/- 1.77% | 25.89 +/- 1.80% |
+| v2_controls | delta_flat_control | pca128_rbf_svc_c3_gamma_scale | 5 | 36.07 +/- 1.20% | 33.76 +/- 1.17% | 34.08 +/- 1.23% |
+| v2_controls | delta_flat_control | rbf_svc_c10_gamma_scale | 5 | 33.80 +/- 1.29% | 32.36 +/- 1.30% | 32.26 +/- 1.25% |
+| v2_controls | raw_flat_control | linearsvc_c1 | 5 | 26.16 +/- 1.48% | 25.77 +/- 1.48% | 25.90 +/- 1.47% |
+| v2_controls | raw_flat_control | pca128_rbf_svc_c3_gamma_scale | 5 | 42.08 +/- 0.86% | 40.34 +/- 1.07% | 40.36 +/- 1.05% |
+| v2_controls | raw_flat_control | rbf_svc_c10_gamma_scale | 5 | 41.42 +/- 1.99% | 40.19 +/- 2.31% | 40.19 +/- 2.30% |
+| v2_controls | signed_delta_flat_control | linearsvc_c1 | 5 | 33.58 +/- 0.70% | 33.03 +/- 0.74% | 33.13 +/- 0.80% |
+| v2_controls | signed_delta_flat_control | pca128_rbf_svc_c3_gamma_scale | 5 | 50.11 +/- 0.75% | 48.82 +/- 0.70% | 48.78 +/- 0.86% |
+| v2_controls | signed_delta_flat_control | rbf_svc_c10_gamma_scale | 5 | 43.77 +/- 0.49% | 42.83 +/- 0.67% | 42.53 +/- 0.65% |
+| v2_hybrid | shallow80_lif_head | supervised | 5 | 81.53 +/- 0.67% | 80.69 +/- 0.54% | 80.56 +/- 0.54% |
+| v2_hybrid | shallow80_lif_head_embedding_probe | linearsvc_c1 | 1 | 80.22 +/- 0.00% | 79.35 +/- 0.00% | 79.34 +/- 0.00% |
+| v2_hybrid | shallow80_lif_head_embedding_probe | pca128_rbf_svc_c3_gamma_scale | 1 | 81.88 +/- 0.00% | 80.85 +/- 0.00% | 80.88 +/- 0.00% |
+| v2_hybrid | shallow80_lif_head_embedding_probe | rbf_svc_c10_gamma_scale | 1 | 81.47 +/- 0.00% | 80.37 +/- 0.00% | 80.36 +/- 0.00% |
+| v2_hybrid | shallow80_plif_head | supervised | 5 | 81.59 +/- 0.67% | 80.67 +/- 0.56% | 80.51 +/- 0.57% |
+| v2_hybrid | shallow80_plif_head_embedding_probe | linearsvc_c1 | 1 | 81.05 +/- 0.00% | 79.85 +/- 0.00% | 79.78 +/- 0.00% |
+| v2_hybrid | shallow80_plif_head_embedding_probe | pca128_rbf_svc_c3_gamma_scale | 1 | 81.88 +/- 0.00% | 80.85 +/- 0.00% | 80.80 +/- 0.00% |
+| v2_hybrid | shallow80_plif_head_embedding_probe | rbf_svc_c10_gamma_scale | 1 | 81.74 +/- 0.00% | 80.74 +/- 0.00% | 80.72 +/- 0.00% |
+| v2_hybrid | shallow_temporal_gated_lif | supervised | 5 | 83.50 +/- 0.89% | 82.83 +/- 0.84% | 82.78 +/- 0.80% |
+| v2_hybrid | shallow_temporal_lif_head | supervised | 5 | 82.56 +/- 1.57% | 81.82 +/- 1.44% | 81.62 +/- 1.41% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe | linearsvc_c1 | 5 | 83.47 +/- 1.67% | 82.80 +/- 1.60% | 82.78 +/- 1.54% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe | pca128_rbf_svc_c3_gamma_scale | 5 | 84.61 +/- 1.02% | 83.94 +/- 0.81% | 83.76 +/- 0.82% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe | rbf_svc_c10_gamma_scale | 5 | 84.50 +/- 1.15% | 83.83 +/- 1.05% | 83.69 +/- 1.08% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_final_membrane | linearsvc_c1 | 5 | 67.91 +/- 1.68% | 67.06 +/- 1.43% | 66.73 +/- 1.46% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_final_membrane | pca128_rbf_svc_c3_gamma_scale | 5 | 69.21 +/- 1.47% | 68.36 +/- 1.23% | 68.09 +/- 1.11% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_final_membrane | rbf_svc_c10_gamma_scale | 5 | 68.49 +/- 1.95% | 67.67 +/- 1.94% | 67.54 +/- 1.87% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_max_membrane | linearsvc_c1 | 5 | 75.64 +/- 1.19% | 74.61 +/- 1.17% | 74.36 +/- 1.13% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_max_membrane | pca128_rbf_svc_c3_gamma_scale | 5 | 81.12 +/- 1.40% | 80.30 +/- 1.30% | 80.12 +/- 1.32% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_max_membrane | rbf_svc_c10_gamma_scale | 5 | 81.20 +/- 0.97% | 80.54 +/- 0.83% | 80.38 +/- 0.75% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_mean_membrane | linearsvc_c1 | 5 | 82.81 +/- 0.79% | 82.12 +/- 0.73% | 81.89 +/- 0.65% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_mean_membrane | pca128_rbf_svc_c3_gamma_scale | 5 | 84.05 +/- 0.99% | 83.22 +/- 0.85% | 82.95 +/- 0.78% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_mean_membrane | rbf_svc_c10_gamma_scale | 5 | 84.36 +/- 0.79% | 83.56 +/- 0.71% | 83.42 +/- 0.63% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_spike_count | linearsvc_c1 | 5 | 84.00 +/- 1.06% | 83.31 +/- 1.12% | 83.17 +/- 1.05% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_spike_count | pca128_rbf_svc_c3_gamma_scale | 5 | 85.71 +/- 0.86% | 85.04 +/- 0.70% | 84.88 +/- 0.70% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_spike_count | rbf_svc_c10_gamma_scale | 5 | 86.02 +/- 0.93% | 85.39 +/- 0.82% | 85.29 +/- 0.87% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_spike_mean_late_fusion | late_fusion_rbf_c10_spike_mean | 1 | 85.34 +/- 0.00% | 84.60 +/- 0.00% | 84.66 +/- 0.00% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_windowed_spike_count_4 | linearsvc_c1 | 1 | 81.33 +/- 0.00% | 80.51 +/- 0.00% | 80.45 +/- 0.00% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_windowed_spike_count_4 | pca128_rbf_svc_c3_gamma_scale | 1 | 83.54 +/- 0.00% | 82.69 +/- 0.00% | 82.71 +/- 0.00% |
+| v2_hybrid | shallow_temporal_lif_head_embedding_probe_windowed_spike_count_4 | rbf_svc_c10_gamma_scale | 1 | 83.54 +/- 0.00% | 82.72 +/- 0.00% | 82.75 +/- 0.00% |
+| v2_hybrid | shallow_temporal_multiscale_gated_lif | supervised | 1 | 82.99 +/- 0.00% | 82.18 +/- 0.00% | 82.06 +/- 0.00% |
+| v2_hybrid | shallow_temporal_spike_aware_gated_lif | supervised | 5 | 84.41 +/- 1.29% | 83.73 +/- 1.13% | 83.67 +/- 1.13% |
+| v2_hybrid | shallow_temporal_spike_aware_proto_lif_ce | supervised | 5 | 84.75 +/- 0.66% | 83.94 +/- 0.51% | 83.85 +/- 0.41% |
+| v2_hybrid | shallow_temporal_spike_aware_proto_lif_supcon005 | supervised | 5 | 84.08 +/- 1.21% | 83.31 +/- 1.08% | 83.11 +/- 1.07% |
+| v2_hybrid | shallow_temporal_spike_aware_proto_lif_supcon005_sep | supervised | 5 | 84.22 +/- 0.84% | 83.49 +/- 0.72% | 83.34 +/- 0.66% |
+| v2_hybrid | shallow_temporal_spike_aware_proto_lif_supcon010 | supervised | 5 | 84.22 +/- 0.76% | 83.55 +/- 0.64% | 83.42 +/- 0.61% |
+| v2_hybrid | shallow_temporal_windowed_spike_lif_4bins | supervised | 1 | 82.02 +/- 0.00% | 81.13 +/- 0.00% | 80.97 +/- 0.00% |

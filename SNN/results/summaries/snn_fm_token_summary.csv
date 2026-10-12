@@ -1,0 +1,3 @@
+config,folds,accuracy_mean,accuracy_std,macro_f1_mean,macro_f1_std,balanced_accuracy_mean,balanced_accuracy_std,train_minutes_mean,train_minutes_std
+eegpt_token_spike_aware_gated_lif,1,0.6085753803596127,0.0,0.597329169717592,0.0,0.596931839892332,0.0,0.49092169602711994,0.0
+eegpt_token_spike_aware_proto_lif_ce,1,0.5961272475795297,0.0,0.5863625173084466,0.0,0.5876837820240177,0.0,0.45857714811960854,0.0

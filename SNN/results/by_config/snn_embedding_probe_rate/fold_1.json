@@ -1,0 +1,271 @@
+{
+  "name": "snn_embedding_probe_rate",
+  "fold": 1,
+  "source_config": {
+    "name": "spiking_shallow_rate",
+    "encoder": {
+      "name": "rate",
+      "rate_gain": 1.0,
+      "delta_threshold": 0.2
+    },
+    "model": {
+      "architecture": "spiking_shallow_convnet",
+      "n_filters": 40,
+      "temporal_kernel": 25,
+      "beta": 0.9,
+      "threshold": 1.0,
+      "surrogate": "atan",
+      "dropout": 0.5,
+      "readout": "mean_membrane"
+    },
+    "training": {
+      "batch_size": 64,
+      "epochs": 120,
+      "patience": 20,
+      "val_size": 0.2,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "scheduler_patience": 8,
+      "scheduler_factor": 0.5,
+      "seed": 42
+    },
+    "config_path": "SNN/configs/spiking_shallow_rate.yaml"
+  },
+  "checkpoint_path": "SNN/artifacts/checkpoints/spiking_shallow_rate/fold_1.pt",
+  "embedding_mode": "concat",
+  "embedding_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/artifacts/embeddings/spiking_shallow_rate/fold_1_concat.npz",
+  "embedding_shape": {
+    "train": [
+      2889,
+      160
+    ],
+    "test": [
+      723,
+      160
+    ]
+  },
+  "heads": [
+    {
+      "name": "linearsvc_c1",
+      "family": "linear_margin",
+      "config": {
+        "C": 1.0,
+        "dual": false,
+        "max_iter": 5000,
+        "tol": 0.001
+      },
+      "train_metrics": {
+        "accuracy": 0.44098303911388026,
+        "macro_f1": 0.4159545029908513,
+        "balanced_accuracy": 0.41601036793391094,
+        "confusion_matrix": [
+          [
+            117,
+            73,
+            176,
+            150
+          ],
+          [
+            49,
+            247,
+            232,
+            170
+          ],
+          [
+            52,
+            111,
+            504,
+            212
+          ],
+          [
+            56,
+            105,
+            229,
+            406
+          ]
+        ]
+      },
+      "test_metrics": {
+        "accuracy": 0.359612724757953,
+        "macro_f1": 0.3296162278274746,
+        "balanced_accuracy": 0.33488862910323663,
+        "confusion_matrix": [
+          [
+            18,
+            26,
+            45,
+            41
+          ],
+          [
+            14,
+            49,
+            60,
+            51
+          ],
+          [
+            18,
+            34,
+            105,
+            63
+          ],
+          [
+            20,
+            35,
+            56,
+            88
+          ]
+        ]
+      },
+      "seconds": 1.1362590789794922,
+      "warnings": []
+    },
+    {
+      "name": "rbf_svc_c10_gamma_scale",
+      "family": "rbf_svc",
+      "config": {
+        "C": 10.0,
+        "kernel": "rbf",
+        "gamma": "scale"
+      },
+      "train_metrics": {
+        "accuracy": 0.9556940117687781,
+        "macro_f1": 0.9560936458440202,
+        "balanced_accuracy": 0.9538923691172249,
+        "confusion_matrix": [
+          [
+            483,
+            8,
+            7,
+            18
+          ],
+          [
+            2,
+            662,
+            15,
+            19
+          ],
+          [
+            1,
+            16,
+            835,
+            27
+          ],
+          [
+            3,
+            5,
+            7,
+            781
+          ]
+        ]
+      },
+      "test_metrics": {
+        "accuracy": 0.49100968188105115,
+        "macro_f1": 0.47892818834320694,
+        "balanced_accuracy": 0.4800931956624211,
+        "confusion_matrix": [
+          [
+            51,
+            34,
+            25,
+            20
+          ],
+          [
+            31,
+            75,
+            34,
+            34
+          ],
+          [
+            25,
+            37,
+            112,
+            46
+          ],
+          [
+            27,
+            25,
+            30,
+            117
+          ]
+        ]
+      },
+      "seconds": 0.6666667461395264,
+      "warnings": []
+    },
+    {
+      "name": "pca128_rbf_svc_c3_gamma_scale",
+      "family": "pca_rbf_svc",
+      "config": {
+        "pca_components": 128,
+        "requested_pca_components": 128,
+        "C": 3.0,
+        "kernel": "rbf",
+        "gamma": "scale"
+      },
+      "train_metrics": {
+        "accuracy": 0.8456213222568363,
+        "macro_f1": 0.8473444646977902,
+        "balanced_accuracy": 0.8382993223501453,
+        "confusion_matrix": [
+          [
+            406,
+            25,
+            33,
+            52
+          ],
+          [
+            9,
+            550,
+            61,
+            78
+          ],
+          [
+            4,
+            21,
+            756,
+            98
+          ],
+          [
+            8,
+            8,
+            49,
+            731
+          ]
+        ]
+      },
+      "test_metrics": {
+        "accuracy": 0.48409405255878285,
+        "macro_f1": 0.46800947520489444,
+        "balanced_accuracy": 0.4693127188470283,
+        "confusion_matrix": [
+          [
+            42,
+            29,
+            27,
+            32
+          ],
+          [
+            29,
+            80,
+            35,
+            30
+          ],
+          [
+            19,
+            33,
+            107,
+            61
+          ],
+          [
+            24,
+            23,
+            31,
+            121
+          ]
+        ]
+      },
+      "seconds": 0.4937875270843506,
+      "warnings": []
+    }
+  ]
+}

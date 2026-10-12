@@ -1,0 +1,308 @@
+{
+  "name": "shallow_temporal_lif_eegpt_distill_full104",
+  "fold": 1,
+  "config": {
+    "name": "shallow_temporal_lif_eegpt_distill_full104",
+    "model": {
+      "architecture": "shallow_feature_snn_head",
+      "feature_mode": "temporal_map",
+      "hidden_dim": 64,
+      "beta": 0.9,
+      "threshold": 1.0,
+      "learn_beta": false,
+      "learn_threshold": false,
+      "surrogate": "atan",
+      "dropout": 0.3,
+      "readout": "mean_membrane"
+    },
+    "distillation": {
+      "teacher": "eegpt_adapter58_rbf_svc",
+      "eegpt_embedding_template": "FoundationModel_EEGPT/results/adapter_embeddings/channel_vep_seed42/eegpt_adapter58_mean/fold_{fold}.pt",
+      "prefix_steps": 104,
+      "alpha": 0.25,
+      "temperature": 2.0
+    },
+    "training": {
+      "batch_size": 64,
+      "feature_batch_size": 256,
+      "epochs": 120,
+      "patience": 20,
+      "val_size": 0.2,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "scheduler_patience": 8,
+      "scheduler_factor": 0.5,
+      "seed": 42
+    },
+    "encoder": {},
+    "config_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/configs/shallow_temporal_lif_eegpt_distill_full104.yaml"
+  },
+  "data": {
+    "fold": 1,
+    "feature_mode": "temporal_map",
+    "checkpoint_template": "QNN/checkpoints/shallow_original_fold{fold}_seed42.pth",
+    "checkpoint_path": "QNN/checkpoints/shallow_original_fold1_seed42.pth",
+    "scaler_fit": "full_train_fold",
+    "train_size": 2311,
+    "val_size_count": 578,
+    "full_train_size": 2889,
+    "test_size": 723,
+    "feature_shape": [
+      40,
+      104
+    ],
+    "teacher": {
+      "type": "eegpt_adapter58_rbf_svc",
+      "embedding_path": "FoundationModel_EEGPT/results/adapter_embeddings/channel_vep_seed42/eegpt_adapter58_mean/fold_1.pt",
+      "train_metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            516,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            698,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            879,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            796
+          ]
+        ]
+      },
+      "test_metrics": {
+        "accuracy": 0.8934993084370678,
+        "macro_f1": 0.8908494903477289,
+        "balanced_accuracy": 0.8928502178523838,
+        "confusion_matrix": [
+          [
+            118,
+            4,
+            7,
+            1
+          ],
+          [
+            11,
+            148,
+            7,
+            8
+          ],
+          [
+            4,
+            10,
+            201,
+            5
+          ],
+          [
+            5,
+            9,
+            6,
+            179
+          ]
+        ]
+      },
+      "fit_seconds": 20.250824689865112
+    }
+  },
+  "prefix_steps": 104,
+  "alpha": 0.25,
+  "temperature": 2.0,
+  "best_epoch": 1,
+  "best_val_metrics": {
+    "accuracy": 0.40625,
+    "macro_f1": 0.27765567765567767,
+    "balanced_accuracy": 0.3502584372149589,
+    "confusion_matrix": [
+      [
+        5,
+        0,
+        6,
+        0
+      ],
+      [
+        6,
+        0,
+        7,
+        4
+      ],
+      [
+        0,
+        0,
+        20,
+        3
+      ],
+      [
+        3,
+        0,
+        9,
+        1
+      ]
+    ],
+    "loss": 3.0111489295959473,
+    "ce_loss": 2.93575119972229,
+    "kd_loss": 3.2373414039611816,
+    "spike_rate": 0.32006603479385376
+  },
+  "train_metrics": {
+    "accuracy": 0.375,
+    "macro_f1": 0.283569193405259,
+    "balanced_accuracy": 0.3823953823953824,
+    "confusion_matrix": [
+      [
+        6,
+        0,
+        5,
+        0
+      ],
+      [
+        6,
+        0,
+        6,
+        2
+      ],
+      [
+        0,
+        0,
+        16,
+        2
+      ],
+      [
+        3,
+        0,
+        16,
+        2
+      ]
+    ],
+    "loss": 2.007373809814453,
+    "ce_loss": 2.0632219314575195,
+    "kd_loss": 1.8398293256759644,
+    "spike_rate": 0.301377534866333
+  },
+  "test_metrics": {
+    "accuracy": 0.4375,
+    "macro_f1": 0.2028985507246377,
+    "balanced_accuracy": 0.4375,
+    "confusion_matrix": [
+      [
+        28,
+        0,
+        30,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "loss": 1.6312289237976074,
+    "ce_loss": 1.4476842880249023,
+    "kd_loss": 2.1818628311157227,
+    "spike_rate": 0.3069598972797394
+  },
+  "seconds": 0.39173126220703125,
+  "checkpoint_path": "SNN/artifacts/checkpoints/smoke_v5_eegpt_distill/v5_eegpt_distill/shallow_temporal_lif_eegpt_distill_full104/fold_1.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "train": {
+        "accuracy": 0.203125,
+        "macro_f1": 0.13957426221577163,
+        "balanced_accuracy": 0.22619047619047616,
+        "confusion_matrix": [
+          [
+            8,
+            0,
+            6,
+            0
+          ],
+          [
+            10,
+            0,
+            8,
+            1
+          ],
+          [
+            10,
+            0,
+            5,
+            0
+          ],
+          [
+            11,
+            0,
+            5,
+            0
+          ]
+        ],
+        "loss": 5.094902992248535,
+        "ce_loss": 4.880887508392334,
+        "kd_loss": 5.7369489669799805,
+        "spike_rate": 0.29660269618034363
+      },
+      "val": {
+        "accuracy": 0.40625,
+        "macro_f1": 0.27765567765567767,
+        "balanced_accuracy": 0.3502584372149589,
+        "confusion_matrix": [
+          [
+            5,
+            0,
+            6,
+            0
+          ],
+          [
+            6,
+            0,
+            7,
+            4
+          ],
+          [
+            0,
+            0,
+            20,
+            3
+          ],
+          [
+            3,
+            0,
+            9,
+            1
+          ]
+        ],
+        "loss": 3.0111489295959473,
+        "ce_loss": 2.93575119972229,
+        "kd_loss": 3.2373414039611816,
+        "spike_rate": 0.32006603479385376
+      }
+    }
+  ]
+}

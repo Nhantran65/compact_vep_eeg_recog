@@ -1,0 +1,23 @@
+name: shallow80_plif_head
+model:
+  architecture: shallow_feature_snn_head
+  feature_mode: 80d
+  hidden_dim: 64
+  beta: 0.90
+  threshold: 1.0
+  learn_beta: true
+  learn_threshold: true
+  surrogate: atan
+  dropout: 0.30
+  readout: mean_membrane
+training:
+  batch_size: 64
+  feature_batch_size: 256
+  epochs: 120
+  patience: 20
+  val_size: 0.20
+  lr: 0.001
+  weight_decay: 0.0001
+  scheduler_patience: 8
+  scheduler_factor: 0.5
+  seed: 42

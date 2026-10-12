@@ -1,0 +1,220 @@
+{
+  "name": "shallow80_lif_head",
+  "fold": 1,
+  "config": {
+    "name": "shallow80_lif_head",
+    "model": {
+      "architecture": "shallow_feature_snn_head",
+      "feature_mode": "80d",
+      "hidden_dim": 64,
+      "beta": 0.9,
+      "threshold": 1.0,
+      "learn_beta": false,
+      "learn_threshold": false,
+      "surrogate": "atan",
+      "dropout": 0.3,
+      "readout": "mean_membrane"
+    },
+    "training": {
+      "batch_size": 64,
+      "feature_batch_size": 256,
+      "epochs": 120,
+      "patience": 20,
+      "val_size": 0.2,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "scheduler_patience": 8,
+      "scheduler_factor": 0.5,
+      "seed": 42
+    },
+    "encoder": {},
+    "config_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/configs/shallow80_lif_head.yaml"
+  },
+  "data": {
+    "fold": 1,
+    "feature_mode": "80d",
+    "checkpoint_template": "QNN/checkpoints/shallow_original_fold{fold}_seed42.pth",
+    "checkpoint_path": "QNN/checkpoints/shallow_original_fold1_seed42.pth",
+    "scaler_fit": "full_train_fold",
+    "train_size": 2311,
+    "val_size_count": 578,
+    "full_train_size": 2889,
+    "test_size": 723,
+    "feature_shape": [
+      80
+    ]
+  },
+  "best_epoch": 1,
+  "best_val_metrics": {
+    "accuracy": 0.4013840830449827,
+    "macro_f1": 0.40094694274689024,
+    "balanced_accuracy": 0.40676759317192546,
+    "confusion_matrix": [
+      [
+        46,
+        48,
+        9,
+        0
+      ],
+      [
+        54,
+        68,
+        4,
+        14
+      ],
+      [
+        35,
+        33,
+        78,
+        30
+      ],
+      [
+        28,
+        79,
+        12,
+        40
+      ]
+    ],
+    "loss": 1.3358358408753022,
+    "spike_rate": 0.03169869087837838
+  },
+  "train_metrics": {
+    "accuracy": 0.40588489831241886,
+    "macro_f1": 0.40368604900995214,
+    "balanced_accuracy": 0.4114929602860063,
+    "confusion_matrix": [
+      [
+        194,
+        177,
+        40,
+        2
+      ],
+      [
+        230,
+        258,
+        10,
+        60
+      ],
+      [
+        137,
+        122,
+        333,
+        111
+      ],
+      [
+        142,
+        277,
+        65,
+        153
+      ]
+    ],
+    "loss": 1.3345667402345038,
+    "spike_rate": 0.02998143088329455
+  },
+  "test_metrics": {
+    "accuracy": 0.355463347164592,
+    "macro_f1": 0.3545956286699289,
+    "balanced_accuracy": 0.35720046357500873,
+    "confusion_matrix": [
+      [
+        49,
+        55,
+        23,
+        3
+      ],
+      [
+        69,
+        71,
+        7,
+        27
+      ],
+      [
+        48,
+        45,
+        93,
+        34
+      ],
+      [
+        63,
+        81,
+        11,
+        44
+      ]
+    ],
+    "loss": 1.3512131246128847,
+    "spike_rate": 0.03321020159384479
+  },
+  "seconds": 0.29589223861694336,
+  "checkpoint_path": "/home/kiettqa/EEG-Foundation-Model-Paper/SNN/artifacts/v2_smoke_checkpoints/v2_hybrid/shallow80_lif_head/fold_1.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "train": {
+        "accuracy": 0.40625,
+        "macro_f1": 0.40398110661268555,
+        "balanced_accuracy": 0.42341269841269846,
+        "confusion_matrix": [
+          [
+            4,
+            1,
+            2,
+            0
+          ],
+          [
+            5,
+            4,
+            0,
+            1
+          ],
+          [
+            0,
+            3,
+            3,
+            0
+          ],
+          [
+            4,
+            1,
+            2,
+            2
+          ]
+        ],
+        "loss": 1.344486117362976,
+        "spike_rate": 0.0419921875
+      },
+      "val": {
+        "accuracy": 0.4013840830449827,
+        "macro_f1": 0.40094694274689024,
+        "balanced_accuracy": 0.40676759317192546,
+        "confusion_matrix": [
+          [
+            46,
+            48,
+            9,
+            0
+          ],
+          [
+            54,
+            68,
+            4,
+            14
+          ],
+          [
+            35,
+            33,
+            78,
+            30
+          ],
+          [
+            28,
+            79,
+            12,
+            40
+          ]
+        ],
+        "loss": 1.3358358408753022,
+        "spike_rate": 0.03169869087837838
+      }
+    }
+  ]
+}
