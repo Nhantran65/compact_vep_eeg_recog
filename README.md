@@ -1,27 +1,27 @@
 # Compact VEP EEG Recognition
 
-Project độc lập cho nhận dạng Apple, Car, Flower, Human Face từ EEG 14 kênh, 128 Hz, cửa sổ 1 giây. Được tách từ EEG-Foundation-Model-Paper ngày 12/10/2026, theo phạm vi ML/DL/SNN của `docs/MSc__Supervision.pdf`.
+A standalone project for recognizing Apple, Car, Flower, and Human Face from 14-channel, 128 Hz EEG in 1-second windows. It was extracted from EEG-Foundation-Model-Paper on 12/10/2026, following the ML/DL/SNN scope of `docs/MSc__Supervision.pdf`.
 
-**Đọc trước:** [Tổng hợp thí nghiệm và kiểm toán](docs/EXPERIMENTS.md). Điểm 86,02% là kết quả lịch sử trên fold theo epoch, không phải độ chính xác trên subject chưa thấy. Backbone DL cũ dùng test để chọn checkpoint. Probe dùng SNN đã huấn luyện bằng nhãn. Bản brief có các mô tả chưa khớp mã thực tế.
+**Read first:** [Experiment summary and audit](docs/EXPERIMENTS.md). The 86.02% score is a historical result on epoch-level folds, not accuracy on unseen subjects. The legacy DL backbones used the test set for checkpoint selection. The probe uses an SNN that was trained with labels. The brief contains descriptions that do not match the actual code.
 
-## Thành phần
+## Components
 
-- `SNN/src/snn_vep/`: mã SNN và backbone Shallow độc lập, không import QNN.
-- `SNN/configs/`, `SNN/scripts/`: cấu hình và CLI train, probe, ablation, early exit, Shallow-teacher distillation.
-- `SNN/results/`, `SNN/artifacts/`: kết quả gốc, checkpoint và embedding; JSON lịch sử giữ nguyên.
-- `baselines/checkpoints/`: 5 backbone Shallow tương ứng các fold lịch sử.
-- `results/`: bằng chứng classical ML, DeepConvNet và ShallowConvNet.
-- `CSV-FEATURES/`: 59 CSV khôi phục từ Git, 3.612 epoch; có Class/Phase/Subject.
-- `trainfold/`: fold lịch sử dựng lại từ thứ tự file trong output notebook, có thêm metadata và hash. Không dùng cho tuyên bố subject generalization.
-- `evidence/subject_disjoint/`: manifest và bộ chia subject-disjoint của nghiên cứu sau này, riêng với `trainfold`.
-- `evidence/later_benchmarks/`: báo cáo nghiên cứu sau này để truy nguồn, không phải runner của project này.
-- `archive/notebooks/`, `archive/baseline_scripts/`: ML/DL gốc và output đã lưu. Khi chạy notebook, đặt cwd kernel về root project trước các cell đọc dữ liệu; baseline scripts đọc `trainfold` tương đối với cwd. DeepConvNet gốc dùng test để chọn checkpoint, chỉ phục vụ tái lập lịch sử.
-- `archive/foundation_extensions/`: source của các screen EEGPT âm tính, cần cache ngoài và không thuộc runtime độc lập.
-- `preprocessing/`: MATLAB/EEGLAB gốc. Raw EDF/SET không kèm; nếu chạy preprocessing từ đầu cần dữ liệu gốc, EEGLAB/ICLabel và chỉnh đường dẫn MATLAB.
+- `SNN/src/snn_vep/`: standalone SNN code and Shallow backbone; does not import QNN.
+- `SNN/configs/`, `SNN/scripts/`: configs and CLIs for training, probing, ablation, early exit, and Shallow-teacher distillation.
+- `SNN/results/`, `SNN/artifacts/`: original results, checkpoints, and embeddings; historical JSON is kept unchanged.
+- `baselines/checkpoints/`: 5 Shallow backbones corresponding to the historical folds.
+- `results/`: evidence for classical ML, DeepConvNet, and ShallowConvNet.
+- `CSV-FEATURES/`: 59 CSVs restored from Git, 3,612 epochs; includes Class/Phase/Subject.
+- `trainfold/`: historical folds rebuilt from the file order in notebook output, with added metadata and hashes. Do not use for subject-generalization claims.
+- `evidence/subject_disjoint/`: manifest and subject-disjoint split from later research, separate from `trainfold`.
+- `evidence/later_benchmarks/`: later research reports kept for provenance; not runners for this project.
+- `archive/notebooks/`, `archive/baseline_scripts/`: original ML/DL with saved outputs. When running notebooks, set the kernel cwd to the project root before cells that read data; baseline scripts read `trainfold` relative to cwd. The original DeepConvNet used the test set for checkpoint selection and is only for historical reproduction.
+- `archive/foundation_extensions/`: source for the negative EEGPT screens; requires an external cache and is not part of the standalone runtime.
+- `preprocessing/`: original MATLAB/EEGLAB code. Raw EDF/SET files are not included; running preprocessing from scratch requires the original data, EEGLAB/ICLabel, and adjusting MATLAB paths.
 
-## Cài và chạy
+## Install and run
 
-Chạy lệnh từ thư mục root của project. Python >=3.10; môi trường kiểm tra chi tiết ở `docs/environment.json`.
+Run commands from the project root. Python >=3.10; the tested environment is detailed in `docs/environment.json`.
 
 ```bash
 python3 -m venv .venv
@@ -31,7 +31,7 @@ python scripts/inventory_results.py
 python scripts/verify_project.py
 ```
 
-Tái lập spike-count probe trên checkpoint đã có, ghi kết quả mới vào `runs/`:
+Reproduce the spike-count probe on existing checkpoints, writing new results to `runs/`:
 
 ```bash
 python SNN/scripts/run_shallow_snn_probe.py \
@@ -39,7 +39,7 @@ python SNN/scripts/run_shallow_snn_probe.py \
   --modes spike_count --device cpu --results-dir runs/probe/results
 ```
 
-Huấn luyện lại head supervised trên backbone đã đóng gói:
+Retrain the supervised head on the packaged backbone:
 
 ```bash
 python SNN/scripts/run_shallow_snn_hybrid.py \
@@ -48,19 +48,19 @@ python SNN/scripts/run_shallow_snn_hybrid.py \
   --checkpoints-dir runs/proto/checkpoints --no-progress
 ```
 
-Chạy baseline classical lịch sử (cần extra `classical`; xem `--help`):
+Run the historical classical baselines (requires the `classical` extra; see `--help`):
 
 ```bash
 python -m pip install -e '.[classical]'
 python archive/baseline_scripts/run_classical_ml_baselines.py --help
 ```
 
-Nếu bỏ thư mục fold để tiết kiệm chỗ, dựng lại bằng `python scripts/prepare_legacy_folds.py`. Script từ chối ghi đè fold đang có. Giữ cả 59 CSV và `docs/legacy_input_order.json`.
+If the fold directories are removed to save space, rebuild them with `python scripts/prepare_legacy_folds.py`. The script refuses to overwrite existing folds. Keep all 59 CSVs and `docs/legacy_input_order.json`.
 
-CLI gốc có thể ghi đè kết quả/checkpoint nếu dùng mặc định: luôn chỉ định `--results-dir` và `--checkpoints-dir` riêng khi train mới. Một số summarizer có output mặc định trong `SNN/results/summaries`; dùng inventory mới để kiểm tra dữ liệu gốc.
+The original CLIs may overwrite results/checkpoints when using defaults: always pass separate `--results-dir` and `--checkpoints-dir` when training anew. Some summarizers write by default to `SNN/results/summaries`; use a fresh inventory to check the original data.
 
-## Tiếp tục nghiên cứu
+## Continuing the research
 
-Cần chạy benchmark mới trên subject-disjoint train/validation/test và train-only preprocessing trước khi kết luận SNN giúp tổng quát hóa. Bộ manifest đã có nhưng head/backbone trong package vẫn gắn với fold lịch sử. Chưa triển khai runner mới cho protocol subject-disjoint, chưa có thí nghiệm trên hai dataset C3 trong brief. Không trộn hai protocol hoặc tái sử dụng backbone epoch-fold cho subject-fold mới.
+A new benchmark on subject-disjoint train/validation/test with train-only preprocessing is required before concluding that SNNs help generalization. The manifest exists, but the heads/backbones in the package are still tied to the historical folds. No runner has been implemented for the subject-disjoint protocol yet, and there are no experiments on the two C3 datasets in the brief. Do not mix the two protocols or reuse epoch-fold backbones for new subject folds.
 
-Dữ liệu gốc: Mendeley Data, DOI `10.17632/g9shp2gxhy.2`.
+Original data: Mendeley Data, DOI `10.17632/g9shp2gxhy.2`.

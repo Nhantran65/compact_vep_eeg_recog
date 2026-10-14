@@ -1,6 +1,6 @@
 # Literature Review: SNNs For VEP EEG
 
-Ngày cập nhật: 2026-06-07
+Last updated: 2026-06-07
 
 This note tracks the research basis for applying spiking neural networks to the
 project's low-channel VEP EEG classification task:

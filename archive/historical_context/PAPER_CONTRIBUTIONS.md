@@ -2,32 +2,32 @@
 
 Last updated: 2026-06-08
 
-Mục tiêu paper nên được frame là:
+The paper's goal should be framed as:
 
 ```text
-Một benchmark có kiểm soát cho compact low-channel VEP EEG, dùng cùng fixed
-folds để so sánh conventional EEG networks, QNN/QML, SNN và EEG foundation
-models; trọng tâm là interface alignment và transfer diagnostics, không chỉ là
+A controlled benchmark for compact low-channel VEP EEG, using the same fixed
+folds to compare conventional EEG networks, QNN/QML, SNN, and EEG foundation
+models; the focus is interface alignment and transfer diagnostics, not just
 leaderboard accuracy.
 ```
 
-## 1. Luận điểm chính
+## 1. Main Thesis
 
-Luận điểm mạnh nhất:
+The strongest thesis:
 
 ```text
-Trong compact 14-channel VEP EEG, hiệu quả transfer phụ thuộc nhiều vào việc
-align đúng pretrained input contract của model hơn là model có dynamic-channel
-interface hay kích thước lớn hơn.
+In compact 14-channel VEP EEG, transfer effectiveness depends more on correctly
+aligning the model's pretrained input contract than on whether the model has a
+dynamic-channel interface or a larger size.
 ```
 
-Nói ngắn hơn:
+In short:
 
 ```text
 Interface alignment beats nominal channel flexibility.
 ```
 
-Dataset/protocol chung:
+Shared dataset/protocol:
 
 ```text
 Task: 4-class visual/VEP EEG classification
@@ -39,16 +39,16 @@ Evaluation: fixed trainfold/fold_{1..5}
 Rule: fit scaler/PCA/probe preprocessing on train fold only
 ```
 
-Metric policy cho benchmark chính:
+Metric policy for the main benchmark:
 
-- **Accuracy**: hiệu năng tổng thể trên toàn bộ test fold.
-- **Macro-F1**: cân bằng precision/recall giữa 4 class, không để class đông chi phối.
-- **Balanced Accuracy**: trung bình recall theo class, đo khả năng nhận ra từng class công bằng hơn accuracy.
-- **Cohen's Kappa**: mức vượt chance-level sau khi hiệu chỉnh phân bố class thật và phân bố dự đoán.
+- **Accuracy**: overall performance on the entire test fold.
+- **Macro-F1**: balances precision/recall across the 4 classes, so majority classes do not dominate.
+- **Balanced Accuracy**: mean per-class recall, measuring the ability to recognize each class more fairly than accuracy.
+- **Cohen's Kappa**: agreement above chance level after correcting for the true and predicted class distributions.
 
-## 2. Kết quả chính
+## 2. Main Results
 
-| Model | Scope | Accuracy | Macro-F1 | Balanced Acc | Cohen's Kappa | Ý nghĩa |
+| Model | Scope | Accuracy | Macro-F1 | Balanced Acc | Cohen's Kappa | Meaning |
 |---|---|---:|---:|---:|---:|---|
 | EEGPT adapter58 + RBF-SVC | 5-fold | `87.90 +/- 1.82%` | `87.45 +/- 2.21%` | `87.23 +/- 2.50%` | `83.64 +/- 2.51%` | strongest foundation-model row |
 | SNN temporal LIF `spike_count` + RBF-SVC | 5-fold | `86.02 +/- 0.93%` | `85.39 +/- 0.82%` | `85.29 +/- 0.87%` | `81.12 +/- 1.25%` | strongest SNN representation row |
@@ -61,33 +61,34 @@ Metric policy cho benchmark chính:
 | NeuroLM V1/V2 best | fold 1 only | `53.25%` | `52.22%` | `52.07%` | `36.74%` | named-channel token interface not enough |
 | Raw RBF-SVM | 5-fold baseline | `41.86 +/- 0.87%` | `37.41 +/- 1.53%` | `38.51 +/- 1.11%` | `~19.51%` | low classical baseline |
 
-Kappa được tính post-hoc từ confusion matrix:
+Kappa is computed post hoc from the confusion matrix:
 
 ```text
 kappa = (observed_accuracy - expected_accuracy) / (1 - expected_accuracy)
 ```
 
-Với các row 5-fold có fold-level confusion matrix, Kappa là mean +/- sample std
-trên 5 folds. Với BrainOmni/REVE/NeuroLM, đây là fold-1 result nên không có std.
-Raw RBF-SVM chỉ còn confusion matrix trung bình trong artifact cũ, nên Kappa là
-ước lượng từ averaged confusion matrix; cần rerun riêng SVM baseline nếu muốn
-Kappa fold-wise mean +/- std cho row này.
+For 5-fold rows with fold-level confusion matrices, Kappa is mean +/- sample std
+over 5 folds. For BrainOmni/REVE/NeuroLM, these are fold-1 results, so there is
+no std. Raw RBF-SVM only has an averaged confusion matrix in the old artifact,
+so its Kappa is estimated from the averaged confusion matrix; rerun the SVM
+baseline separately to get fold-wise Kappa mean +/- std for this row.
 
 ## 3. Transfer-Time / Efficiency Finding
 
-Nên bổ sung thời gian, nhưng phải ghi rõ đây là **recorded wall-clock transfer
-component**, không phải một benchmark inference/energy chuẩn hóa. Các nhánh
-không log cùng một loại thời gian: SNN/QNN chủ yếu là downstream head training,
-foundation models có adapter training, embedding extraction/cache và probe fit.
+Timing should be added, but it must be clearly labelled as a **recorded
+wall-clock transfer component**, not a standardized inference/energy benchmark.
+The branches do not log the same kind of time: SNN/QNN mainly log downstream
+head training, while foundation models have adapter training, embedding
+extraction/caching, and probe fitting.
 
-| Group | Representative row | Accuracy | Recorded transfer time | Cách hiểu |
+| Group | Representative row | Accuracy | Recorded transfer time | Interpretation |
 |---|---|---:|---:|---|
-| SNN representation | temporal LIF `spike_count` + RBF-SVC | `86.02 +/- 0.93%` | RBF fit `~0.11 s/fold`; temporal LIF checkpoint training `~1.75 min/fold` nếu tính từ scratch | fastest strong downstream representation readout |
+| SNN representation | temporal LIF `spike_count` + RBF-SVC | `86.02 +/- 0.93%` | RBF fit `~0.11 s/fold`; temporal LIF checkpoint training `~1.75 min/fold` if counted from scratch | fastest strong downstream representation readout |
 | SNN supervised | differentiable prototype LIF | `84.75 +/- 0.66%` | `~2.31 min/fold` | fastest strong supervised neuromorphic head |
 | QNN/QML | `t2_temporal_qdelta` label smoothing + cosine | `82.61 +/- 0.99%` | `~84.4 min/fold` | much slower downstream head; modest accuracy gain |
 | Foundation model | EEGPT adapter58 + RBF-SVC | `87.90 +/- 1.82%` | adapter train `~4.74 min/fold`; RBF fit `~5.84 s/fold`; embedding extraction not normalized here | strongest accuracy, but timing depends on cached embedding pipeline |
 
-Claim nên dùng:
+Claim to use:
 
 ```text
 SNN provides the best accuracy-time trade-off among non-foundation downstream
@@ -95,49 +96,49 @@ heads: it reaches the QNN/foundation-model accuracy regime with minute-scale
 training, while QNN recipes require tens of minutes per fold.
 ```
 
-Claim nên tránh:
+Claim to avoid:
 
 ```text
 SNN is absolutely fastest end-to-end across all model families.
 ```
 
-Lý do tránh: foundation-model timing cần tách rõ adapter training, frozen
-backbone encoding, cached embedding reuse và probe fitting. Nếu muốn claim
-runtime nghiêm túc hơn, cần một benchmark thời gian chuẩn hóa chạy lại toàn bộ
-pipeline trên cùng hardware.
+Reason to avoid: foundation-model timing needs to separate adapter training,
+frozen backbone encoding, cached embedding reuse, and probe fitting. A more
+rigorous runtime claim requires a standardized timing benchmark that reruns the
+full pipeline on the same hardware.
 
 ## 4. Main Contributions
 
 ### Contribution 1: Controlled Cross-Family Benchmark
 
-Paper có thể claim:
+The paper can claim:
 
 ```text
-Chúng tôi xây dựng một benchmark có kiểm soát cho compact 14-channel VEP EEG
-classification, đánh giá conventional EEG networks, QNN/QML, SNN và EEG
-foundation models trên cùng fixed folds và train-only preprocessing.
+We build a controlled benchmark for compact 14-channel VEP EEG classification,
+evaluating conventional EEG networks, QNN/QML, SNN, and EEG foundation models
+on the same fixed folds with train-only preprocessing.
 ```
 
-Giá trị:
+Value:
 
-- Cùng split và metric cho nhiều họ model.
-- Có cả positive và negative results.
-- Tách được ba câu hỏi: accuracy, transfer suitability, và model-family claim.
+- Same split and metrics across many model families.
+- Includes both positive and negative results.
+- Separates three questions: accuracy, transfer suitability, and model-family claims.
 
 ### Contribution 2: Interface-Contract Taxonomy
 
-Thay vì chỉ phân loại model theo kiến trúc, project phân loại theo pretrained
-input contract:
+Instead of classifying models only by architecture, the project classifies them
+by pretrained input contract:
 
 | Interface contract | Models | Finding |
 |---|---|---|
-| Fixed hard channel contract | EEGPT | rất mạnh khi sửa đúng 14->58 channel + sampling contract |
-| Fixed canonical montage/temporal contract | LaBraM | yếu nếu temporal interface sai, thành secondary baseline khi align đúng |
-| Dynamic channel + electrode positions | REVE, BrainOmni | tiện về interface nhưng chỉ weak-positive trên compact VEP này |
-| Named-channel token interface | NeuroLM | named tokens không đủ để rescue short 1s Emotiv14 VEP |
-| Dataset-trained local frontend | Shallow/QNN/SNN | mạnh local baseline, không phải pretrained FM transfer |
+| Fixed hard channel contract | EEGPT | very strong when the 14->58 channel + sampling contract is fixed correctly |
+| Fixed canonical montage/temporal contract | LaBraM | weak if the temporal interface is wrong; becomes a secondary baseline when aligned correctly |
+| Dynamic channel + electrode positions | REVE, BrainOmni | convenient interface but only weak-positive on this compact VEP |
+| Named-channel token interface | NeuroLM | named tokens are not enough to rescue short 1s Emotiv14 VEP |
+| Dataset-trained local frontend | Shallow/QNN/SNN | strong local baseline, not pretrained FM transfer |
 
-Claim chính:
+Main claim:
 
 ```text
 Dynamic-channel support is an interface convenience, not sufficient evidence of
@@ -146,7 +147,7 @@ representation suitability for compact VEP EEG.
 
 ### Contribution 3: Frozen-Probe-First Transfer Protocol
 
-Protocol reusable cho dataset EEG mới:
+A reusable protocol for new EEG datasets:
 
 ```text
 fixed folds
@@ -157,20 +158,21 @@ fixed folds
 -> only then train adapter or fine-tune
 ```
 
-Vì dataset nhỏ, neural head/fine-tuning dễ overfit. Frozen probes giúp quyết
-định sớm branch nào đáng chạy 5-fold hoặc adapter.
+Because the dataset is small, neural heads/fine-tuning overfit easily. Frozen
+probes help decide early which branches are worth running 5-fold or with an
+adapter.
 
-Bằng chứng:
+Evidence:
 
-- EEGPT frozen/adapter embeddings + RBF-SVC là strongest FM path.
-- LaBraM chỉ mạnh sau khi sửa temporal interface.
-- REVE/BrainOmni/NeuroLM không đạt promotion dù có adapter/interface variants.
-- SNN V5a cũng theo logic này: SNN temporal dynamics tạo representation tốt,
-  RBF-SVC đọc tốt hơn supervised linear head.
+- EEGPT frozen/adapter embeddings + RBF-SVC is the strongest FM path.
+- LaBraM is only strong after fixing the temporal interface.
+- REVE/BrainOmni/NeuroLM did not reach promotion despite adapter/interface variants.
+- SNN V5a follows the same logic: SNN temporal dynamics produce a good
+  representation, and RBF-SVC reads it better than a supervised linear head.
 
 ### Contribution 4: Conditional Adapter Gains
 
-Adapter không luôn giúp. Nó chỉ đáng giá khi sửa một mismatch cụ thể.
+Adapters do not always help. They are only worthwhile when they fix a specific mismatch.
 
 | Branch | Intervention | Outcome |
 |---|---|---|
@@ -222,25 +224,25 @@ V6d is the cleaner supervised SNN-hybrid architecture result.
 
 ### Contribution 6: Controlled Negative Results
 
-Negative/neutral results là một phần contribution vì chúng loại bỏ overclaim:
+Negative/neutral results are part of the contribution because they rule out overclaims:
 
-- Dynamic-channel REVE/BrainOmni không tự động transfer mạnh.
-- NeuroLM named-channel tokens không phù hợp với compact 1s VEP protocol.
-- QNN gain quanh Shallow là modest; chưa có quantum advantage.
-- Quantum kernel trên SNN embedding thua matched RBF-SVC control.
-- EEGPT-QDelta gần như neutral.
-- Raw SNN/event encoders yếu.
-- SNN prefix/early-exit chưa qua gate, nên không claim early VEP decision.
-- EEGPT-teacher distillation vào SNN hiện tại không qua gate dù teacher mạnh.
-- V6c/V6e supervised extensions và V5a windowed/fusion probes chưa vượt
+- Dynamic-channel REVE/BrainOmni do not automatically transfer strongly.
+- NeuroLM named-channel tokens do not fit the compact 1s VEP protocol.
+- QNN gains around Shallow are modest; there is no quantum advantage.
+- Quantum kernel on SNN embeddings loses to the matched RBF-SVC control.
+- EEGPT-QDelta is nearly neutral.
+- Raw SNN/event encoders are weak.
+- SNN prefix/early-exit has not passed its gate, so no early VEP decision is claimed.
+- The current EEGPT-teacher distillation into SNN did not pass its gate despite a strong teacher.
+- V6c/V6e supervised extensions and V5a windowed/fusion probes did not beat the
   predefined fold-1 gates.
-- V6d SupCon/prototype-separation regularization không cải thiện CE-only.
-- EEGPT-token SNN plug-in head không qua fold-1 gate; không claim SNN head là
-  universal foundation-model readout.
+- V6d SupCon/prototype-separation regularization did not improve on CE-only.
+- The EEGPT-token SNN plug-in head did not pass the fold-1 gate; do not claim the
+  SNN head is a universal foundation-model readout.
 
 ## 5. Suggested Contribution Paragraph
 
-Có thể viết phần contributions trong paper như sau:
+The contributions section of the paper could be written as follows:
 
 ```text
 We present a controlled benchmark for compact low-channel VEP EEG
@@ -260,38 +262,38 @@ representation probes and controlled negative results for raw SNN encoders,
 quantum kernels, and weak foundation-model transfer paths.
 ```
 
-## 6. Claims Nên Dùng
+## 6. Claims To Use
 
-- EEGPT adapter58 + RBF-SVC là strongest foundation-model baseline.
-- V5a SNN temporal LIF `spike_count` + RBF-SVC là strongest SNN representation
+- EEGPT adapter58 + RBF-SVC is the strongest foundation-model baseline.
+- V5a SNN temporal LIF `spike_count` + RBF-SVC is the strongest SNN representation
   row.
-- V6d differentiable prototype LIF là strongest supervised SNN row.
-- EEGPT-token SNN plug-in screen là negative control: best fold-1 chỉ `60.86%`
-  acc / `59.73%` macro-F1, nên không chạy 5-fold.
-- V6/V5a extension screen mostly negative/neutral; V6d CE-only là supervised
-  SNN improvement mới nhất.
-- Interface alignment là yếu tố quyết định trong compact VEP transfer.
-- Dynamic-channel support không đảm bảo representation phù hợp.
-- Frozen probing nên đi trước expensive adapter/fine-tuning.
-- Adapter gains là conditional, không phải mặc định.
+- V6d differentiable prototype LIF is the strongest supervised SNN row.
+- The EEGPT-token SNN plug-in screen is a negative control: best fold-1 is only
+  `60.86%` acc / `59.73%` macro-F1, so it was not run 5-fold.
+- The V6/V5a extension screen is mostly negative/neutral; V6d CE-only is the latest
+  supervised SNN improvement.
+- Interface alignment is the decisive factor in compact VEP transfer.
+- Dynamic-channel support does not guarantee a suitable representation.
+- Frozen probing should precede expensive adapter training/fine-tuning.
+- Adapter gains are conditional, not a default.
 
-## 7. Claims Nên Tránh
+## 7. Claims To Avoid
 
-- Không claim dynamic-channel models nói chung là yếu; chỉ nói trong benchmark
-  compact Emotiv14 VEP này chúng chưa transfer mạnh.
-- Không claim V5a là end-to-end supervised SNN; đó là SNN representation +
+- Do not claim dynamic-channel models are weak in general; only say that in this
+  compact Emotiv14 VEP benchmark they did not transfer strongly.
+- Do not claim V5a is an end-to-end supervised SNN; it is an SNN representation +
   classical nonlinear probe.
-- Không claim quantum advantage nếu không beat matched classical controls.
-- Không claim EEGPT-QDelta cải thiện meaningful.
-- Không claim SNN early VEP decision; prefix gates chưa đạt.
-- Không claim V6-style SNN head plug-and-play trên mọi Foundation Model token
-  cache; EEGPT token screen không qua gate.
-- Không claim QNN gain robust nếu chưa có multi-seed validation.
+- Do not claim quantum advantage without beating matched classical controls.
+- Do not claim EEGPT-QDelta gives a meaningful improvement.
+- Do not claim SNN early VEP decision; prefix gates were not met.
+- Do not claim the V6-style SNN head is plug-and-play on every foundation-model
+  token cache; the EEGPT token screen did not pass its gate.
+- Do not claim QNN gains are robust without multi-seed validation.
 
 ## 8. Practical Takeaway
 
-Với một EEG dataset mới, phần reusable không phải là `adapter58`,
-`stretch_3000`, hay một hyperparameter cụ thể. Phần reusable là protocol:
+For a new EEG dataset, the reusable part is not `adapter58`, `stretch_3000`, or
+any specific hyperparameter. The reusable part is the protocol:
 
 ```text
 define dataset contract
@@ -304,4 +306,4 @@ define dataset contract
 -> matched controls for QNN/SNN/fine-tuning claims
 ```
 
-Đây là đóng góp có ý nghĩa ngoài dataset hiện tại.
+This is a contribution that is meaningful beyond the current dataset.

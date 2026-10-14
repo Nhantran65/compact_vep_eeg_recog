@@ -1,33 +1,33 @@
-# Hướng nghiên cứu SNN còn mở cho VEP EEG benchmark
+# Open SNN Research Directions for the VEP EEG Benchmark
 
 Last updated: 2026-06-08
 
-Ghi chú tool: người dùng yêu cầu plugin `life-science-research`, nhưng plugin
-này không khả dụng trong session hiện tại và cũng không xuất hiện trong danh
-sách plugin có thể cài. Tài liệu này dùng web search/paper sources, tài liệu
-local trong `SNN/`, `SNN/README.md`, `SNN/LITERATURE_REVIEW.md`, và các result
-summary/JSON hiện có.
+Tool note: the user requested the `life-science-research` plugin, but that
+plugin was not available in the current session and did not appear in the list
+of installable plugins. This document uses web search/paper sources, local
+documents in `SNN/`, `SNN/README.md`, `SNN/LITERATURE_REVIEW.md`, and the
+existing result summaries/JSON.
 
-Mục tiêu của file này là tránh lặp lại các hướng SNN đã làm. Các hướng bên dưới
-được chia thành:
+The goal of this file is to avoid repeating SNN directions that have already
+been explored. The directions below are grouped into:
 
 ```text
-1. Đã làm / đã đóng
-2. Hướng V5/V6 đã chạy 5-fold
-3. Hướng còn mở thật sự sau fold 1
-4. Thứ tự thử nghiệm đề xuất
+1. Done / closed
+2. V5/V6 directions already run 5-fold
+3. Directions still genuinely open after fold 1
+4. Proposed experiment order
 ```
 
-## 1. Trạng thái SNN hiện tại
+## 1. Current SNN Status
 
-Kết luận chính của nhánh SNN:
+Main conclusion of the SNN branch:
 
 ```text
-Raw EEG SNN yếu.
+Raw EEG SNN is weak.
 Useful SNN path = frozen ShallowConvNet temporal feature map + spiking temporal readout.
 ```
 
-Best SNN representation hiện tại:
+Current best SNN representation:
 
 ```text
 frozen ShallowConvNet temporal feature map [B,40,104]
@@ -40,7 +40,7 @@ macro-F1       85.39 +/- 0.82%
 balanced acc   85.29 +/- 0.87%
 ```
 
-Best supervised SNN hiện tại:
+Current best supervised SNN:
 
 ```text
 frozen ShallowConvNet temporal feature map [B,40,104]
@@ -53,7 +53,7 @@ macro-F1       83.94 +/- 0.51%
 balanced acc   83.85 +/- 0.41%
 ```
 
-So với QNN:
+Compared with QNN:
 
 ```text
 Best QNN snapshot:
@@ -61,43 +61,44 @@ Best QNN snapshot:
   accuracy = 82.614% +/- 0.994%
   train time = about 84.4 min/fold
 
-SNN representation row đã vượt QNN snapshot về accuracy. Supervised gated SNN
-cũng vượt plain temporal LIF và nằm trên QNN snapshot, nhưng cần claim tách
-riêng khỏi representation-probe row.
+The SNN representation row already beats the QNN snapshot in accuracy. The
+supervised gated SNN also beats plain temporal LIF and sits above the QNN
+snapshot, but its claim must be kept separate from the representation-probe row.
 ```
 
-Vì vậy hướng nghiên cứu nên tập trung vào:
+Therefore research should focus on:
 
 ```text
 spiking temporal readout / distillation / embedding probe / efficiency,
-không phải raw SNN generic.
+not generic raw SNN.
 ```
 
-V5/V6 5-fold update ngày 2026-06-04:
+V5/V6 5-fold update on 2026-06-04:
 
 | Branch | Result | Gate / Baseline | Decision |
 |---|---:|---|---|
 | `V5a temporal_lif_embedding_probe` | `86.02 +/- 0.93%` acc / `85.39 +/- 0.82%` macro-F1 (`spike_count + RBF-SVC C=10`) | best QNN snapshot `82.61 +/- 0.99%` acc | promote as best SNN representation row |
-| `V5b eegpt_teacher_distill_full104` | student `82.57%` acc / `81.65%` macro-F1; teacher `89.35%` acc | `>=84.0%` acc hoặc `>=83.0%` macro-F1 | neutral/close current recipe |
+| `V5b eegpt_teacher_distill_full104` | student `82.57%` acc / `81.65%` macro-F1; teacher `89.35%` acc | `>=84.0%` acc or `>=83.0%` macro-F1 | neutral/close current recipe |
 | `V6a shallow_temporal_gated_lif` | `83.50 +/- 0.89%` acc / `82.83 +/- 0.84%` macro-F1 | plain temporal LIF `82.56 +/- 1.57%` acc | positive; superseded by V6b |
 | `V6b shallow_temporal_spike_aware_gated_lif` | `84.41 +/- 1.29%` acc / `83.73 +/- 1.13%` macro-F1 | V6a `83.50 +/- 0.89%` acc | positive; superseded by V6d |
 | `V6d0 shallow_temporal_spike_aware_proto_lif_ce` | `84.75 +/- 0.66%` acc / `83.94 +/- 0.51%` macro-F1 | V6b `84.41 +/- 1.29%` acc | promote as best supervised SNN row |
 
-V6/V5a extension fold-1 screen ngày 2026-06-07:
+V6/V5a extension fold-1 screen on 2026-06-07:
 
 | Branch | Result | Gate | Decision |
 |---|---:|---|---|
-| `V6b shallow_temporal_spike_aware_gated_lif` | fold-1 `83.68%` acc / `82.99%` macro-F1; 5-fold `84.41 +/- 1.29%` acc / `83.73 +/- 1.13%` macro-F1 | `>=84.0%` acc hoặc `>=83.3%` macro-F1 | fold-1 close; 5-fold user-requested run promoted |
-| `V6c shallow_temporal_windowed_spike_lif_4bins` | `82.02%` acc / `81.13%` macro-F1 | same V6 gate | không promote |
-| `V6e shallow_temporal_multiscale_gated_lif` | `82.99%` acc / `82.18%` macro-F1 | same V6 gate | không promote |
-| `V5a-ext windowed_spike_count_4 + RBF-SVC` | `83.54%` acc / `82.72%` macro-F1 | `>86.5%` acc hoặc `>85.8%` macro-F1 | không promote |
-| `V5a-ext spike_mean_late_fusion` | `85.34%` acc / `84.60%` macro-F1 | same V5a gate | close, không promote |
+| `V6b shallow_temporal_spike_aware_gated_lif` | fold-1 `83.68%` acc / `82.99%` macro-F1; 5-fold `84.41 +/- 1.29%` acc / `83.73 +/- 1.13%` macro-F1 | `>=84.0%` acc or `>=83.3%` macro-F1 | fold-1 close; 5-fold user-requested run promoted |
+| `V6c shallow_temporal_windowed_spike_lif_4bins` | `82.02%` acc / `81.13%` macro-F1 | same V6 gate | not promoted |
+| `V6e shallow_temporal_multiscale_gated_lif` | `82.99%` acc / `82.18%` macro-F1 | same V6 gate | not promoted |
+| `V5a-ext windowed_spike_count_4 + RBF-SVC` | `83.54%` acc / `82.72%` macro-F1 | `>86.5%` acc or `>85.8%` macro-F1 | not promoted |
+| `V5a-ext spike_mean_late_fusion` | `85.34%` acc / `84.60%` macro-F1 | same V5a gate | close, not promoted |
 
-Kết luận: V6b được chạy 5-fold theo yêu cầu sau screen và vượt V6a, nên thay
-V6a làm supervised SNN row. Giữ V5a `spike_count + RBF-SVC` làm strongest SNN
-representation row. V6c/V6e và V5a windowed/fusion probes không promote.
+Conclusion: V6b was run 5-fold on request after the screen and beat V6a, so it
+replaces V6a as the supervised SNN row. Keep V5a `spike_count + RBF-SVC` as the
+strongest SNN representation row. V6c/V6e and V5a windowed/fusion probes are
+not promoted.
 
-V6d differentiable prototype-head update ngày 2026-06-07:
+V6d differentiable prototype-head update on 2026-06-07:
 
 | Branch | Result | Gate / Baseline | Decision |
 |---|---:|---|---|
@@ -106,61 +107,63 @@ V6d differentiable prototype-head update ngày 2026-06-07:
 | `V6d2 proto_lif_supcon010` | `84.22 +/- 0.76%` acc / `83.55 +/- 0.64%` macro-F1 | V6b baseline | below V6b/V6d0 |
 | `V6d3 proto_lif_supcon005_sep` | `84.22 +/- 0.84%` acc / `83.49 +/- 0.72%` macro-F1 | V6b baseline | below V6b/V6d0 |
 
-Kết luận: differentiable prototype/RBF-style head giúp supervised SNN vượt
-V6b, nhưng SupCon/prototype separation chưa giúp trong setting này.
+Conclusion: the differentiable prototype/RBF-style head lets the supervised SNN
+beat V6b, but SupCon/prototype separation does not help in this setting.
 
-EEGPT-token SNN plug-in screen ngày 2026-06-08:
+EEGPT-token SNN plug-in screen on 2026-06-08:
 
 | Branch | Fold-1 result | Gate | Decision |
 |---|---:|---|---|
-| `eegpt_token_spike_aware_gated_lif` | `60.86%` acc / `59.73%` macro-F1 | `>=84.0%` acc hoặc `>=83.5%` macro-F1 | không chạy 5-fold |
-| `eegpt_token_spike_aware_proto_lif_ce` | `59.61%` acc / `58.64%` macro-F1 | same | không chạy 5-fold |
+| `eegpt_token_spike_aware_gated_lif` | `60.86%` acc / `59.73%` macro-F1 | `>=84.0%` acc or `>=83.5%` macro-F1 | not run 5-fold |
+| `eegpt_token_spike_aware_proto_lif_ce` | `59.61%` acc / `58.64%` macro-F1 | same | not run 5-fold |
 
-Kết luận: V6-style SNN head không plug-and-play tốt trên cached EEGPT tokens
-`[B,4,2048]`. Hướng SNN mạnh hiện tại vẫn cần frozen feature map giữ nhiều bước
-temporal dynamics, như Shallow temporal map `[B,40,104]`.
+Conclusion: the V6-style SNN head is not plug-and-play on cached EEGPT tokens
+`[B,4,2048]`. The current strong SNN direction still needs a frozen feature map
+that preserves many temporal steps, such as the Shallow temporal map `[B,40,104]`.
 
-## 2. Đã làm / đã đóng
+## 2. Done / Closed
 
-Các hướng sau đã có kết quả trong README, literature review hoặc result files.
-Không nên đưa vào danh sách active directions nữa nếu không có hypothesis mới.
+The following directions already have results in the README, literature review,
+or result files. They should not be listed as active directions again without a
+new hypothesis.
 
-| Hướng | Trạng thái | Kết luận |
+| Direction | Status | Conclusion |
 |---|---|---|
-| Raw supervised SNN `direct/rate/delta/signed_delta` | Done fold 1 | Yếu; best fixed signed/delta supervised chỉ khoảng 46-47% |
-| Raw SNN embedding probe | Done fold 1 | Weak-positive; best `delta SNN embedding + RBF-SVC` = `68.46% / 67.83%`, không promote |
-| Raw delta-family classical controls | Done 5-fold | Delta transform alone yếu; signed-delta flat control khoảng 50.11% |
-| Shallow80 LIF/PLIF hybrid | Done 5-fold | Viable khoảng 81.5%, nhưng dưới temporal-map LIF |
+| Raw supervised SNN `direct/rate/delta/signed_delta` | Done fold 1 | Weak; best fixed signed/delta supervised only about 46-47% |
+| Raw SNN embedding probe | Done fold 1 | Weak-positive; best `delta SNN embedding + RBF-SVC` = `68.46% / 67.83%`, not promoted |
+| Raw delta-family classical controls | Done 5-fold | Delta transform alone is weak; signed-delta flat control about 50.11% |
+| Shallow80 LIF/PLIF hybrid | Done 5-fold | Viable at about 81.5%, but below temporal-map LIF |
 | Shallow temporal-map LIF | Done 5-fold | Previous V2 best / plain baseline: `82.56% +/- 1.57%` |
-| Post-hoc early-exit | Done 5-fold | Negative; K80 chỉ `79.13%`, chưa đủ gate |
-| Shallow-teacher prefix distillation | Done fold 1 | Có nhích lên nhưng chưa qua gate |
-| Prefix rescue K64/K80 | Done selected 5-fold | K64 = `76.97%`, K80 = `79.01%`; cả hai fail gates |
-| Adaptive signed-delta raw encoder | Done fold 1 | `46.20% / 46.54%`, không đạt gate; đóng |
-| Quantum kernel on SNN embedding | Done fold 1 subset | Quantum kernel thua matched RBF-SVC control |
-| V6/V5a extension screen | Done fold 1 + V6b 5-fold | V6b vượt V6a trên 5-fold; windowed/fusion probes không vượt V5a |
-| V6d differentiable prototype head | Done 5-fold | CE-only vượt V6b; SupCon variants không cải thiện |
-| EEGPT-token SNN plug-in head | Done fold 1 | Best chỉ `60.86% / 59.73%`; không qua gate, không 5-fold |
+| Post-hoc early-exit | Done 5-fold | Negative; K80 only `79.13%`, below gate |
+| Shallow-teacher prefix distillation | Done fold 1 | Slight improvement but did not pass gate |
+| Prefix rescue K64/K80 | Done selected 5-fold | K64 = `76.97%`, K80 = `79.01%`; both fail gates |
+| Adaptive signed-delta raw encoder | Done fold 1 | `46.20% / 46.54%`, did not reach gate; closed |
+| Quantum kernel on SNN embedding | Done fold 1 subset | Quantum kernel loses to matched RBF-SVC control |
+| V6/V5a extension screen | Done fold 1 + V6b 5-fold | V6b beats V6a on 5-fold; windowed/fusion probes do not beat V5a |
+| V6d differentiable prototype head | Done 5-fold | CE-only beats V6b; SupCon variants do not improve |
+| EEGPT-token SNN plug-in head | Done fold 1 | Best only `60.86% / 59.73%`; did not pass gate, no 5-fold |
 
-Đặc biệt:
+In particular:
 
 ```text
-Không nên lặp lại Shallow-teacher prefix distillation chỉ bằng cách đổi nhẹ
-alpha/dropout. Rescue sweep đã cho thấy K64/K80 không qua gate.
+Do not repeat Shallow-teacher prefix distillation by merely tweaking
+alpha/dropout. The rescue sweep showed K64/K80 do not pass the gate.
 ```
 
 ```text
-Không nên mở thêm raw SNN encoder lớn hơn nếu chỉ dựa trên fixed/adaptive
-delta coding hiện tại. Evidence nói raw SNN path yếu.
+Do not open a larger raw SNN encoder if it relies only on the current
+fixed/adaptive delta coding. Evidence says the raw SNN path is weak.
 ```
 
-## 3. Hướng mở 1: Temporal-hybrid SNN embedding probe
+## 3. Open Direction 1: Temporal-hybrid SNN embedding probe
 
 ### Hypothesis
 
-Foundation-model branches cho thấy frozen/fixed representation + classical
-RBF-SVC thường mạnh hơn neural head trên dataset nhỏ. Raw SNN embedding probe đã
-làm và yếu, nhưng SNN hybrid tốt nhất `shallow_temporal_lif_head` chưa được
-đánh giá đầy đủ như một representation learner trên 5 folds.
+Foundation-model branches show that a frozen/fixed representation + classical
+RBF-SVC is often stronger than a neural head on small datasets. The raw SNN
+embedding probe has been done and is weak, but the best SNN hybrid
+`shallow_temporal_lif_head` has not been fully evaluated as a representation
+learner over 5 folds.
 
 ### Pipeline
 
@@ -183,7 +186,7 @@ train shallow_temporal_lif_head on fold k
 
 ### Why this is not already done
 
-README đã có:
+The README already has:
 
 ```text
 shallow80_lif_head embedding probe fold 1
@@ -191,14 +194,14 @@ shallow80_plif_head embedding probe fold 1
 raw SNN embedding probes fold 1
 ```
 
-Nhưng chưa có full probe matrix cho:
+But there is no full probe matrix yet for:
 
 ```text
 shallow_temporal_lif_head embeddings
 ```
 
-Quantum kernel probe đã dùng `snn_temporal_lif_concat` trên subset fold 1, và
-matched RBF-SVC đạt khoảng `83.26%`, nên full probe đáng kiểm tra.
+The quantum kernel probe used `snn_temporal_lif_concat` on a fold-1 subset, and
+the matched RBF-SVC reached about `83.26%`, so a full probe is worth checking.
 
 ### Controls
 
@@ -210,7 +213,7 @@ matched RBF-SVC đạt khoảng `83.26%`, nên full probe đáng kiểm tra.
 ### Promotion gate
 
 ```text
-fold-1 >= 83.0% acc hoặc >=82.0% macro-F1 -> run 5-fold
+fold-1 >= 83.0% acc or >=82.0% macro-F1 -> run 5-fold
 5-fold > 82.61% acc -> serious SNN-vs-QNN result
 5-fold near 82.5% but faster/sparser -> efficiency result
 ```
@@ -227,33 +230,33 @@ decision = best SNN representation row
 
 ### Paper value
 
-Nếu tốt:
+If positive:
 
 ```text
 SNN as representation learner + classical nonlinear probe is stronger than a
 pure supervised SNN head.
 ```
 
-Nếu không:
+If not:
 
 ```text
 Supervised temporal LIF readout is already the useful SNN endpoint.
 ```
 
-## 4. Hướng mở 2: EEGPT-teacher distillation into SNN
+## 4. Open Direction 2: EEGPT-teacher distillation into SNN
 
 ### Hypothesis
 
-Shallow-teacher prefix distillation đã fail gates. Lý do có thể là teacher chỉ ở
-vùng 82%. EEGPT adapter58 + RBF-SVC đạt:
+Shallow-teacher prefix distillation failed its gates. A possible reason is that
+the teacher sits only around 82%. EEGPT adapter58 + RBF-SVC reaches:
 
 ```text
 87.901% +/- 1.824% accuracy
 87.450% +/- 2.214% macro-F1
 ```
 
-Do đó hướng còn mở là dùng teacher mạnh hơn để distill class geometry vào SNN
-student nhỏ và nhanh.
+The remaining open direction is therefore to use a stronger teacher to distill
+class geometry into a small, fast SNN student.
 
 ### Pipeline
 
@@ -300,12 +303,12 @@ V5c feature-level alignment:
 
 ```text
 Full-window:
-  fold-1 >= 84% acc hoặc >=83% macro-F1 -> run 5-fold
+  fold-1 >= 84% acc or >=83% macro-F1 -> run 5-fold
   5-fold > QNN best 82.61% with low training time -> promote
 
 Prefix:
   K64 within 2 pp of full-window SNN
-  hoặc K80 >= 80% 5-fold
+  or K80 >= 80% 5-fold
 ```
 
 Fold-1 result for the implemented full-window recipe:
@@ -327,13 +330,13 @@ spiking temporal readout may combine EEGPT representation quality with SNN
 training/inference efficiency.
 ```
 
-Đây là hướng paper-value cao nhất nếu chạy được.
+This is the direction with the highest paper value if it works.
 
-## 5. Hướng mở 3: VEP-aware temporal gated LIF readout
+## 5. Open Direction 3: VEP-aware temporal gated LIF readout
 
 ### Hypothesis
 
-`ShallowFeatureSNNHead` hiện tại rất đơn giản:
+The current `ShallowFeatureSNNHead` is very simple:
 
 ```text
 for each timestep:
@@ -342,8 +345,9 @@ for each timestep:
 readout = mean_membrane / final / max / spike_count
 ```
 
-Nó chưa học explicit timing importance. VEP là time-locked response, nên một
-temporal gate/attention nhẹ có thể học đoạn bins discriminative hơn mean pooling.
+It does not learn explicit timing importance. VEP is a time-locked response, so
+a lightweight temporal gate/attention could learn more discriminative bins than
+mean pooling.
 
 ### Architecture
 
@@ -375,8 +379,8 @@ shallow_temporal_lif_temporal_attention
 ### Promotion gate
 
 ```text
-fold-1 beats current temporal LIF by >=0.5 pp acc hoặc macro-F1 -> run 5-fold
-5-fold >=83% acc hoặc lower variance than current SNN -> promote
+fold-1 beats current temporal LIF by >=0.5 pp acc or macro-F1 -> run 5-fold
+5-fold >=83% acc or lower variance than current SNN -> promote
 ```
 
 Five-fold result:
@@ -388,13 +392,13 @@ delta = +0.94 pp acc / +1.02 pp macro-F1
 decision = positive V6a result; superseded by V6b spike-aware gated LIF
 ```
 
-## 6. Hướng mở 4: Multi-scale / wavelet-inspired spiking temporal readout
+## 6. Open Direction 4: Multi-scale / wavelet-inspired spiking temporal readout
 
 ### Hypothesis
 
-VEP signal có cả waveform morphology và time-frequency structure. Current LIF
-readout nhìn từng timestep qua một Linear layer. Multi-scale temporal branches
-có thể bắt slow/fast components tốt hơn.
+The VEP signal has both waveform morphology and time-frequency structure. The
+current LIF readout sees each timestep through a single Linear layer.
+Multi-scale temporal branches could capture slow/fast components better.
 
 ### Architecture
 
@@ -426,26 +430,26 @@ shallow_temporal_wavelet_lif
 ### Promotion gate
 
 ```text
-fold-1 >=83% acc hoặc > current SNN macro-F1 by >=0.5 pp -> run 5-fold
+fold-1 >=83% acc or > current SNN macro-F1 by >=0.5 pp -> run 5-fold
 ```
 
-## 7. Hướng mở 5: Topology-preserving SNN before Shallow spatial collapse
+## 7. Open Direction 5: Topology-preserving SNN before Shallow spatial collapse
 
 ### Hypothesis
 
-Current best SNN dùng Shallow feature map sau spatial convolution:
+The current best SNN uses the Shallow feature map after spatial convolution:
 
 ```text
 Shallow conv1/conv2/BN/square -> [B,40,104]
 ```
 
-Channel topology đã bị collapse. Một SNN mới có thể đọc map sớm hơn:
+Channel topology has already been collapsed. A new SNN could read an earlier map:
 
 ```text
 after Shallow temporal conv only -> [B,40,14,104]
 ```
 
-Sau đó dùng channel graph/gate để exploit Emotiv14 geometry.
+Then use a channel graph/gate to exploit Emotiv14 geometry.
 
 ### Architecture
 
@@ -480,13 +484,13 @@ fold-1 >=83% acc -> run 5-fold
 or fold-1 improves Apple/Car recalls meaningfully without hurting macro-F1
 ```
 
-## 8. Hướng mở 6: Shallow-initialized / ANN-to-SNN readout
+## 8. Open Direction 6: Shallow-initialized / ANN-to-SNN readout
 
 ### Hypothesis
 
-Current temporal LIF head is trained from scratch on frozen Shallow maps. Vì
-ShallowConvNet đã có trained classifier và pooling/log feature path, có thể dùng
-nó để initialize hoặc distill SNN readout.
+Current temporal LIF head is trained from scratch on frozen Shallow maps. Since
+ShallowConvNet already has a trained classifier and a pooling/log feature path,
+it can be used to initialize or distill the SNN readout.
 
 ### Variants
 
@@ -512,13 +516,13 @@ fold-1 matches current SNN with fewer epochs or lower spike rate -> efficiency r
 fold-1 beats current SNN by >=0.5 pp -> run 5-fold
 ```
 
-## 9. Hướng mở 7: Efficiency / latency diagnostic
+## 9. Open Direction 7: Efficiency / latency diagnostic
 
 ### Hypothesis
 
-SNN có thể không vượt EEGPT accuracy, nhưng có thể là best efficiency baseline
-trong nhóm Shallow/QNN/SNN. Hiện tại đã có training time, spike rate và một số
-head latency, nhưng cần chuẩn hóa để claim nghiêm túc.
+SNN may not beat EEGPT accuracy, but it may be the best efficiency baseline
+within the Shallow/QNN/SNN group. Training time, spike rate, and some head
+latency already exist, but they need to be standardized for a rigorous claim.
 
 ### Metrics
 
@@ -553,7 +557,7 @@ training cost.
 
 ## 10. Recommended active experiment order after V6d prototype screen
 
-Đề xuất thứ tự thực dụng:
+Proposed practical order:
 
 ```text
 1. Promote V5a temporal-hybrid SNN embedding probe in the benchmark table
